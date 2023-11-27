@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain.pattern="http://dataquality.domain.pattern" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.domain.pattern:Pattern xmi:id="_6YWv4D16Ed2p44yVAaDvbQ" name="Master Card Number" supplierDependency="_kohGEIzzEe6DPNh9qc8Srg">
+    <taggedValue xmi:id="_Nx-2gEEqEd2095gIBp6gJQ" tag="Purpose" value="Check the validity of Master card numbers"/>
+    <taggedValue xmi:id="_Nx_dkEEqEd2095gIBp6gJQ" tag="Description" value="All MasterCard numbers start with the numbers 51 through 55. All have 16 digits."/>
+    <taggedValue xmi:id="_Nx_dkUEqEd2095gIBp6gJQ" tag="Author" value=""/>
+    <taggedValue xmi:id="_Nx_dkkEqEd2095gIBp6gJQ" tag="Status" value="Draft"/>
+    <taggedValue xmi:id="_qD2VwGO9Ed2pdqzSh7BKqQ" tag="Validation_Status" value="true"/>
+    <components xsi:type="dataquality.domain.pattern:RegularExpression" xmi:id="_6YWv4T16Ed2p44yVAaDvbQ" expressionType="REGEXP">
+      <expression xmi:id="_6YWv4j16Ed2p44yVAaDvbQ" body="'^5[1-5][0-9]{14}$'" language="SQL"/>
+    </components>
+  </dataquality.domain.pattern:Pattern>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_kohGEIzzEe6DPNh9qc8Srg" kind="Usage" supplier="_6YWv4D16Ed2p44yVAaDvbQ">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/pattern_analysis_product_0.1.ana#_RRV2AIzzEe6DPNh9qc8Srg"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>

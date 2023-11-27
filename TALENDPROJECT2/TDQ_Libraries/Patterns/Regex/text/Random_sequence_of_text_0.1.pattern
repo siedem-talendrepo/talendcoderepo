@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain.pattern="http://dataquality.domain.pattern" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.domain.pattern:Pattern xmi:id="_gDqDcP9eEd2mwaQf90ozSg" name="Random sequence of text" supplierDependency="_oCX90IzzEe6DPNh9qc8Srg">
+    <taggedValue xmi:id="_gDqDcf9eEd2mwaQf90ozSg" tag="Author" value="scorreia"/>
+    <taggedValue xmi:id="_gDqDcv9eEd2mwaQf90ozSg" tag="Description" value="Matches text with random sequences at least 4 consonants such as &quot;smqljfmj&quot;"/>
+    <taggedValue xmi:id="_gDqDc_9eEd2mwaQf90ozSg" tag="Purpose" value="Search random sequences"/>
+    <taggedValue xmi:id="_gDqDdP9eEd2mwaQf90ozSg" tag="Status" value="Draft"/>
+    <taggedValue xmi:id="_gDqDdf9eEd2mwaQf90ozSg" tag="Validation_Status" value="true"/>
+    <components xsi:type="dataquality.domain.pattern:RegularExpression" xmi:id="_gDqDdv9eEd2mwaQf90ozSg" expressionType="REGEXP">
+      <expression xmi:id="_gDqDd_9eEd2mwaQf90ozSg" body="'[zrtypqsdfghjklmwxcvbnZRTYPQSDFGHJKLMWXCVBN]{4,}$'" language="SQL"/>
+    </components>
+  </dataquality.domain.pattern:Pattern>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_oCX90IzzEe6DPNh9qc8Srg" kind="Usage" supplier="_gDqDcP9eEd2mwaQf90ozSg">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/pattern_analysis_product_0.1.ana#_RRV2AIzzEe6DPNh9qc8Srg"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>

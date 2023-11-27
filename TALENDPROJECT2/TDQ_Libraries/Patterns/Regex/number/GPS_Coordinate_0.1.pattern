@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain.pattern="http://dataquality.domain.pattern" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.domain.pattern:Pattern xmi:id="_Xaq7AECwEeWDcpMk51Q9_w" name="GPS Coordinate" supplierDependency="_kb8CoIzzEe6DPNh9qc8Srg">
+    <taggedValue xmi:id="_Xaq7AUCwEeWDcpMk51Q9_w" tag="Status" value="development"/>
+    <taggedValue xmi:id="_Xaq7AkCwEeWDcpMk51Q9_w" tag="Author" value="talend@talend.com"/>
+    <taggedValue xmi:id="_Xaq7A0CwEeWDcpMk51Q9_w" tag="Purpose" value="40.7127837,-74.00594130000002"/>
+    <taggedValue xmi:id="_Xaq7BECwEeWDcpMk51Q9_w" tag="Description" value="Google Maps style GPS Decimal format"/>
+    <taggedValue xmi:id="_Xaq7BUCwEeWDcpMk51Q9_w" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_Xaq7BkCwEeWDcpMk51Q9_w" tag="Validation_Status" value="true"/>
+    <components xsi:type="dataquality.domain.pattern:RegularExpression" xmi:id="_Xaq7B0CwEeWDcpMk51Q9_w" expressionType="REGEXP">
+      <expression xmi:id="_Xaq7CECwEeWDcpMk51Q9_w" body="'^([0-9]{1,3}[\\.][0-9]*)[, ]+-?([0-9]{1,3}[\\.][0-9]*)$'" language="SQL"/>
+    </components>
+  </dataquality.domain.pattern:Pattern>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_kb8CoIzzEe6DPNh9qc8Srg" kind="Usage" supplier="_Xaq7AECwEeWDcpMk51Q9_w">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/pattern_analysis_product_0.1.ana#_RRV2AIzzEe6DPNh9qc8Srg"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>

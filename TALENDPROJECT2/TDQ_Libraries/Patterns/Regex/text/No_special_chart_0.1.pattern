@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain.pattern="http://dataquality.domain.pattern" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.domain.pattern:Pattern xmi:id="_6rm3QIycEd6Dle_8xC0lwg" name="No special chart" supplierDependency="_oCTFUIzzEe6DPNh9qc8Srg">
+    <taggedValue xmi:id="_6rm3QYycEd6Dle_8xC0lwg" tag="Author" value="Mohammed Rafiq .M"/>
+    <taggedValue xmi:id="_6rm3QoycEd6Dle_8xC0lwg" tag="Description" value="Allow only 3 charcters or number without any special characters"/>
+    <taggedValue xmi:id="_6rm3Q4ycEd6Dle_8xC0lwg" tag="Purpose" value="QDE|||QDE#RF"/>
+    <taggedValue xmi:id="_6rm3RIycEd6Dle_8xC0lwg" tag="Status" value="Draft"/>
+    <taggedValue xmi:id="_6rm3RYycEd6Dle_8xC0lwg" tag="Validation_Status" value="true"/>
+    <components xsi:type="dataquality.domain.pattern:RegularExpression" xmi:id="_6rm3RoycEd6Dle_8xC0lwg" expressionType="REGEXP">
+      <expression xmi:id="_6rm3R4ycEd6Dle_8xC0lwg" body="'^[A-Za-z0-9]{3}$'" language="SQL"/>
+    </components>
+  </dataquality.domain.pattern:Pattern>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_oCTFUIzzEe6DPNh9qc8Srg" kind="Usage" supplier="_6rm3QIycEd6Dle_8xC0lwg">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/pattern_analysis_product_0.1.ana#_RRV2AIzzEe6DPNh9qc8Srg"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>

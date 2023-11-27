@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain.pattern="http://dataquality.domain.pattern" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.domain.pattern:Pattern xmi:id="_ly9QgcBQEd2Zap05uF3mKA" name="Hex Color Codes" supplierDependency="_fT6_8IzzEe6DPNh9qc8Srg">
+    <taggedValue xmi:id="_ly93kMBQEd2Zap05uF3mKA" tag="Author" value="Michael Fienen"/>
+    <taggedValue xmi:id="_ly93kcBQEd2Zap05uF3mKA" tag="Description" value="Matches valid 3 or 6 character hex codes used for HTML or CSS.&#xA;Matches fff | #990000 | #cc3366 | #AAAAAA&#xA;Non-Matches #5555 | #ZJK000 | CDCDCDCD"/>
+    <taggedValue xmi:id="_ly93ksBQEd2Zap05uF3mKA" tag="Purpose" value="Check hex codes used for HTML or CSS"/>
+    <taggedValue xmi:id="_ly93k8BQEd2Zap05uF3mKA" tag="Status" value="Production"/>
+    <taggedValue xmi:id="_ly93lMBQEd2Zap05uF3mKA" tag="Validation_Status" value="true"/>
+    <components xsi:type="dataquality.domain.pattern:RegularExpression" xmi:id="_ly93lcBQEd2Zap05uF3mKA" expressionType="REGEXP">
+      <expression xmi:id="_ly93lsBQEd2Zap05uF3mKA" body="'^\#?[A-Fa-f0-9]{3}([A-Fa-f0-9]{3})?$'" language="SQL"/>
+    </components>
+    <components xsi:type="dataquality.domain.pattern:RegularExpression" xmi:id="_p0SX8MBQEd2Zap05uF3mKA" expressionType="REGEXP">
+      <expression xmi:id="_p0SX8cBQEd2Zap05uF3mKA" body="'^\\#?[A-Fa-f0-9]{3}([A-Fa-f0-9]{3})?$'" language="MySQL"/>
+    </components>
+  </dataquality.domain.pattern:Pattern>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_fT6_8IzzEe6DPNh9qc8Srg" kind="Usage" supplier="_ly9QgcBQEd2Zap05uF3mKA">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/pattern_analysis_product_0.1.ana#_RRV2AIzzEe6DPNh9qc8Srg"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>
