@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_VONlEY3AEe69Y-EhpX6DLw" name="Column Analysis Products" creationDate="2023-11-28T13:02:49.249+0530" defaultContext="Default">
+    <clientDependency href="../../metadata/fileDelimited/product_Dataset_0.1.item#_pXdzYIzxEe6DPNh9qc8Srg"/>
+    <clientDependency href="../../TDQ_Libraries/Patterns/Regex/currency/FR_Amount_Money_0.1.pattern#_fUEw8IzzEe6DPNh9qc8Srg"/>
+    <taggedValue xmi:id="_VONlEo3AEe69Y-EhpX6DLw" tag="Status" value="development"/>
+    <taggedValue xmi:id="_VONlE43AEe69Y-EhpX6DLw" tag="Author" value="anilcharan1@siedemdata_nfr"/>
+    <taggedValue xmi:id="_VONlFI3AEe69Y-EhpX6DLw" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_VONlFY3AEe69Y-EhpX6DLw" tag="Description" value=""/>
+    <taggedValue xmi:id="_VONlFo3AEe69Y-EhpX6DLw" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_VTOA4Y3AEe69Y-EhpX6DLw" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_VTOA4o3AEe69Y-EhpX6DLw" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_VTOA443AEe69Y-EhpX6DLw" tag="Is Use Sample Data" value="false"/>
+    <taggedValue xmi:id="_VTOA5I3AEe69Y-EhpX6DLw" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_VONlF43AEe69Y-EhpX6DLw">
+      <connection href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGSTAIzxEe6DPNh9qc8Srg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvQozxEe6DPNh9qc8Srg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvQ4zxEe6DPNh9qc8Srg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvS4zxEe6DPNh9qc8Srg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvVIzxEe6DPNh9qc8Srg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvRozxEe6DPNh9qc8Srg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvRYzxEe6DPNh9qc8Srg"/>
+    </context>
+    <results xmi:id="_VONlGI3AEe69Y-EhpX6DLw">
+      <resultMetadata xmi:id="_VONlGY3AEe69Y-EhpX6DLw" executionDate="2023-11-28T13:06:15.122+0530" executionDuration="7886" message="" executionNumber="3" lastRunOk="true" lastExecutionNumberOk="2"/>
+      <indicators xsi:type="dataquality.indicators.columnset:SimpleStatIndicator" xmi:id="_VONlGo3AEe69Y-EhpX6DLw" count="68730" computed="true" storeData="true" listRows="ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A65787000000001770400000001757200135B4C6A6176612E6C616E672E4F626A6563743B90CE589F1073296C02000078700000000078" uniqueCount="67884" distinctCount="68307">
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Multiple_Column_Simple_Statistics_0.1.definition#_JoeMkM-jEd6qN5aKpPNGTg"/>
+        <analyzedColumns xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvQozxEe6DPNh9qc8Srg"/>
+        <analyzedColumns xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvQ4zxEe6DPNh9qc8Srg"/>
+        <analyzedColumns xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvS4zxEe6DPNh9qc8Srg"/>
+        <analyzedColumns xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvVIzxEe6DPNh9qc8Srg"/>
+        <analyzedColumns xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvRozxEe6DPNh9qc8Srg"/>
+        <analyzedColumns xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvRYzxEe6DPNh9qc8Srg"/>
+        <rowCountIndicator xmi:id="_VONlG43AEe69Y-EhpX6DLw" count="68730" computed="true">
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+          <builtInIndicatorDefinition xmi:id="_bMT7MI3AEe69Y-EhpX6DLw" name="Row Count" label="Row Count">
+            <taggedValue xmi:id="_bMT7MY3AEe69Y-EhpX6DLw" tag="Description" value="counts the number of rows"/>
+            <taggedValue xmi:id="_bMT7Mo3AEe69Y-EhpX6DLw" tag="Purpose" value="evaluates the number of records"/>
+            <sqlGenericExpression xmi:id="_bMT7M43AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </rowCountIndicator>
+        <uniqueCountIndicator xmi:id="_VONlHI3AEe69Y-EhpX6DLw" count="68730" computed="true" uniqueValueCount="67884">
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+          <builtInIndicatorDefinition xmi:id="_bMjLwI3AEe69Y-EhpX6DLw" name="Unique Count" label="Unique Count">
+            <taggedValue xmi:id="_bMjLwY3AEe69Y-EhpX6DLw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+            <taggedValue xmi:id="_bMjLwo3AEe69Y-EhpX6DLw" tag="Purpose" value="evaluates the number of unique records"/>
+            <sqlGenericExpression xmi:id="_bMjLw43AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+            <sqlGenericExpression xmi:id="_bMjLxI3AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+            <sqlGenericExpression xmi:id="_bMjLxY3AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_bMjLxo3AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_bMjLx43AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_bMjLyI3AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_bMjLyY3AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+          </builtInIndicatorDefinition>
+        </uniqueCountIndicator>
+        <distinctCountIndicator xmi:id="_VONlHY3AEe69Y-EhpX6DLw" count="68730" computed="true" distinctValueCount="68307">
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+          <builtInIndicatorDefinition xmi:id="_bMaB0I3AEe69Y-EhpX6DLw" name="Distinct Count" label="Distinct Count">
+            <taggedValue xmi:id="_bMaB0Y3AEe69Y-EhpX6DLw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+            <taggedValue xmi:id="_bMaB0o3AEe69Y-EhpX6DLw" tag="Purpose" value="evaluates the number of distinct records"/>
+            <sqlGenericExpression xmi:id="_bMaB043AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </distinctCountIndicator>
+        <duplicateCountIndicator xmi:id="_VONlHo3AEe69Y-EhpX6DLw" count="68730" computed="true" duplicateValueCount="423">
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+          <builtInIndicatorDefinition xmi:id="_bMh9oI3AEe69Y-EhpX6DLw" name="Duplicate Count" label="Duplicate Count">
+            <taggedValue xmi:id="_bMh9oY3AEe69Y-EhpX6DLw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+            <taggedValue xmi:id="_bMh9oo3AEe69Y-EhpX6DLw" tag="Purpose" value="evaluates the number of duplicated records"/>
+            <sqlGenericExpression xmi:id="_bMh9o43AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+            <sqlGenericExpression xmi:id="_bMh9pI3AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+            <sqlGenericExpression xmi:id="_bMh9pY3AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_bMh9po3AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_bMh9p43AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_bMh9qI3AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_bMh9qY3AEe69Y-EhpX6DLw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+          </builtInIndicatorDefinition>
+        </duplicateCountIndicator>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.columnset:AllMatchIndicator" xmi:id="_vmybUI3AEe69Y-EhpX6DLw" count="68730" computed="true" storeData="true" listRows="ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A65787000000001770400000001757200135B4C6A6176612E6C616E672E4F626A6563743B90CE589F1073296C02000078700000000078" uniqueCount="67884" distinctCount="68307" matchingValueCount="0" notMatchingValueCount="68730">
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/All_Match_0.1.definition#_JoeMkM-jEd6qN5aKpPNGTh"/>
+        <analyzedColumns xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvQozxEe6DPNh9qc8Srg"/>
+        <analyzedColumns xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvQ4zxEe6DPNh9qc8Srg"/>
+        <analyzedColumns xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvS4zxEe6DPNh9qc8Srg"/>
+        <analyzedColumns xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvVIzxEe6DPNh9qc8Srg"/>
+        <analyzedColumns xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvRozxEe6DPNh9qc8Srg"/>
+        <analyzedColumns xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvRYzxEe6DPNh9qc8Srg"/>
+        <compositeRegexMatchingIndicators xmi:id="_vmybVI3AEe69Y-EhpX6DLw" name="FR Amount Money" count="68730" computed="true">
+          <parameters xmi:id="_vmybVY3AEe69Y-EhpX6DLw">
+            <dataValidDomain xmi:id="_vmybVo3AEe69Y-EhpX6DLw">
+              <patterns href="../../TDQ_Libraries/Patterns/Regex/currency/FR_Amount_Money_0.1.pattern#_MKEKcEClEeWDcpMk51Q9_w"/>
+            </dataValidDomain>
+          </parameters>
+          <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvRozxEe6DPNh9qc8Srg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
+        </compositeRegexMatchingIndicators>
+        <compositeRegexMatchingIndicators xmi:id="_vmybWo3AEe69Y-EhpX6DLw" name="FR Amount Money" count="68730" computed="true">
+          <parameters xmi:id="_vmybW43AEe69Y-EhpX6DLw">
+            <dataValidDomain xmi:id="_vmybXI3AEe69Y-EhpX6DLw">
+              <patterns href="../../TDQ_Libraries/Patterns/Regex/currency/FR_Amount_Money_0.1.pattern#_MKEKcEClEeWDcpMk51Q9_w"/>
+            </dataValidDomain>
+          </parameters>
+          <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/product_Dataset_0.1.item#_CGUvRYzxEe6DPNh9qc8Srg"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
+        </compositeRegexMatchingIndicators>
+      </indicators>
+    </results>
+    <parameters xmi:id="_VONlH43AEe69Y-EhpX6DLw" dataFilter="_VTOA5Y3AEe69Y-EhpX6DLw" analysisType="Column Set Analysis" executionLanguage="Java"/>
+    <contextType xmi:id="_VTOA4I3AEe69Y-EhpX6DLw" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_VTOA5Y3AEe69Y-EhpX6DLw" name="Column Analysis Products">
+    <ranges xmi:id="_VTOA5o3AEe69Y-EhpX6DLw">
+      <expressions xmi:id="_VTOA543AEe69Y-EhpX6DLw">
+        <expression xsi:type="relational:TdExpression" xmi:id="_VTOA6I3AEe69Y-EhpX6DLw" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>

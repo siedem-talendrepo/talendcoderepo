@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_Ht7acY3BEe69Y-EhpX6DLw" name="Business Rule Analysis Products" creationDate="2023-11-28T13:08:28.119+0530">
+  <taggedValue xmi:id="_Ht7aco3BEe69Y-EhpX6DLw" tag="Status" value="development"/>
+  <taggedValue xmi:id="_Ht7ac43BEe69Y-EhpX6DLw" tag="Author" value="anilcharan1@siedemdata_nfr"/>
+  <taggedValue xmi:id="_Ht7adI3BEe69Y-EhpX6DLw" tag="Purpose"/>
+  <taggedValue xmi:id="_Ht7adY3BEe69Y-EhpX6DLw" tag="Description"/>
+  <taggedValue xmi:id="_Ht7ado3BEe69Y-EhpX6DLw" tag="Version" value="0.1"/>
+  <context xmi:id="_Ht7ad43BEe69Y-EhpX6DLw"/>
+  <results xmi:id="_Ht7aeI3BEe69Y-EhpX6DLw">
+    <resultMetadata xmi:id="_Ht7aeY3BEe69Y-EhpX6DLw"/>
+  </results>
+  <parameters xmi:id="_Ht7aeo3BEe69Y-EhpX6DLw" analysisType="Table Analysis"/>
+</dataquality.analysis:Analysis>

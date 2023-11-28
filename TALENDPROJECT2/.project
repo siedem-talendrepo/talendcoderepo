@@ -10,4 +10,26 @@
 		<nature>org.talend.core.talendnature</nature>
 		<nature>com.oaklandsw.transform.runtime.nature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>.Source_dataset_Analysis-20231128-1453-00039.pdf</name>
+			<type>1</type>
+			<location>C:/Users/Geetha Thota/OneDrive/Documents/Siedem/DQ REports/Source_dataset_Analysis-20231128-1453-00039.pdf</location>
+		</link>
+		<link>
+			<name>.Source_dataset_Analysis-20231128-1509-00029.pdf</name>
+			<type>1</type>
+			<location>C:/Users/Geetha Thota/OneDrive/Documents/Siedem/DQ REports/Source_dataset_Analysis-20231128-1509-00029.pdf</location>
+		</link>
+		<link>
+			<name>.Transformed_dataset_Analysis-20231128-1511-00001.pdf</name>
+			<type>1</type>
+			<location>C:/Users/Geetha Thota/OneDrive/Documents/Siedem/DQ REports/Transformed_dataset_Analysis-20231128-1511-00001.pdf</location>
+		</link>
+		<link>
+			<name>.table_analysis_product-20231127-1444-00037.pdf</name>
+			<type>1</type>
+			<location>C:/Users/Geetha Thota/OneDrive/Documents/Siedem/DQ REports/table_analysis_product-20231127-1444-00037.pdf</location>
+		</link>
+	</linkedResources>
 </projectDescription>

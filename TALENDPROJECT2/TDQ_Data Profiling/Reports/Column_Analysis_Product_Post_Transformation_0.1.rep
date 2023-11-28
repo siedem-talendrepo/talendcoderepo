@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.reports:TdReport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.reports="http://dataquality.reports" xmi:id="_DH0t0Y3IEe69Y-EhpX6DLw" name="Column Analysis Product_Post_Transformation" creationDate="2023-11-28T13:58:03.757+0530" defaultContext="Default">
+  <clientDependency href="../Analyses/Column_Analysis_Product_post_transformation_0.1.ana#_DH0t443IEe69Y-EhpX6DLw"/>
+  <taggedValue xmi:id="_DH0t0o3IEe69Y-EhpX6DLw" tag="OutputFolder" value="C:\Users\Geetha Thota\OneDrive\Documents\Siedem\DQ REports"/>
+  <taggedValue xmi:id="_DH0t043IEe69Y-EhpX6DLw" tag="REP_DBINFO_DBTYPE" value="HSQL"/>
+  <taggedValue xmi:id="_DH0t1I3IEe69Y-EhpX6DLw" tag="REP_DBINFO_DBVERSION" value=""/>
+  <taggedValue xmi:id="_DH0t1Y3IEe69Y-EhpX6DLw" tag="REP_DBINFO_HOST" value=""/>
+  <taggedValue xmi:id="_DH0t1o3IEe69Y-EhpX6DLw" tag="REP_DBINFO_PORT" value=""/>
+  <taggedValue xmi:id="_DH0t143IEe69Y-EhpX6DLw" tag="REP_DBINFO_WAREHOUSE" value=""/>
+  <taggedValue xmi:id="_DH0t2I3IEe69Y-EhpX6DLw" tag="REP_DBINFO_DBNAME" value="talend_dq"/>
+  <taggedValue xmi:id="_DH0t2Y3IEe69Y-EhpX6DLw" tag="REP_DBINFO_SCHEMA" value=""/>
+  <taggedValue xmi:id="_DH0t2o3IEe69Y-EhpX6DLw" tag="REP_DBINFO_USER" value="sa"/>
+  <taggedValue xmi:id="_DH0t243IEe69Y-EhpX6DLw" tag="REP_DBINFO_PASSWORD" value="enc:system.encryption.key.v1:SUuHNWTboM3RiZg9FhNRj9jQVCeaqLuWDZWR8Q=="/>
+  <taggedValue xmi:id="_DH0t3I3IEe69Y-EhpX6DLw" tag="REP_DBINFO_PARAMETER" value=""/>
+  <taggedValue xmi:id="_DH0t3Y3IEe69Y-EhpX6DLw" tag="REP_DBINFO_URL" value="jdbc:hsqldb:file:/C:\Users\Geetha Thota\OneDrive\Documents\Workspace\TDQ_reporting_db\talend_dq"/>
+  <taggedValue xmi:id="_DH0t3o3IEe69Y-EhpX6DLw" tag="REP_DBINFO_DRIVER" value="org.hsqldb.jdbcDriver"/>
+  <taggedValue xmi:id="_DH0t343IEe69Y-EhpX6DLw" tag="REP_DBINFO_DIALECT" value="org.hibernate.dialect.HSQLDialect"/>
+  <taggedValue xmi:id="_DH0t4I3IEe69Y-EhpX6DLw" tag="REP_PASSWORD_CONTEXT" value="false"/>
+  <taggedValue xmi:id="_DH0t4Y3IEe69Y-EhpX6DLw" tag="Author" value="anilcharan1@siedemdata_nfr"/>
+  <taggedValue xmi:id="_Z0JUwI3IEe69Y-EhpX6DLw" tag="Purpose" value=""/>
+  <taggedValue xmi:id="_Z0JUwY3IEe69Y-EhpX6DLw" tag="Description" value=""/>
+  <taggedValue xmi:id="_Z0JUwo3IEe69Y-EhpX6DLw" tag="Status" value="development"/>
+  <taggedValue xmi:id="_Z0JUw43IEe69Y-EhpX6DLw" tag="OutputFileName" value="Transformed_dataset_Analysis"/>
+  <taggedValue xmi:id="_Z0JUxI3IEe69Y-EhpX6DLw" tag="Single output" value="false"/>
+  <taggedValue xmi:id="_Z0JUxY3IEe69Y-EhpX6DLw" tag="OutputType" value="pdf"/>
+  <taggedValue xmi:id="_Z0JUxo3IEe69Y-EhpX6DLw" tag="REP_GENERATE_FILE" value="true"/>
+  <taggedValue xmi:id="_Z0JUyI3IEe69Y-EhpX6DLw" tag="REP_LAST_RUN_CONTEXT" value="Default"/>
+  <analysisMap xmi:id="_DH0t4o3IEe69Y-EhpX6DLw" mustRefresh="true" reportType="Basic">
+    <analysis href="../Analyses/Column_Analysis_Product_post_transformation_0.1.ana#_X4_FEY3HEe69Y-EhpX6DLw"/>
+  </analysisMap>
+  <ExecInformations xmi:id="_PYJrcI3SEe69Y-EhpX6DLw" executionDate="2023-11-28T15:10:59.333+0530" executionDuration="1634" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+  <context xmi:id="_Z0JUx43IEe69Y-EhpX6DLw" confirmationNeeded="false" hide="false" name="Default"/>
+</dataquality.reports:TdReport>
