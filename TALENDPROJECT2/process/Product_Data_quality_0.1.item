@@ -487,7 +487,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="cleansed_Data" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row2.category" name="category" nullable="true" type="id_String"/>
@@ -639,19 +639,26 @@
       </column>
     </metadata>
   </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String foo = &quot;bar&quot;;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
   <node componentName="tDqReportRun" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="480">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDqReportRun_3"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDqReportRun_2"/>
     <elementParameter field="REFRESH_REPORTS" name="REFRESH_REPORTS" value=""/>
     <elementParameter field="BROWSE_REPORTS" name="BROWSE_REPORTS" value=""/>
-    <elementParameter field="TEXT" name="REPORT_FILE" value="&quot;/TALENDPROJECT2/TDQ_Data Profiling/Reports/Column_Analysis_Product_post_transformation_0.1.rep&quot;"/>
-    <elementParameter field="TEXT" name="OUTPUT_FOLDER" value="&quot;C:/Users/Geetha Thota/OneDrive/Documents/GENERATED_REPORTS&quot;"/>
+    <elementParameter field="TEXT" name="REPORT_FILE" value="&quot;/TALENDPROJECT2/TDQ_Data Profiling/Reports/Column_Analysis_Product_Post_Transformation_0.1.rep&quot;"/>
+    <elementParameter field="TEXT" name="OUTPUT_FOLDER" value="&quot;C:/Users/Geetha Thota/OneDrive/Documents/Siedem/DQ REports&quot;"/>
     <elementParameter field="CHECK" name="TUJ_MODE" show="false" value="false"/>
     <elementParameter field="TABLE" name="DRIVER_JAR">
       <elementValue elementRef="JAR_NAME" value="hsqldb.jar"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PARALLEL_EXECUTION" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDqReportRun_3">
+    <metadata connector="FLOW" name="tDqReportRun_2">
       <column defaultValue="" key="false" length="0" name="REPORT_UUID" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="REPORT_NAME" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="EXE_TIMESTAMP" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
@@ -660,13 +667,6 @@
       <column defaultValue="" key="false" length="0" name="INFO_FAILURE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="608">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="String foo = &quot;bar&quot;;"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJava_1"/>
-  </node>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDqReportRun_1" offsetLabelX="0" offsetLabelY="0" source="tDqReportRun_1" target="tFileInputDelimited_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
@@ -674,14 +674,14 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tDqReportRun_3">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tDqReportRun_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
   <connection connectorName="FLOW" label="cleansed_Data" lineStyle="0" metaname="cleansed_Data" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="cleansed_Data"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDqReportRun_3" offsetLabelX="0" offsetLabelY="0" source="tDqReportRun_3" target="tJava_1">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDqReportRun_2" offsetLabelX="0" offsetLabelY="0" source="tDqReportRun_2" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
   </connection>
   <subjob>
@@ -695,22 +695,22 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDqReportRun_3"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7f8d2934-1ef1-4d65-94d5-6deb64cc2edd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JnrPwPClw7LMfwChren17kLJ0sV1xCCuPlF5nHOQ/gDjH7nWU+0jGoAAE+tLhv57jcBfHZZJsukk&#13;
-2OpRuuMYww==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_81127da8-07ff-4c0f-bb78-5fcad7c35ac1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/Mcmo/SW2pFxrIZpGOiVRWtUPYAJhcWFvTqEKZ3bbw901QQUlL0EJRVbVXIrNae25KBBwqGSdLvE&#13;
-1rsgsBJ33g==</DigestValue></Reference></SignedInfo><SignatureValue>Zhues78zDNg+IPI4asirDj5w08bVqwdnYIaKyUvXjtYgrugdgPz8yRrtDaxmQe3W2oOxrXy6ToRH&#13;
-2+m828JvlSaF0jQCN2Ylv/hs5imivsUqJS5jz5KysQ9b04cepjC0e/cktfBa24JLAfR/TM2eaO5+&#13;
-Aul7fkha2zlHZsC83T7HAKGLy0mUTZGCFAS+MXpHKbPmGAddRgOFvv0eGFUz1UeOUG5yrSQWN63Z&#13;
-95pUGQ/SjUtUvp5gIDEmMdk8yWZ9MSNeMGuwqe+MlBkuFvqutdZR/f1AtCfVqF4ktHgvaR5MfOS8&#13;
-H+sqeb/IsySfY0pPW5IRU60TP4/zz7vtfK6KvA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDqReportRun_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b209a800-169b-4f80-a799-88bc5ae3442a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5XcNdTRnnwawoVNHfE5DfQ5zDum0dfN3auEmOES/CI75VxWxuplko2qsCthSLDW/6Ogh6iDyY/Iw&#13;
+1BPxuemHmA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e907a31b-6f1e-4d66-a0e4-7b287c0394e5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jYcagvHO6NUFo1ycZM8dZ/IvXMvz/RgefPCc3Am3TyOi5loeuThSAeLC7nNHJPgr9bzxdNVQPVxZ&#13;
+y969Jeprng==</DigestValue></Reference></SignedInfo><SignatureValue>Xit91IAINhYXEyGZR/zGVtopPZeLUkjSSiF5FT74QdgzF5kxY8lBCge8yHKfrK7gBdmeWCrWopsl&#13;
+phHySVtn2OCNBNFXvGZdq8N2gycxYeDHL8RZ9PZb5JLJXrRknPn09Mt835z0dyFyfrjyQOgpOer2&#13;
+rSFeRmtT/SpZTxP3CsjbMDDv/9LA2MDcCRQ1lqyUyJGmilxtPxbCbKEUrtFQr/RDXrNa2AOULWV7&#13;
+5ZbFt1yoGOa7b5I5ky/DmQ00Yz9wh6gKl2bmSwOcNGPrtOn2iZ3W0oac1z5p9h1pRMxoQf0bfXGP&#13;
+Ro3ZZ2uNoYp+VTGHibyy+q9A0iD6AM3FAu37+A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -732,4 +732,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_81127da8-07ff-4c0f-bb78-5fcad7c35ac1" Target="#_7f8d2934-1ef1-4d65-94d5-6deb64cc2edd"><Timestamp>2023-11-28 09:53:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e907a31b-6f1e-4d66-a0e4-7b287c0394e5" Target="#_b209a800-169b-4f80-a799-88bc5ae3442a"><Timestamp>2023-11-28 10:35:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
