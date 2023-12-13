@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_pfHuEI6zEe6lF6W9iI5hog" name="Business_rule_analysis_Product" supplierDependency="_3FVPoI60Ee6lF6W9iI5hog" creationDate="2023-11-29T18:04:32.935+0530" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/mysql_conn_0.1.item#_kq1AAI6wEe6m-o0neW33tg"/>
     <taggedValue xmi:id="_pfHuEY6zEe6lF6W9iI5hog" tag="Status" value="development"/>
     <taggedValue xmi:id="_pfHuEo6zEe6lF6W9iI5hog" tag="Author" value="anilcharan1@siedemdata_nfr"/>
     <taggedValue xmi:id="_pfHuE46zEe6lF6W9iI5hog" tag="Purpose" value="Discount Invalid values"/>
@@ -13,11 +14,11 @@
       <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/mysql_conn_0.1.item#_WLXs0Y6wEe6m-o0neW33tg"/>
     </context>
     <results xmi:id="_pfHuF46zEe6lF6W9iI5hog">
-      <resultMetadata xmi:id="_pfHuGI6zEe6lF6W9iI5hog" executionDate="2023-11-29T18:18:47.413+0530" executionDuration="1522" message="" executionNumber="6" lastRunOk="true" lastExecutionNumberOk="5"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_o0BtMI60Ee6lF6W9iI5hog" count="18656" computed="true">
+      <resultMetadata xmi:id="_pfHuGI6zEe6lF6W9iI5hog" executionDate="2023-11-30T15:50:15.493+0530" executionDuration="1197" message="" executionNumber="9" lastRunOk="true" lastExecutionNumberOk="6"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_o0BtMI60Ee6lF6W9iI5hog" count="18666" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/mysql_conn_0.1.item#_WLXs0Y6wEe6m-o0neW33tg"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o8klMI60Ee6lF6W9iI5hog" body="SELECT COUNT(*) FROM `dqreports`.`product`  WHERE (discount &lt; 0)" language="MySQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o8klMI60Ee6lF6W9iI5hog" body="SELECT COUNT(*) FROM `dqreports`.`product`  WHERE (discount &lt; 0 OR name=&quot;&quot;)" language="MySQL"/>
         <builtInIndicatorDefinition xmi:id="_o8d3gI60Ee6lF6W9iI5hog" name="Row Count" label="Row Count">
           <taggedValue xmi:id="_o8d3gY60Ee6lF6W9iI5hog" tag="Description" value="counts the number of rows"/>
           <taggedValue xmi:id="_o8d3go60Ee6lF6W9iI5hog" tag="Purpose" value="evaluates the number of records"/>
@@ -34,7 +35,7 @@
   <dataquality.domain:Domain xmi:id="_uBvksI6zEe6lF6W9iI5hog" name="Business_rule_analysis_Product">
     <ranges xmi:id="_uBvksY6zEe6lF6W9iI5hog">
       <expressions xmi:id="_uBvkso6zEe6lF6W9iI5hog">
-        <expression xsi:type="relational:TdExpression" xmi:id="_uBvks46zEe6lF6W9iI5hog" body="discount &lt; 0 " language="SQL"/>
+        <expression xsi:type="relational:TdExpression" xmi:id="_uBvks46zEe6lF6W9iI5hog" body="discount &lt; 0 OR name=&quot;&quot;" language="SQL"/>
       </expressions>
     </ranges>
   </dataquality.domain:Domain>
