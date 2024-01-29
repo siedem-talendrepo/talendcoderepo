@@ -1,5 +1,10 @@
 {
   "migrationTask" : [ {
+    "id" : "RevertSAPContextModeAdditionalPropMigrationTask",
+    "breaks" : "8.0.0",
+    "version" : "8.0.1",
+    "status" : "noimpact"
+  }, {
     "id" : "oorg.talend.designer.mapreduce.repository.migration.AddDistributionForSparkMigrationTask",
     "breaks" : "8.0.0",
     "version" : "8.0.1",
