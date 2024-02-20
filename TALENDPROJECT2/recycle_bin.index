@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin">
+  <deletedFolders>metadata/connections/training</deletedFolders>
   <deletedItems id="_4gaVMI0BEe69Y-EhpX6DLw" path="" type="PROCESS"/>
   <deletedItems id="_7xu-II3UEe69Y-EhpX6DLw" path="" type="PROCESS"/>
   <deletedItems id="_JmYssI3IEe69Y-EhpX6DLw" path="" type="PROCESS"/>
