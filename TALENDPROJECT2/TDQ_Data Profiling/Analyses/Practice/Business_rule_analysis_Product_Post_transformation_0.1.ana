@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_OfKCgY7FEe6674gXgR4cxw" name="Business_rule_analysis_Product_Post_transformation" supplierDependency="_VFjHsI7FEe6674gXgR4cxw" creationDate="2023-11-29T18:04:32.935+0530" defaultContext="Default">
-    <clientDependency href="../../metadata/connections/mysql_conn_0.1.item#_kq1AAI6wEe6m-o0neW33tg"/>
+    <clientDependency href="../../../metadata/connections/mysql_conn_0.1.item#_kq1AAI6wEe6m-o0neW33tg"/>
     <taggedValue xmi:id="_OfKCgo7FEe6674gXgR4cxw" tag="Status" value="development"/>
     <taggedValue xmi:id="_OfKCg47FEe6674gXgR4cxw" tag="Author" value="anilcharan1@siedemdata_nfr"/>
     <taggedValue xmi:id="_OfKChI7FEe6674gXgR4cxw" tag="Purpose" value="Discount Invalid values"/>
@@ -10,14 +10,14 @@
     <taggedValue xmi:id="_OfKCh47FEe6674gXgR4cxw" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
     <taggedValue xmi:id="_OfKCiI7FEe6674gXgR4cxw" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
     <context xmi:id="_OfKCiY7FEe6674gXgR4cxw">
-      <connection href="../../metadata/connections/mysql_conn_0.1.item#_1gxUUI6uEe6m-o0neW33tg"/>
-      <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/mysql_conn_0.1.item#_G7AxE47EEe6674gXgR4cxw"/>
+      <connection href="../../../metadata/connections/mysql_conn_0.1.item#_1gxUUI6uEe6m-o0neW33tg"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/mysql_conn_0.1.item#_G7AxE47EEe6674gXgR4cxw"/>
     </context>
     <results xmi:id="_OfKCio7FEe6674gXgR4cxw">
       <resultMetadata xmi:id="_OfKCi47FEe6674gXgR4cxw" executionDate="2023-11-29T20:10:48.047+0530" executionDuration="1226" message="" executionNumber="7" lastRunOk="true" lastExecutionNumberOk="6"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_SIBmoI7FEe6674gXgR4cxw" computed="true">
-        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/mysql_conn_0.1.item#_G7AxE47EEe6674gXgR4cxw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/mysql_conn_0.1.item#_G7AxE47EEe6674gXgR4cxw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_SQ8SEI7FEe6674gXgR4cxw" body="SELECT COUNT(*) FROM `dqreports`.`product_transformed`  WHERE (discount &lt; 0)" language="MySQL"/>
         <builtInIndicatorDefinition xmi:id="_SQ2LcI7FEe6674gXgR4cxw" name="Row Count" label="Row Count">
           <taggedValue xmi:id="_SQ2LcY7FEe6674gXgR4cxw" tag="Description" value="counts the number of rows"/>
@@ -37,6 +37,6 @@
     </ranges>
   </dataquality.domain:Domain>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_VFjHsI7FEe6674gXgR4cxw" kind="Usage" supplier="_OfKCgY7FEe6674gXgR4cxw">
-    <client xsi:type="dataquality.reports:TdReport" href="../Reports/Column_Analysis_Product_Post_Transformation_0.1.rep#_DH0t0Y3IEe69Y-EhpX6DLw"/>
+    <client xsi:type="dataquality.reports:TdReport" href="../../Reports/Column_Analysis_Product_Post_Transformation_0.1.rep#_DH0t0Y3IEe69Y-EhpX6DLw"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>

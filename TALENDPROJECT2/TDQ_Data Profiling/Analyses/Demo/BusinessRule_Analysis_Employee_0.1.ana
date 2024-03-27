@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_gU3-4evjEe6kNJrje0cWTg" name="BusinessRule_Analysis_Employee" creationDate="2024-03-27T08:11:25.454+0530" defaultContext="Default">
+    <clientDependency href="../../../metadata/connections/Employee_0.1.item#_qNGG0OtXEe6kNJrje0cWTg"/>
+    <taggedValue xmi:id="_gU3-4uvjEe6kNJrje0cWTg" tag="Status" value="development"/>
+    <taggedValue xmi:id="_gU3-4-vjEe6kNJrje0cWTg" tag="Author" value="geetha.thota@siedemdata_nfr"/>
+    <taggedValue xmi:id="_gU3-5OvjEe6kNJrje0cWTg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_gU3-5evjEe6kNJrje0cWTg" tag="Description" value=""/>
+    <taggedValue xmi:id="_gU3-5uvjEe6kNJrje0cWTg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_pyQfUevjEe6kNJrje0cWTg" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_pyQfV-vjEe6kNJrje0cWTg" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_gU3-5-vjEe6kNJrje0cWTg">
+      <connection href="../../../metadata/connections/Employee_0.1.item#_ASIFgLxLEe66paKj2GVf5w"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C-jPgbxLEe66paKj2GVf5w"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C-tAgbxLEe66paKj2GVf5w"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C-tAk7xLEe66paKj2GVf5w"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C-3YkbxLEe66paKj2GVf5w"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C_AigbxLEe66paKj2GVf5w"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C_KTgbxLEe66paKj2GVf5w"/>
+    </context>
+    <results xmi:id="_gU3-6OvjEe6kNJrje0cWTg">
+      <resultMetadata xmi:id="_gU3-6evjEe6kNJrje0cWTg" executionDate="2024-03-27T08:13:08.464+0530" executionDuration="860" message="Query not executed for indicator: &quot;Demo DQ Rule&quot; SQL query: SELECT COUNT(*) FROM `employees`.`employees`   WHERE (example != ''). Exception: Unknown column 'example' in 'where clause'" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-cOvlEe6kNJrje0cWTg">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C-jPgbxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-cevlEe6kNJrje0cWTg">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C-tAgbxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-cuvlEe6kNJrje0cWTg">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C-tAk7xLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-c-vlEe6kNJrje0cWTg">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C-3YkbxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-dOvlEe6kNJrje0cWTg">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C_AigbxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-devlEe6kNJrje0cWTg">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C_KTgbxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+    </results>
+    <parameters xmi:id="_gU3-6-vjEe6kNJrje0cWTg" dataFilter="_pyQfWOvjEe6kNJrje0cWTg" analysisType="Table Analysis"/>
+    <contextType xmi:id="_pyQfUOvjEe6kNJrje0cWTg" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_pyQfWOvjEe6kNJrje0cWTg" name="BusinessRule_Analysis_Employee">
+    <ranges xmi:id="_pyQfWevjEe6kNJrje0cWTg">
+      <expressions xmi:id="_pyQfWuvjEe6kNJrje0cWTg">
+        <expression xsi:type="relational:TdExpression" xmi:id="_pyQfW-vjEe6kNJrje0cWTg" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>

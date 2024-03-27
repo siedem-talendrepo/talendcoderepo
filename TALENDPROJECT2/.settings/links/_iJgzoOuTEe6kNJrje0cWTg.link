@@ -1,0 +1,114 @@
+{
+  "itemId" : "_iJgzoOuTEe6kNJrje0cWTg",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_gWRrYOqWEe6kNJrje0cWTg",
+    "parameterList" : [ {
+      "id" : "_gWcDceqWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_account"
+    }, {
+      "id" : "_gWcDcuqWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_oauthProperties_oauthUserName"
+    }, {
+      "id" : "_gWcDc-qWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_role"
+    }, {
+      "id" : "_gWcDdOqWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_jdbcParameters"
+    }, {
+      "id" : "_gWcDdeqWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_userPassword_password"
+    }, {
+      "id" : "_gWcDduqWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_userPassword_userId"
+    }, {
+      "id" : "_gWcDd-qWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_oauthProperties_scope"
+    }, {
+      "id" : "_gWcDeOqWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_oauthProperties_oauthPassword"
+    }, {
+      "id" : "_gWcDeeqWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_regionID"
+    }, {
+      "id" : "_gWcDeuqWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_warehouse"
+    }, {
+      "id" : "_gWcDe-qWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_db"
+    }, {
+      "id" : "_gWcDfOqWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_loginTimeout"
+    }, {
+      "id" : "_gWcDfeqWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_keyAlias"
+    }, {
+      "id" : "_gWcDfuqWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_oauthProperties_oauthTokenEndpoint"
+    }, {
+      "id" : "_gWcDf-qWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_oauthProperties_clientSecret"
+    }, {
+      "id" : "_gWcDgOqWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_schemaName"
+    }, {
+      "id" : "_gWcDgeqWEe6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_oauthProperties_clientId"
+    } ]
+  }, {
+    "contextName" : "DEV",
+    "repoId" : "_gWRrYOqWEe6kNJrje0cWTg",
+    "parameterList" : [ {
+      "id" : "_nZeoEev5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_account"
+    }, {
+      "id" : "_nZeoEuv5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_oauthProperties_oauthUserName"
+    }, {
+      "id" : "_nZeoE-v5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_role"
+    }, {
+      "id" : "_nZeoFOv5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_jdbcParameters"
+    }, {
+      "id" : "_nZeoFev5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_userPassword_password"
+    }, {
+      "id" : "_nZeoFuv5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_userPassword_userId"
+    }, {
+      "id" : "_nZeoF-v5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_oauthProperties_scope"
+    }, {
+      "id" : "_nZeoGOv5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_oauthProperties_oauthPassword"
+    }, {
+      "id" : "_nZeoGev5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_regionID"
+    }, {
+      "id" : "_nZeoGuv5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_warehouse"
+    }, {
+      "id" : "_nZeoG-v5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_db"
+    }, {
+      "id" : "_nZeoHOv5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_loginTimeout"
+    }, {
+      "id" : "_nZeoHev5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_keyAlias"
+    }, {
+      "id" : "_nZeoHuv5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_oauthProperties_oauthTokenEndpoint"
+    }, {
+      "id" : "_nZeoH-v5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_oauthProperties_clientSecret"
+    }, {
+      "id" : "_nZeoIOv5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_schemaName"
+    }, {
+      "id" : "_nZeoIev5Ee6kNJrje0cWTg",
+      "name" : "EMPLOYEE_RAW_oauthProperties_clientId"
+    } ]
+  } ]
+}

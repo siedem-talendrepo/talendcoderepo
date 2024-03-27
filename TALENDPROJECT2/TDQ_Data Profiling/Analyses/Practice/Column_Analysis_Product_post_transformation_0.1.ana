@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_X4_FEY3HEe69Y-EhpX6DLw" name="Column Analysis Product_post_transformation" supplierDependency="_DH0t443IEe69Y-EhpX6DLw" creationDate="2023-11-28T13:12:05.956+0530" defaultContext="Default">
-    <clientDependency href="../../metadata/connections/mysql_conn_0.1.item#_kq1AAI6wEe6m-o0neW33tg"/>
+    <clientDependency href="../../../metadata/connections/mysql_conn_0.1.item#_kq1AAI6wEe6m-o0neW33tg"/>
     <taggedValue xmi:id="_X4_FEo3HEe69Y-EhpX6DLw" tag="Status" value="development"/>
     <taggedValue xmi:id="_X4_FE43HEe69Y-EhpX6DLw" tag="Author" value="anilcharan1@siedemdata_nfr"/>
     <taggedValue xmi:id="_X4_FFI3HEe69Y-EhpX6DLw" tag="Purpose" value=""/>
@@ -12,18 +12,18 @@
     <taggedValue xmi:id="_X4_FGY3HEe69Y-EhpX6DLw" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
     <taggedValue xmi:id="_X4_FGo3HEe69Y-EhpX6DLw" tag="Is Use Sample Data" value="false"/>
     <context xmi:id="_X4_FG43HEe69Y-EhpX6DLw">
-      <connection href="../../metadata/connections/mysql_conn_0.1.item#_1gxUUI6uEe6m-o0neW33tg"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsKsI7EEe6674gXgR4cxw"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsKtI7EEe6674gXgR4cxw"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsK1I7EEe6674gXgR4cxw"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsK2I7EEe6674gXgR4cxw"/>
+      <connection href="../../../metadata/connections/mysql_conn_0.1.item#_1gxUUI6uEe6m-o0neW33tg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsKsI7EEe6674gXgR4cxw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsKtI7EEe6674gXgR4cxw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsK1I7EEe6674gXgR4cxw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsK2I7EEe6674gXgR4cxw"/>
     </context>
     <results xmi:id="_X4_FHI3HEe69Y-EhpX6DLw">
       <resultMetadata xmi:id="_X4_FHY3HEe69Y-EhpX6DLw" executionDate="2023-11-29T20:06:17.174+0530" executionDuration="15166" message="" executionNumber="7" lastRunOk="true" lastExecutionNumberOk="7"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_bZoxYI7EEe6674gXgR4cxw" count="549840" computed="true">
         <parameters xmi:id="_bZoxYY7EEe6674gXgR4cxw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsKsI7EEe6674gXgR4cxw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsKsI7EEe6674gXgR4cxw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
         <builtInIndicatorDefinition xmi:id="_bn7sEI7EEe6674gXgR4cxw" name="Row Count" label="Row Count">
           <taggedValue xmi:id="_bn7sEY7EEe6674gXgR4cxw" tag="Description" value="counts the number of rows"/>
           <taggedValue xmi:id="_bn7sEo7EEe6674gXgR4cxw" tag="Purpose" value="evaluates the number of records"/>
@@ -32,8 +32,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_bZoxYo7EEe6674gXgR4cxw" count="549840" computed="true" distinctValueCount="9">
         <parameters xmi:id="_bZoxY47EEe6674gXgR4cxw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsKsI7EEe6674gXgR4cxw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsKsI7EEe6674gXgR4cxw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
         <builtInIndicatorDefinition xmi:id="_bn_9gI7EEe6674gXgR4cxw" name="Distinct Count" label="Distinct Count">
           <taggedValue xmi:id="_boAkkI7EEe6674gXgR4cxw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
           <taggedValue xmi:id="_boAkkY7EEe6674gXgR4cxw" tag="Purpose" value="evaluates the number of distinct records"/>
@@ -42,8 +42,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_pxN68I7EEe6674gXgR4cxw" count="549840" computed="true">
         <parameters xmi:id="_pxN68Y7EEe6674gXgR4cxw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsKsI7EEe6674gXgR4cxw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsKsI7EEe6674gXgR4cxw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <builtInIndicatorDefinition xmi:id="_p47sgI7EEe6674gXgR4cxw" name="Blank Count" label="Blank Count">
           <taggedValue xmi:id="_p47sgY7EEe6674gXgR4cxw" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
           <taggedValue xmi:id="_p47sgo7EEe6674gXgR4cxw" tag="Purpose" value="evaluates the number of blank records"/>
@@ -56,8 +56,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_bZtp4I7EEe6674gXgR4cxw" count="549840" computed="true">
         <parameters xmi:id="_bZtp4Y7EEe6674gXgR4cxw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsKtI7EEe6674gXgR4cxw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsKtI7EEe6674gXgR4cxw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
         <builtInIndicatorDefinition xmi:id="_boSRYI7EEe6674gXgR4cxw" name="Row Count" label="Row Count">
           <taggedValue xmi:id="_boSRYY7EEe6674gXgR4cxw" tag="Description" value="counts the number of rows"/>
           <taggedValue xmi:id="_boSRYo7EEe6674gXgR4cxw" tag="Purpose" value="evaluates the number of records"/>
@@ -66,8 +66,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_bZtp4o7EEe6674gXgR4cxw" count="549840" computed="true" distinctValueCount="648">
         <parameters xmi:id="_bZtp447EEe6674gXgR4cxw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsKtI7EEe6674gXgR4cxw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsKtI7EEe6674gXgR4cxw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
         <builtInIndicatorDefinition xmi:id="_boWi0I7EEe6674gXgR4cxw" name="Distinct Count" label="Distinct Count">
           <taggedValue xmi:id="_boWi0Y7EEe6674gXgR4cxw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
           <taggedValue xmi:id="_boWi0o7EEe6674gXgR4cxw" tag="Purpose" value="evaluates the number of distinct records"/>
@@ -76,8 +76,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_pxN68o7EEe6674gXgR4cxw" count="549840" computed="true">
         <parameters xmi:id="_pxN6847EEe6674gXgR4cxw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsKtI7EEe6674gXgR4cxw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsKtI7EEe6674gXgR4cxw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <builtInIndicatorDefinition xmi:id="_p5GroI7EEe6674gXgR4cxw" name="Blank Count" label="Blank Count">
           <taggedValue xmi:id="_p5GroY7EEe6674gXgR4cxw" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
           <taggedValue xmi:id="_p5Groo7EEe6674gXgR4cxw" tag="Purpose" value="evaluates the number of blank records"/>
@@ -90,8 +90,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_bZtp5o7EEe6674gXgR4cxw" count="549840" computed="true">
         <parameters xmi:id="_bZtp547EEe6674gXgR4cxw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsK1I7EEe6674gXgR4cxw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsK1I7EEe6674gXgR4cxw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
         <builtInIndicatorDefinition xmi:id="_bozOwI7EEe6674gXgR4cxw" name="Row Count" label="Row Count">
           <taggedValue xmi:id="_bozOwY7EEe6674gXgR4cxw" tag="Description" value="counts the number of rows"/>
           <taggedValue xmi:id="_bozOwo7EEe6674gXgR4cxw" tag="Purpose" value="evaluates the number of records"/>
@@ -100,8 +100,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_bZtp6I7EEe6674gXgR4cxw" count="549840" computed="true" distinctValueCount="413">
         <parameters xmi:id="_bZtp6Y7EEe6674gXgR4cxw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsK1I7EEe6674gXgR4cxw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsK1I7EEe6674gXgR4cxw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
         <builtInIndicatorDefinition xmi:id="_bpBRMI7EEe6674gXgR4cxw" name="Distinct Count" label="Distinct Count">
           <taggedValue xmi:id="_bpBRMY7EEe6674gXgR4cxw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
           <taggedValue xmi:id="_bpBRMo7EEe6674gXgR4cxw" tag="Purpose" value="evaluates the number of distinct records"/>
@@ -110,8 +110,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_pxN69I7EEe6674gXgR4cxw" count="549840" computed="true">
         <parameters xmi:id="_pxN69Y7EEe6674gXgR4cxw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsK1I7EEe6674gXgR4cxw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsK1I7EEe6674gXgR4cxw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <builtInIndicatorDefinition xmi:id="_p5MyQI7EEe6674gXgR4cxw" name="Blank Count" label="Blank Count">
           <taggedValue xmi:id="_p5MyQY7EEe6674gXgR4cxw" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
           <taggedValue xmi:id="_p5MyQo7EEe6674gXgR4cxw" tag="Purpose" value="evaluates the number of blank records"/>
@@ -124,8 +124,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_bZtp7I7EEe6674gXgR4cxw" count="549840" computed="true">
         <parameters xmi:id="_bZtp7Y7EEe6674gXgR4cxw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsK2I7EEe6674gXgR4cxw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsK2I7EEe6674gXgR4cxw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
         <builtInIndicatorDefinition xmi:id="_bpdWEI7EEe6674gXgR4cxw" name="Row Count" label="Row Count">
           <taggedValue xmi:id="_bpdWEY7EEe6674gXgR4cxw" tag="Description" value="counts the number of rows"/>
           <taggedValue xmi:id="_bpdWEo7EEe6674gXgR4cxw" tag="Purpose" value="evaluates the number of records"/>
@@ -134,8 +134,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_bZtp7o7EEe6674gXgR4cxw" count="549840" computed="true" distinctValueCount="392">
         <parameters xmi:id="_bZtp747EEe6674gXgR4cxw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsK2I7EEe6674gXgR4cxw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsK2I7EEe6674gXgR4cxw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
         <builtInIndicatorDefinition xmi:id="_bppjUI7EEe6674gXgR4cxw" name="Distinct Count" label="Distinct Count">
           <taggedValue xmi:id="_bppjUY7EEe6674gXgR4cxw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
           <taggedValue xmi:id="_bppjUo7EEe6674gXgR4cxw" tag="Purpose" value="evaluates the number of distinct records"/>
@@ -144,8 +144,8 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_pxN69o7EEe6674gXgR4cxw" count="549840" computed="true">
         <parameters xmi:id="_pxN6947EEe6674gXgR4cxw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsK2I7EEe6674gXgR4cxw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsK2I7EEe6674gXgR4cxw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <builtInIndicatorDefinition xmi:id="_p5fGII7EEe6674gXgR4cxw" name="Blank Count" label="Blank Count">
           <taggedValue xmi:id="_p5fGIY7EEe6674gXgR4cxw" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
           <taggedValue xmi:id="_p5fGIo7EEe6674gXgR4cxw" tag="Purpose" value="evaluates the number of blank records"/>
@@ -161,7 +161,7 @@
     <contextType xmi:id="_X4_FeI3HEe69Y-EhpX6DLw" confirmationNeeded="false" hide="false" name="Default"/>
   </dataquality.analysis:Analysis>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_DH0t443IEe69Y-EhpX6DLw" kind="Usage" supplier="_X4_FEY3HEe69Y-EhpX6DLw">
-    <client xsi:type="dataquality.reports:TdReport" href="../Reports/Column_Analysis_Product_Post_Transformation_0.1.rep#_DH0t0Y3IEe69Y-EhpX6DLw"/>
+    <client xsi:type="dataquality.reports:TdReport" href="../../Reports/Column_Analysis_Product_Post_Transformation_0.1.rep#_DH0t0Y3IEe69Y-EhpX6DLw"/>
   </orgomg.cwm.objectmodel.core:Dependency>
   <dataquality.domain:Domain xmi:id="_X4_FeY3HEe69Y-EhpX6DLw" name="Column Analysis Product_post_transformation">
     <ranges xmi:id="_X4_Feo3HEe69Y-EhpX6DLw">

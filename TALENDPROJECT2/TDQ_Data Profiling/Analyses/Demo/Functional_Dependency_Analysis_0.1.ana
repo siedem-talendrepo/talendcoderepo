@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_fXuw4euFEe6kNJrje0cWTg" name="Functional_Dependency_Analysis" creationDate="2024-03-26T20:58:26.350+0530">
+  <taggedValue xmi:id="_fXuw4uuFEe6kNJrje0cWTg" tag="Status" value="development"/>
+  <taggedValue xmi:id="_fXuw4-uFEe6kNJrje0cWTg" tag="Author" value="geetha.thota@siedemdata_nfr"/>
+  <taggedValue xmi:id="_fXuw5OuFEe6kNJrje0cWTg" tag="Purpose"/>
+  <taggedValue xmi:id="_fXuw5euFEe6kNJrje0cWTg" tag="Description"/>
+  <taggedValue xmi:id="_fXuw5uuFEe6kNJrje0cWTg" tag="Version" value="0.1"/>
+  <context xmi:id="_fXuw5-uFEe6kNJrje0cWTg"/>
+  <results xmi:id="_fXuw6OuFEe6kNJrje0cWTg">
+    <resultMetadata xmi:id="_fXuw6euFEe6kNJrje0cWTg"/>
+  </results>
+  <parameters xmi:id="_fXuw6uuFEe6kNJrje0cWTg" analysisType="Functional Dependency"/>
+</dataquality.analysis:Analysis>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmi:id="_rR1EAeuIEe6kNJrje0cWTg" name="CorrelationAnalysis" creationDate="2024-03-26T21:21:14.752+0530">
+  <taggedValue xmi:id="_rR1EAuuIEe6kNJrje0cWTg" tag="Status" value="development"/>
+  <taggedValue xmi:id="_rR1EA-uIEe6kNJrje0cWTg" tag="Author" value="geetha.thota@siedemdata_nfr"/>
+  <taggedValue xmi:id="_rR1EBOuIEe6kNJrje0cWTg" tag="Purpose"/>
+  <taggedValue xmi:id="_rR1EBeuIEe6kNJrje0cWTg" tag="Description"/>
+  <taggedValue xmi:id="_rR1EBuuIEe6kNJrje0cWTg" tag="Version" value="0.1"/>
+  <context xmi:id="_rR1EB-uIEe6kNJrje0cWTg"/>
+  <results xmi:id="_rR1ECOuIEe6kNJrje0cWTg">
+    <resultMetadata xmi:id="_rR1ECeuIEe6kNJrje0cWTg"/>
+    <indicators xsi:type="dataquality.indicators.columnset:MinMaxDateIndicator" xmi:id="_rR1ECuuIEe6kNJrje0cWTg">
+      <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Correlation/Min_Max_Date_Multiple_Column_Frequency_Table_0.1.definition#_yCHCULrcEd2PGrJOyhNk-w"/>
+      <rowCountIndicator xmi:id="_rR1EC-uIEe6kNJrje0cWTg"/>
+      <uniqueCountIndicator xmi:id="_rR1EDOuIEe6kNJrje0cWTg"/>
+      <distinctCountIndicator xmi:id="_rR1EDeuIEe6kNJrje0cWTg"/>
+      <duplicateCountIndicator xmi:id="_rR1EDuuIEe6kNJrje0cWTg"/>
+    </indicators>
+  </results>
+  <parameters xmi:id="_rR1ED-uIEe6kNJrje0cWTg" analysisType="Column Correlation Analysis"/>
+</dataquality.analysis:Analysis>

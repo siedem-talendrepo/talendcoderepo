@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataquality.reports:TdReport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.reports="http://dataquality.reports" xmi:id="_DH0t0Y3IEe69Y-EhpX6DLw" name="Column Analysis Product_Post_Transformation" creationDate="2023-11-28T13:58:03.757+0530" defaultContext="Default">
-  <clientDependency href="../Analyses/Column_Analysis_Product_post_transformation_0.1.ana#_DH0t443IEe69Y-EhpX6DLw"/>
-  <clientDependency href="../Analyses/Business_rule_analysis_Product_Post_transformation_0.1.ana#_VFjHsI7FEe6674gXgR4cxw"/>
-  <clientDependency href="../Analyses/column_set_Analysis_post_transformation_0.1.ana#_VFvU8I7FEe6674gXgR4cxw"/>
+  <clientDependency href="../Analyses/Practice/Column_Analysis_Product_post_transformation_0.1.ana#_DH0t443IEe69Y-EhpX6DLw"/>
+  <clientDependency href="../Analyses/Practice/Business_rule_analysis_Product_Post_transformation_0.1.ana#_VFjHsI7FEe6674gXgR4cxw"/>
+  <clientDependency href="../Analyses/Practice/column_set_Analysis_post_transformation_0.1.ana#_VFvU8I7FEe6674gXgR4cxw"/>
   <taggedValue xmi:id="_DH0t0o3IEe69Y-EhpX6DLw" tag="OutputFolder" value="C:\Users\Geetha Thota\OneDrive\Documents\Siedem\DQ REports"/>
   <taggedValue xmi:id="_DH0t043IEe69Y-EhpX6DLw" tag="REP_DBINFO_DBTYPE" value="HSQL"/>
   <taggedValue xmi:id="_DH0t1I3IEe69Y-EhpX6DLw" tag="REP_DBINFO_DBVERSION" value=""/>
@@ -28,13 +28,13 @@
   <taggedValue xmi:id="_Z0JUxo3IEe69Y-EhpX6DLw" tag="REP_GENERATE_FILE" value="true"/>
   <taggedValue xmi:id="_Z0JUyI3IEe69Y-EhpX6DLw" tag="REP_LAST_RUN_CONTEXT" value="Default"/>
   <analysisMap xmi:id="_DH0t4o3IEe69Y-EhpX6DLw" mustRefresh="true" reportType="Basic">
-    <analysis href="../Analyses/Column_Analysis_Product_post_transformation_0.1.ana#_X4_FEY3HEe69Y-EhpX6DLw"/>
+    <analysis href="../Analyses/Practice/Column_Analysis_Product_post_transformation_0.1.ana#_X4_FEY3HEe69Y-EhpX6DLw"/>
   </analysisMap>
   <analysisMap xmi:id="_VFW6cI7FEe6674gXgR4cxw" mustRefresh="true" reportType="Basic">
-    <analysis href="../Analyses/Business_rule_analysis_Product_Post_transformation_0.1.ana#_OfKCgY7FEe6674gXgR4cxw"/>
+    <analysis href="../Analyses/Practice/Business_rule_analysis_Product_Post_transformation_0.1.ana#_OfKCgY7FEe6674gXgR4cxw"/>
   </analysisMap>
   <analysisMap xmi:id="_VFW6cY7FEe6674gXgR4cxw" mustRefresh="true" reportType="Basic">
-    <analysis href="../Analyses/column_set_Analysis_post_transformation_0.1.ana#_trjYoY67Ee6lF6W9iI5hog"/>
+    <analysis href="../Analyses/Practice/column_set_Analysis_post_transformation_0.1.ana#_trjYoY67Ee6lF6W9iI5hog"/>
   </analysisMap>
   <ExecInformations xmi:id="_PYJrcI3SEe69Y-EhpX6DLw" executionDate="2023-11-28T16:02:51.174+0530" executionDuration="2079" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
   <context xmi:id="_Z0JUx43IEe69Y-EhpX6DLw" confirmationNeeded="false" hide="false" name="Default"/>

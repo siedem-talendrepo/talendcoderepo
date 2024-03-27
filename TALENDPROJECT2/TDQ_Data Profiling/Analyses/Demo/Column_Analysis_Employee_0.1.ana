@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_NfpqIeuHEe6kNJrje0cWTg" name="Column_Analysis_Employee" creationDate="2024-03-26T21:10:45.378+0530" defaultContext="Default">
+    <clientDependency href="../../../metadata/connections/Employee_0.1.item#_qNGG0OtXEe6kNJrje0cWTg"/>
+    <clientDependency href="../../../TDQ_Libraries/Patterns/Regex/text/Starts_with_uppercase_0.1.pattern#_oCsG4IzzEe6DPNh9qc8Srg"/>
+    <taggedValue xmi:id="_NfpqIuuHEe6kNJrje0cWTg" tag="Status" value="development"/>
+    <taggedValue xmi:id="_NfpqI-uHEe6kNJrje0cWTg" tag="Author" value="geetha.thota@siedemdata_nfr"/>
+    <taggedValue xmi:id="_NfpqJOuHEe6kNJrje0cWTg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_NfpqJeuHEe6kNJrje0cWTg" tag="Description" value=""/>
+    <taggedValue xmi:id="_NfpqJuuHEe6kNJrje0cWTg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_wSUX0euHEe6kNJrje0cWTg" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_wSUX0uuHEe6kNJrje0cWTg" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_wSUX0-uHEe6kNJrje0cWTg" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_wTQL8OuHEe6kNJrje0cWTg" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_NfpqJ-uHEe6kNJrje0cWTg">
+      <connection href="../../../metadata/connections/Employee_0.1.item#_ASIFgLxLEe66paKj2GVf5w"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAlLxLEe66paKj2GVf5w"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAmLxLEe66paKj2GVf5w"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAnLxLEe66paKj2GVf5w"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAoLxLEe66paKj2GVf5w"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tApLxLEe66paKj2GVf5w"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAqLxLEe66paKj2GVf5w"/>
+    </context>
+    <results xmi:id="_NfpqKOuHEe6kNJrje0cWTg">
+      <resultMetadata xmi:id="_NfpqKeuHEe6kNJrje0cWTg" executionDate="2024-03-26T21:19:54.802+0530" executionDuration="13526" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_e2C4wOuIEe6kNJrje0cWTg" computed="true">
+        <parameters xmi:id="_e2C4weuIEe6kNJrje0cWTg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAlLxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fXeK0OuIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM `employees`.`employees` WHERE `emp_no` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_fUo5QOuIEe6kNJrje0cWTg" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_fUo5QeuIEe6kNJrje0cWTg" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_fUo5QuuIEe6kNJrje0cWTg" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_fUo5Q-uIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_e2C4wuuIEe6kNJrje0cWTg" computed="true" duplicateValueCount="0">
+        <parameters xmi:id="_e2C4w-uIEe6kNJrje0cWTg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAlLxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fXeK0euIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM (SELECT `emp_no`, COUNT(*) mycount FROM `employees`.`employees`  m  GROUP BY `emp_no` HAVING mycount > 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_fVVc0OuIEe6kNJrje0cWTg" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_fVVc0euIEe6kNJrje0cWTg" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_fVVc0uuIEe6kNJrje0cWTg" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_fVVc0-uIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_fVWD4OuIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_fVWD4euIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_fVWD4uuIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_fVWD4-uIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_fVWD5OuIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_fVWD5euIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_e2C4xOuIEe6kNJrje0cWTg" computed="true">
+        <parameters xmi:id="_e2C4xeuIEe6kNJrje0cWTg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAmLxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fXeK0uuIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM `employees`.`employees` WHERE `birth_date` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_fVmikOuIEe6kNJrje0cWTg" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_fVmikeuIEe6kNJrje0cWTg" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_fVmikuuIEe6kNJrje0cWTg" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_fVmik-uIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_e2C4xuuIEe6kNJrje0cWTg" computed="true" distinctValueCount="1" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000174000A393939392D39392D39397372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B020000787000000000000493F878">
+        <parameters xmi:id="_e2C4x-uIEe6kNJrje0cWTg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAmLxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fXex4OuIEe6kNJrje0cWTg" body="SELECT BINARY REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE( CAST(`birth_date` AS CHAR(30)) ,'a','a'),'b','a'),'c','a'),'d','a'),'e','a'),'f','a'),'g','a'),'h','a'),'i','a'),'j','a'),'k','a'),'l','a'),'m','a'),'n','a'),'o','a'),'p','a'),'q','a'),'r','a'),'s','a'),'t','a'),'u','a'),'v','a'),'w','a'),'x','a'),'y','a'),'z','a'),'ç','a'),'â','a'),'ê','a'),'î','a'),'ô','a'),'û','a'),'é','a'),'è','a'),'ù','a'),'ï','a'),'ö','a'),'ü','a'),'A','A'),'B','A'),'C','A'),'D','A'),'E','A'),'F','A'),'G','A'),'H','A'),'I','A'),'J','A'),'K','A'),'L','A'),'M','A'),'N','A'),'O','A'),'P','A'),'Q','A'),'R','A'),'S','A'),'T','A'),'U','A'),'V','A'),'W','A'),'X','A'),'Y','A'),'Z','A'),'Ç','A'),'Â','A'),'Ê','A'),'Î','A'),'Ô','A'),'Û','A'),'É','A'),'È','A'),'Ù','A'),'Ï','A'),'Ö','A'),'Ü','A'),'0','9'),'1','9'),'2','9'),'3','9'),'4','9'),'5','9'),'6','9'),'7','9'),'8','9'),'9','9'), COUNT(*) c FROM `employees`.`employees` t  GROUP BY BINARY REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE( CAST(`birth_date` AS CHAR(30)) ,'a','a'),'b','a'),'c','a'),'d','a'),'e','a'),'f','a'),'g','a'),'h','a'),'i','a'),'j','a'),'k','a'),'l','a'),'m','a'),'n','a'),'o','a'),'p','a'),'q','a'),'r','a'),'s','a'),'t','a'),'u','a'),'v','a'),'w','a'),'x','a'),'y','a'),'z','a'),'ç','a'),'â','a'),'ê','a'),'î','a'),'ô','a'),'û','a'),'é','a'),'è','a'),'ù','a'),'ï','a'),'ö','a'),'ü','a'),'A','A'),'B','A'),'C','A'),'D','A'),'E','A'),'F','A'),'G','A'),'H','A'),'I','A'),'J','A'),'K','A'),'L','A'),'M','A'),'N','A'),'O','A'),'P','A'),'Q','A'),'R','A'),'S','A'),'T','A'),'U','A'),'V','A'),'W','A'),'X','A'),'Y','A'),'Z','A'),'Ç','A'),'Â','A'),'Ê','A'),'Î','A'),'Ô','A'),'Û','A'),'É','A'),'È','A'),'Ù','A'),'Ï','A'),'Ö','A'),'Ü','A'),'0','9'),'1','9'),'2','9'),'3','9'),'4','9'),'5','9'),'6','9'),'7','9'),'8','9'),'9','9') ORDER BY c DESC LIMIT 10" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_fV6EkOuIEe6kNJrje0cWTg" name="Pattern Frequency Table" label="Pattern Frequency Table">
+          <taggedValue xmi:id="_fV6EkeuIEe6kNJrje0cWTg" tag="Description" value="counts the number of records for each distinct pattern"/>
+          <taggedValue xmi:id="_fV6EkuuIEe6kNJrje0cWTg" tag="Purpose" value="evaluates the most frequent patterns"/>
+          <sqlGenericExpression xmi:id="_fV6Ek-uIEe6kNJrje0cWTg" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__GROUP_BY_ALIAS__%> ORDER BY c DESC" language="SQL"/>
+          <sqlGenericExpression xmi:id="_fV6ElOuIEe6kNJrje0cWTg" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__GROUP_BY_ALIAS__%> ORDER BY c DESC" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_fV6EleuIEe6kNJrje0cWTg" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) AS c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY c DESC" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_fV6EluuIEe6kNJrje0cWTg" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) AS c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__GROUP_BY_ALIAS__%> ORDER BY c DESC" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_fV6El-uIEe6kNJrje0cWTg" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY c DESC" language="DB2"/>
+          <sqlGenericExpression xmi:id="_fV6EmOuIEe6kNJrje0cWTg" body="SELECT &lt;%=__COLUMN_NAMES__%> , COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__GROUP_BY_ALIAS__%> ORDER BY c DESC" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_fV6EmeuIEe6kNJrje0cWTg" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) AS c FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__GROUP_BY_ALIAS__%> ORDER BY c DESC" language="Informix"/>
+          <sqlGenericExpression xmi:id="_fV6EmuuIEe6kNJrje0cWTg" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY c DESC" language="AS/400"/>
+          <sqlGenericExpression xmi:id="_fV6Em-uIEe6kNJrje0cWTg" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__GROUP_BY_ALIAS__%> ORDER BY c DESC" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_fV6EnOuIEe6kNJrje0cWTg" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) AS c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY c DESC" language="Vertica Database"/>
+          <sqlGenericExpression xmi:id="_fV6EneuIEe6kNJrje0cWTg" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) AS c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY c DESC" language="Netezza"/>
+          <charactersMapping xmi:id="_fV6EnuuIEe6kNJrje0cWTg" language="SQL" charactersToReplace="abcdefghijklmnopqrstuvwxyzçâêîôûéèùïöüABCDEFGHIJKLMNOPQRSTUVWXYZÇÂÊÎÔÛÉÈÙÏÖÜ0123456789" replacementCharacters="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9999999999"/>
+          <charactersMapping xmi:id="_fV6En-uIEe6kNJrje0cWTg" name="Characters mapping on MySQL" language="MySQL" charactersToReplace="abcdefghijklmnopqrstuvwxyzçâêîôûéèùïöüABCDEFGHIJKLMNOPQRSTUVWXYZÇÂÊÎÔÛÉÈÙÏÖÜ0123456789" replacementCharacters="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9999999999"/>
+          <charactersMapping xmi:id="_fV6EoOuIEe6kNJrje0cWTg" name="Characters mapping on Oracle" language="Oracle" charactersToReplace="abcdefghijklmnopqrstuvwxyzçâêîôûéèùïöüABCDEFGHIJKLMNOPQRSTUVWXYZÇÂÊÎÔÛÉÈÙÏÖÜ0123456789" replacementCharacters="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9999999999"/>
+          <charactersMapping xmi:id="_fV6EoeuIEe6kNJrje0cWTg" name="Characters mapping on PostgreSQL" language="PostgreSQL" charactersToReplace="abcdefghijklmnopqrstuvwxyzçâêîôûéèùïöüABCDEFGHIJKLMNOPQRSTUVWXYZÇÂÊÎÔÛÉÈÙÏÖÜ0123456789" replacementCharacters="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9999999999"/>
+          <charactersMapping xmi:id="_fV6EouuIEe6kNJrje0cWTg" name="Characters mapping on Microsoft SQL Server" language="Microsoft SQL Server" charactersToReplace="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" replacementCharacters="aaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAA9999999999"/>
+          <charactersMapping xmi:id="_fV6Eo-uIEe6kNJrje0cWTg" name="Characters mapping on DB2" language="DB2" charactersToReplace="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" replacementCharacters="aaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAA9999999999"/>
+          <charactersMapping xmi:id="_fV6EpOuIEe6kNJrje0cWTg" name="Characters mapping on AS/400" language="AS/400" charactersToReplace="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" replacementCharacters="aaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAA9999999999"/>
+          <charactersMapping xmi:id="_fV6EpeuIEe6kNJrje0cWTg" name="Characters mapping on Informix" language="Informix" charactersToReplace="abcdefghijklmnopqrstuvwxyzçâêîôûéèùïöüABCDEFGHIJKLMNOPQRSTUVWXYZÇÂÊÎÔÛÉÈÙÏÖÜ0123456789" replacementCharacters="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9999999999"/>
+          <charactersMapping xmi:id="_fV6EpuuIEe6kNJrje0cWTg" name="Characters mapping on Teradata" language="Teradata" charactersToReplace="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" replacementCharacters="aaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAA9999999999"/>
+          <charactersMapping xmi:id="_fV6Ep-uIEe6kNJrje0cWTg" name="Characters mapping on Vertica" language="Vertica Database" charactersToReplace="abcdefghijklmnopqrstuvwxyzçâêîôûéèùïöüABCDEFGHIJKLMNOPQRSTUVWXYZÇÂÊÎÔÛÉÈÙÏÖÜ0123456789" replacementCharacters="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9999999999"/>
+          <charactersMapping xmi:id="_fV6EqOuIEe6kNJrje0cWTg" language="Netezza" charactersToReplace="abcdefghijklmnopqrstuvwxyzçâêîôûéèùïöüABCDEFGHIJKLMNOPQRSTUVWXYZÇÂÊÎÔÛÉÈÙÏÖÜ0123456789" replacementCharacters="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9999999999"/>
+          <charactersMapping xmi:id="_fV6EqeuIEe6kNJrje0cWTg" name="Characters mapping on Hive" language="Hive" charactersToReplace="0123456789abcdefghijklmnopqrstuvwxyz?aê???éèù??üABCDEFGHIJKLMNOPQRSTUVWXYZ??ê???éèù??ü" replacementCharacters="9999999999aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_e2C4yOuIEe6kNJrje0cWTg" computed="true">
+        <parameters xmi:id="_e2C4yeuIEe6kNJrje0cWTg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAnLxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fXex4euIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM `employees`.`employees` WHERE `first_name` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_fWO0sOuIEe6kNJrje0cWTg" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_fWO0seuIEe6kNJrje0cWTg" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_fWO0suuIEe6kNJrje0cWTg" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_fWO0s-uIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RegexpMatchingIndicator" xmi:id="_e2C4yuuIEe6kNJrje0cWTg" name="Starts with uppercase" count="300024" computed="true" matchingValueCount="300024">
+        <parameters xmi:id="_e2C4y-uIEe6kNJrje0cWTg">
+          <dataValidDomain xmi:id="_e2C4zOuIEe6kNJrje0cWTg">
+            <patterns href="../../../TDQ_Libraries/Patterns/Regex/text/Starts_with_uppercase_0.1.pattern#_53rX8AMvEeKk6OZDw5mXOQ"/>
+          </dataValidDomain>
+        </parameters>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAnLxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fXex4uuIEe6kNJrje0cWTg" body="SELECT COUNT(CASE WHEN REGEXP_LIKE(`first_name`,'^[A-Z]+','c') THEN 1 END), COUNT(*) FROM `employees`.`employees` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_e2C4zeuIEe6kNJrje0cWTg" computed="true">
+        <parameters xmi:id="_e2C4zuuIEe6kNJrje0cWTg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAoLxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fXex4-uIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM `employees`.`employees` WHERE `last_name` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_fWfTYOuIEe6kNJrje0cWTg" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_fWfTYeuIEe6kNJrje0cWTg" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_fWfTYuuIEe6kNJrje0cWTg" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_fWfTY-uIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RegexpMatchingIndicator" xmi:id="_e2C4z-uIEe6kNJrje0cWTg" name="Starts with uppercase" count="300024" computed="true" matchingValueCount="299858" notMatchingValueCount="166">
+        <parameters xmi:id="_e2C40OuIEe6kNJrje0cWTg">
+          <dataValidDomain xmi:id="_e2C40euIEe6kNJrje0cWTg">
+            <patterns href="../../../TDQ_Libraries/Patterns/Regex/text/Starts_with_uppercase_0.1.pattern#_53rX8AMvEeKk6OZDw5mXOQ"/>
+          </dataValidDomain>
+        </parameters>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAoLxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fXex5OuIEe6kNJrje0cWTg" body="SELECT COUNT(CASE WHEN REGEXP_LIKE(`last_name`,'^[A-Z]+','c') THEN 1 END), COUNT(*) FROM `employees`.`employees` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_e2C40uuIEe6kNJrje0cWTg" computed="true">
+        <parameters xmi:id="_e2C40-uIEe6kNJrje0cWTg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tApLxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fXfY8OuIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM `employees`.`employees` WHERE `gender` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_fWzccOuIEe6kNJrje0cWTg" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_fWzcceuIEe6kNJrje0cWTg" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_fWzccuuIEe6kNJrje0cWTg" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_fWzcc-uIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_e2C41OuIEe6kNJrje0cWTg" computed="true">
+        <parameters xmi:id="_e2C41euIEe6kNJrje0cWTg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAqLxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fXfY8euIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM `employees`.`employees` WHERE `hire_date` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_fXD7IOuIEe6kNJrje0cWTg" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_fXD7IeuIEe6kNJrje0cWTg" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_fXD7IuuIEe6kNJrje0cWTg" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_fXD7I-uIEe6kNJrje0cWTg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_NfpqKuuHEe6kNJrje0cWTg" dataFilter="_wTQL8euHEe6kNJrje0cWTg" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_wSUX0OuHEe6kNJrje0cWTg" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_wTQL8euHEe6kNJrje0cWTg" name="Column_Analysis_Employee">
+    <ranges xmi:id="_wTQL8uuHEe6kNJrje0cWTg">
+      <expressions xmi:id="_wTQL8-uHEe6kNJrje0cWTg">
+        <expression xsi:type="relational:TdExpression" xmi:id="_wTQL9OuHEe6kNJrje0cWTg" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>

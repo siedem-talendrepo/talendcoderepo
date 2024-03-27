@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.schema="http://dataquality.indicators.schema" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmi:id="_qNP30OtXEe6kNJrje0cWTg" name="Connection_Overview_Employee" creationDate="2024-03-26T15:30:21.647+0530">
+  <clientDependency href="../../../metadata/connections/Employee_0.1.item#_qNGG0OtXEe6kNJrje0cWTg"/>
+  <taggedValue xmi:id="_qNP30etXEe6kNJrje0cWTg" tag="Status" value="development"/>
+  <taggedValue xmi:id="_qNP30utXEe6kNJrje0cWTg" tag="Author" value="geetha.thota@siedemdata_nfr"/>
+  <taggedValue xmi:id="_qNP30-tXEe6kNJrje0cWTg" tag="Purpose"/>
+  <taggedValue xmi:id="_qNP31OtXEe6kNJrje0cWTg" tag="Description"/>
+  <taggedValue xmi:id="_qNP31etXEe6kNJrje0cWTg" tag="Version" value="0.1"/>
+  <context xmi:id="_qNP31utXEe6kNJrje0cWTg">
+    <connection href="../../../metadata/connections/Employee_0.1.item#_ASIFgLxLEe66paKj2GVf5w"/>
+    <analysedElements xsi:type="TalendMetadata:DatabaseConnection" href="../../../metadata/connections/Employee_0.1.item#_ASIFgLxLEe66paKj2GVf5w"/>
+  </context>
+  <results xmi:id="_qNP31-tXEe6kNJrje0cWTg">
+    <resultMetadata xmi:id="_qNP32OtXEe6kNJrje0cWTg" executionDate="2024-03-26T15:30:27.761+0530" executionDuration="3610" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+    <indicators xsi:type="dataquality.indicators.schema:ConnectionIndicator" xmi:id="_qNP32etXEe6kNJrje0cWTg" computed="true" tableCount="6" keyCount="11" indexCount="14" viewCount="2" tableRowCount="3919015" viewRowCount="600048" catalogCount="1">
+      <analyzedElement xsi:type="TalendMetadata:DatabaseConnection" href="../../../metadata/connections/Employee_0.1.item#_ASIFgLxLEe66paKj2GVf5w"/>
+      <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Overview/Connection_Overview_0.1.definition#_nZEo8MYSEd27NP4lvE0A4w"/>
+      <catalogIndicators xmi:id="_rkcUQOtXEe6kNJrje0cWTg" tableCount="6" keyCount="11" indexCount="14" viewCount="2" tableRowCount="3919015" viewRowCount="600048">
+        <analyzedElement xsi:type="orgomg.cwm.resource.relational:Catalog" href="../../../metadata/connections/Employee_0.1.item#_ATD5oLxLEe66paKj2GVf5w"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Overview/Catalog_Overview_0.1.definition#_QwDiwMYUEd27NP4lvE0A4w"/>
+        <tableIndicators xmi:id="_rkcUQetXEe6kNJrje0cWTg" rowCount="9" tableName="departments" keyCount="1" indexCount="2">
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+        </tableIndicators>
+        <tableIndicators xmi:id="_rkcUQutXEe6kNJrje0cWTg" rowCount="331603" tableName="dept_emp" keyCount="2" indexCount="3">
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+        </tableIndicators>
+        <tableIndicators xmi:id="_rkcUQ-tXEe6kNJrje0cWTg" rowCount="24" tableName="dept_manager" keyCount="2" indexCount="3">
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+        </tableIndicators>
+        <tableIndicators xmi:id="_rkcUROtXEe6kNJrje0cWTg" rowCount="300024" tableName="employees" keyCount="1" indexCount="1">
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+        </tableIndicators>
+        <tableIndicators xmi:id="_rkcURetXEe6kNJrje0cWTg" rowCount="2844047" tableName="salaries" keyCount="2" indexCount="2">
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+        </tableIndicators>
+        <tableIndicators xmi:id="_rkcURutXEe6kNJrje0cWTg" rowCount="443308" tableName="titles" keyCount="3" indexCount="3">
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+        </tableIndicators>
+        <viewIndicators xmi:id="_rkcUR-tXEe6kNJrje0cWTg" rowCount="300024" tableName="current_dept_emp">
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Overview/View_Overview_0.1.definition#_lNIE0MbNEd2d_JPxxDRSfQ"/>
+        </viewIndicators>
+        <viewIndicators xmi:id="_rkcUSOtXEe6kNJrje0cWTg" rowCount="300024" tableName="dept_emp_latest_date">
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Overview/View_Overview_0.1.definition#_lNIE0MbNEd2d_JPxxDRSfQ"/>
+        </viewIndicators>
+      </catalogIndicators>
+    </indicators>
+  </results>
+  <parameters xmi:id="_qNP32-tXEe6kNJrje0cWTg" analysisType="Connection Analysis"/>
+</dataquality.analysis:Analysis>

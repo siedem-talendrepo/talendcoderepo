@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_trjYoY67Ee6lF6W9iI5hog" name="column_set_Analysis_post_transformation" supplierDependency="_VFvU8I7FEe6674gXgR4cxw" creationDate="2023-11-29T17:49:38.195+0530" defaultContext="Default">
-    <clientDependency href="../../metadata/connections/mysql_conn_0.1.item#_kq1AAI6wEe6m-o0neW33tg"/>
+    <clientDependency href="../../../metadata/connections/mysql_conn_0.1.item#_kq1AAI6wEe6m-o0neW33tg"/>
     <taggedValue xmi:id="_trjYoo67Ee6lF6W9iI5hog" tag="Status" value="development"/>
     <taggedValue xmi:id="_trjYo467Ee6lF6W9iI5hog" tag="Author" value="anilcharan1@siedemdata_nfr"/>
     <taggedValue xmi:id="_trjYpI67Ee6lF6W9iI5hog" tag="Purpose" value=""/>
@@ -12,21 +12,21 @@
     <taggedValue xmi:id="_trjYqY67Ee6lF6W9iI5hog" tag="Is Use Sample Data" value="false"/>
     <taggedValue xmi:id="_trjYqo67Ee6lF6W9iI5hog" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
     <context xmi:id="_trjYq467Ee6lF6W9iI5hog">
-      <connection href="../../metadata/connections/mysql_conn_0.1.item#_1gxUUI6uEe6m-o0neW33tg"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsKwI7EEe6674gXgR4cxw"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsKxI7EEe6674gXgR4cxw"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsLAI7EEe6674gXgR4cxw"/>
+      <connection href="../../../metadata/connections/mysql_conn_0.1.item#_1gxUUI6uEe6m-o0neW33tg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsKwI7EEe6674gXgR4cxw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsKxI7EEe6674gXgR4cxw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsLAI7EEe6674gXgR4cxw"/>
     </context>
     <results xmi:id="_trjYrI67Ee6lF6W9iI5hog">
       <resultMetadata xmi:id="_trjYrY67Ee6lF6W9iI5hog" executionDate="2023-11-29T20:09:34.911+0530" executionDuration="7043" message="" executionNumber="6" lastRunOk="true" lastExecutionNumberOk="6"/>
       <indicators xsi:type="dataquality.indicators.columnset:SimpleStatIndicator" xmi:id="_trjYro67Ee6lF6W9iI5hog" count="549840" computed="true" listRows="ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A6578700000000077040000000078" uniqueCount="549840" distinctCount="549840">
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Multiple_Column_Simple_Statistics_0.1.definition#_JoeMkM-jEd6qN5aKpPNGTg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Multiple_Column_Simple_Statistics_0.1.definition#_JoeMkM-jEd6qN5aKpPNGTg"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_trjYr467Ee6lF6W9iI5hog" body="SELECT `raw_price`,`currency`,`id`,COUNT(*) FROM `dqreports`.`product_transformed`  GROUP BY `raw_price`,`currency`,`id`" language="SQL"/>
-        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsKwI7EEe6674gXgR4cxw"/>
-        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsKxI7EEe6674gXgR4cxw"/>
-        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/mysql_conn_0.1.item#_IJsLAI7EEe6674gXgR4cxw"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsKwI7EEe6674gXgR4cxw"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsKxI7EEe6674gXgR4cxw"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../../metadata/connections/mysql_conn_0.1.item#_IJsLAI7EEe6674gXgR4cxw"/>
         <rowCountIndicator xmi:id="_trjYsI67Ee6lF6W9iI5hog" count="549840" computed="true">
-          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_trjYsY67Ee6lF6W9iI5hog" body="SELECT COUNT(*) FROM `dqreports`.`product_transformed` " language="SQL"/>
           <builtInIndicatorDefinition xmi:id="_trjYso67Ee6lF6W9iI5hog" name="Row Count" label="Row Count">
             <taggedValue xmi:id="_trjYs467Ee6lF6W9iI5hog" tag="Description" value="counts the number of rows"/>
@@ -35,7 +35,7 @@
           </builtInIndicatorDefinition>
         </rowCountIndicator>
         <uniqueCountIndicator xmi:id="_trjYto67Ee6lF6W9iI5hog" count="549840" computed="true" uniqueValueCount="549840">
-          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_trjYt467Ee6lF6W9iI5hog" body="SELECT COUNT(*) FROM (SELECT `raw_price`,`currency`,`id`, COUNT(*) mycount FROM `dqreports`.`product_transformed`  GROUP BY `raw_price`,`currency`,`id` HAVING mycount = 1) AS myquery" language="MySQL"/>
           <builtInIndicatorDefinition xmi:id="_trjYuI67Ee6lF6W9iI5hog" name="Unique Count" label="Unique Count">
             <taggedValue xmi:id="_trjYuY67Ee6lF6W9iI5hog" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
@@ -50,7 +50,7 @@
           </builtInIndicatorDefinition>
         </uniqueCountIndicator>
         <distinctCountIndicator xmi:id="_trjYwo67Ee6lF6W9iI5hog" count="549840" computed="true" distinctValueCount="549840">
-          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_trjYw467Ee6lF6W9iI5hog" body="SELECT COUNT(*) FROM (SELECT DISTINCT `raw_price`,`currency`,`id` FROM `dqreports`.`product_transformed` ) A" language="SQL"/>
           <builtInIndicatorDefinition xmi:id="_trjYxI67Ee6lF6W9iI5hog" name="Distinct Count" label="Distinct Count">
             <taggedValue xmi:id="_trjYxY67Ee6lF6W9iI5hog" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
@@ -59,7 +59,7 @@
           </builtInIndicatorDefinition>
         </distinctCountIndicator>
         <duplicateCountIndicator xmi:id="_trjYyI67Ee6lF6W9iI5hog" count="549840" computed="true" duplicateValueCount="0">
-          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
           <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_trjYyY67Ee6lF6W9iI5hog" body="SELECT COUNT(*) FROM (SELECT `raw_price`,`currency`,`id`, COUNT(*) mycount FROM `dqreports`.`product_transformed`  m  GROUP BY `raw_price`,`currency`,`id` HAVING mycount > 1) AS myquery" language="MySQL"/>
           <builtInIndicatorDefinition xmi:id="_trjYyo67Ee6lF6W9iI5hog" name="Duplicate Count" label="Duplicate Count">
             <taggedValue xmi:id="_trjYy467Ee6lF6W9iI5hog" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
@@ -86,6 +86,6 @@
     </ranges>
   </dataquality.domain:Domain>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_VFvU8I7FEe6674gXgR4cxw" kind="Usage" supplier="_trjYoY67Ee6lF6W9iI5hog">
-    <client xsi:type="dataquality.reports:TdReport" href="../Reports/Column_Analysis_Product_Post_Transformation_0.1.rep#_DH0t0Y3IEe69Y-EhpX6DLw"/>
+    <client xsi:type="dataquality.reports:TdReport" href="../../Reports/Column_Analysis_Product_Post_Transformation_0.1.rep#_DH0t0Y3IEe69Y-EhpX6DLw"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:version="2.0">
+  <talendfile:ContextType confirmationNeeded="false" hide="false" name="Default" xmi:id="_gWcDcOqWEe6kNJrje0cWTg">
+    <contextParameter comment="" name="EMPLOYEE_RAW_account" prompt="EMPLOYEE_RAW_account?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ktjccko-rj52485" xmi:id="_gWcDceqWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_oauthProperties_oauthUserName" prompt="EMPLOYEE_RAW_oauthProperties_oauthUserName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_gWcDcuqWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_role" prompt="EMPLOYEE_RAW_role?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_gWcDc-qWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_jdbcParameters" prompt="EMPLOYEE_RAW_jdbcParameters?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_gWcDdOqWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_userPassword_password" prompt="EMPLOYEE_RAW_userPassword_password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:I8J2IAloJd/nQcuuno5ERsQiCZ7Ac0RA1IQc4t1bfBG8m+pvz8UPlGcu" xmi:id="_gWcDdeqWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_userPassword_userId" prompt="EMPLOYEE_RAW_userPassword_userId?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="siedem" xmi:id="_gWcDduqWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_oauthProperties_scope" prompt="EMPLOYEE_RAW_oauthProperties_scope?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_gWcDd-qWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_oauthProperties_oauthPassword" prompt="EMPLOYEE_RAW_oauthProperties_oauthPassword?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="" xmi:id="_gWcDeOqWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_regionID" prompt="EMPLOYEE_RAW_regionID?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_gWcDeeqWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_warehouse" prompt="EMPLOYEE_RAW_warehouse?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="COMPUTE_WH" xmi:id="_gWcDeuqWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_db" prompt="EMPLOYEE_RAW_db?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="EMPLOYEE" xmi:id="_gWcDe-qWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_loginTimeout" prompt="EMPLOYEE_RAW_loginTimeout?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="15" xmi:id="_gWcDfOqWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_keyAlias" prompt="EMPLOYEE_RAW_keyAlias?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_gWcDfeqWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_oauthProperties_oauthTokenEndpoint" prompt="EMPLOYEE_RAW_oauthProperties_oauthTokenEndpoint?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_gWcDfuqWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_oauthProperties_clientSecret" prompt="EMPLOYEE_RAW_oauthProperties_clientSecret?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="" xmi:id="_gWcDf-qWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_schemaName" prompt="EMPLOYEE_RAW_schemaName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="RAW" xmi:id="_gWcDgOqWEe6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_oauthProperties_clientId" prompt="EMPLOYEE_RAW_oauthProperties_clientId?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_gWcDgeqWEe6kNJrje0cWTg"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType confirmationNeeded="false" hide="false" name="DEV" xmi:id="_nZeoEOv5Ee6kNJrje0cWTg">
+    <contextParameter comment="" name="EMPLOYEE_RAW_account" prompt="EMPLOYEE_RAW_account?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ktjccko-rj52485" xmi:id="_nZeoEev5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_oauthProperties_oauthUserName" prompt="EMPLOYEE_RAW_oauthProperties_oauthUserName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_nZeoEuv5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_role" prompt="EMPLOYEE_RAW_role?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_nZeoE-v5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_jdbcParameters" prompt="EMPLOYEE_RAW_jdbcParameters?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_nZeoFOv5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_userPassword_password" prompt="EMPLOYEE_RAW_userPassword_password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:I8J2IAloJd/nQcuuno5ERsQiCZ7Ac0RA1IQc4t1bfBG8m+pvz8UPlGcu" xmi:id="_nZeoFev5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_userPassword_userId" prompt="EMPLOYEE_RAW_userPassword_userId?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="siedem" xmi:id="_nZeoFuv5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_oauthProperties_scope" prompt="EMPLOYEE_RAW_oauthProperties_scope?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_nZeoF-v5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_oauthProperties_oauthPassword" prompt="EMPLOYEE_RAW_oauthProperties_oauthPassword?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="" xmi:id="_nZeoGOv5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_regionID" prompt="EMPLOYEE_RAW_regionID?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_nZeoGev5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_warehouse" prompt="EMPLOYEE_RAW_warehouse?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="COMPUTE_WH" xmi:id="_nZeoGuv5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_db" prompt="EMPLOYEE_RAW_db?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="EMPLOYEE" xmi:id="_nZeoG-v5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_loginTimeout" prompt="EMPLOYEE_RAW_loginTimeout?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="15" xmi:id="_nZeoHOv5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_keyAlias" prompt="EMPLOYEE_RAW_keyAlias?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_nZeoHev5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_oauthProperties_oauthTokenEndpoint" prompt="EMPLOYEE_RAW_oauthProperties_oauthTokenEndpoint?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_nZeoHuv5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_oauthProperties_clientSecret" prompt="EMPLOYEE_RAW_oauthProperties_clientSecret?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="" xmi:id="_nZeoH-v5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_schemaName" prompt="EMPLOYEE_RAW_schemaName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="STG" xmi:id="_nZeoIOv5Ee6kNJrje0cWTg"/>
+    <contextParameter comment="" name="EMPLOYEE_RAW_oauthProperties_clientId" prompt="EMPLOYEE_RAW_oauthProperties_clientId?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" xmi:id="_nZeoIev5Ee6kNJrje0cWTg"/>
+  </talendfile:ContextType>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b3e58c0d-0a51-441d-b5c3-272a41de24db"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>34aYZxEVMajB9Xrk7hDfzOuj1+if4ev3exHww2pOAgfBEWmIRR08vBghg1x6ZhJS64C6F8BKIzJX&#13;
+4abYvMQS3g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e1ce9da9-913a-48e4-9c01-898d9bcb9403"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KIfY98m1+ESwMEimnMGrYJGOH/eaxGEBz1GNw9aqfJcMTKQH31Zwozg6rGNXV+P88kIOy98puqac&#13;
+sbHyMJivrg==</DigestValue></Reference></SignedInfo><SignatureValue>oPl/o/YSKszrxzHulIZwOdpPUYzVyRJSPgozdwbTSAaB2JgX2FgCC8V71lBny1LEx6UujSRBD8A5&#13;
+e4bD9wpyfncfwr/GA/UyHDF4w2xf3OwQJ3UC34tr4rrw5zKWvGU6cDBcBfGHFriQ9MjjtaBF8hRb&#13;
+z9MlgC4hG3lBj33pDUhXoqYMBhCxXHHnhQzKrX1XMpBNODcaOUoh+UCEbDwZ71Jy55HSDj4NWSI7&#13;
+b9L9Zd+/kc6vRGSZOIpK5grFHL6TPXYfaeyNIli3PUvFaDKjaz1iFuymobRJjNGmgpeMxSmQQWkA&#13;
+sHgxt8ALdw6V5ifShgwmoMVLw2FYw1V5HUy18w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e1ce9da9-913a-48e4-9c01-898d9bcb9403" Target="#_b3e58c0d-0a51-441d-b5c3-272a41de24db"><Timestamp>2024-03-27 05:19:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
