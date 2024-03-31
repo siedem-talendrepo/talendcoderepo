@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.reports:TdReport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.reports="http://dataquality.reports" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="_2lCzsOxDEe6azOuOJFdmpQ" name="Employee Dataset Analysis" creationDate="2024-03-27T19:41:06.424+0530" logo="C:\Users\Geetha Thota\Downloads\FullLogo.png" defaultContext="Default">
+  <clientDependency href="../Analyses/Demo/BusinessRule_Analysis_Employee_0.1.ana#_1dijoOxEEe6azOuOJFdmpQ"/>
+  <clientDependency href="../Analyses/Demo/Column_Analysis_Employee_0.1.ana#_1dp4YOxEEe6azOuOJFdmpQ"/>
+  <clientDependency href="../Analyses/Demo/Connection_Overview_Employee_0.1.ana#_1d2FoOxEEe6azOuOJFdmpQ"/>
+  <taggedValue xmi:id="_2lCzsexDEe6azOuOJFdmpQ" tag="Status" value="development"/>
+  <taggedValue xmi:id="_2lCzsuxDEe6azOuOJFdmpQ" tag="Author" value="geetha.thota@siedemdata_nfr"/>
+  <taggedValue xmi:id="_2lCzs-xDEe6azOuOJFdmpQ" tag="Purpose" value=""/>
+  <taggedValue xmi:id="_2lCztOxDEe6azOuOJFdmpQ" tag="Description" value=""/>
+  <taggedValue xmi:id="_2lCztexDEe6azOuOJFdmpQ" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_2lCztuxDEe6azOuOJFdmpQ" tag="OutputFolder" value="C:\Users\Geetha Thota\OneDrive\Documents\POC\DQ Reports"/>
+  <taggedValue xmi:id="_2lCzt-xDEe6azOuOJFdmpQ" tag="REP_DBINFO_DBTYPE" value="Snowflake"/>
+  <taggedValue xmi:id="_2lCzuOxDEe6azOuOJFdmpQ" tag="REP_DBINFO_DBVERSION" value=""/>
+  <taggedValue xmi:id="_2lCzuexDEe6azOuOJFdmpQ" tag="REP_DBINFO_HOST" value="ktjccko-rj52485.snowflakecomputing.com"/>
+  <taggedValue xmi:id="_2lCzuuxDEe6azOuOJFdmpQ" tag="REP_DBINFO_PORT" value="443"/>
+  <taggedValue xmi:id="_2lCzu-xDEe6azOuOJFdmpQ" tag="REP_DBINFO_WAREHOUSE" value="COMPUTE_WH"/>
+  <taggedValue xmi:id="_2lCzvOxDEe6azOuOJFdmpQ" tag="REP_DBINFO_DBNAME" value="EMPLOYEE"/>
+  <taggedValue xmi:id="_2lCzvexDEe6azOuOJFdmpQ" tag="REP_DBINFO_SCHEMA" value="DQ_REPORT"/>
+  <taggedValue xmi:id="_2lCzvuxDEe6azOuOJFdmpQ" tag="REP_DBINFO_USER" value="siedem"/>
+  <taggedValue xmi:id="_2lCzv-xDEe6azOuOJFdmpQ" tag="REP_DBINFO_PASSWORD" value="enc:system.encryption.key.v1:g9StxhGorXbeS0H61k0/LkrW7yYGE1OFKIXKXsE2wi2Nb8PqwLwVe8t9"/>
+  <taggedValue xmi:id="_2lCzwOxDEe6azOuOJFdmpQ" tag="REP_DBINFO_PARAMETER" value="CLIENT_RESULT_COLUMN_CASE_INSENSITIVE=true"/>
+  <taggedValue xmi:id="_2lCzwexDEe6azOuOJFdmpQ" tag="REP_DBINFO_URL" value="jdbc:snowflake://ktjccko-rj52485.snowflakecomputing.com:443/?db=EMPLOYEE&amp;schema=DQ_REPORT&amp;warehouse=COMPUTE_WH&amp;CLIENT_RESULT_COLUMN_CASE_INSENSITIVE=true"/>
+  <taggedValue xmi:id="_2lCzwuxDEe6azOuOJFdmpQ" tag="REP_DBINFO_DRIVER" value="com.snowflake.client.jdbc.SnowflakeDriver"/>
+  <taggedValue xmi:id="_2lCzw-xDEe6azOuOJFdmpQ" tag="REP_DBINFO_DIALECT" value="org.hibernate.dialect.SnowflakeDialect"/>
+  <taggedValue xmi:id="_2lCzxOxDEe6azOuOJFdmpQ" tag="REP_PASSWORD_CONTEXT" value="false"/>
+  <taggedValue xmi:id="_1csPEOxEEe6azOuOJFdmpQ" tag="OutputFileName" value="EmployeeDatasetAnalysis"/>
+  <taggedValue xmi:id="_1csPEexEEe6azOuOJFdmpQ" tag="Single output" value="false"/>
+  <taggedValue xmi:id="_1csPEuxEEe6azOuOJFdmpQ" tag="OutputType" value="pdf"/>
+  <taggedValue xmi:id="_1csPE-xEEe6azOuOJFdmpQ" tag="REP_GENERATE_FILE" value="true"/>
+  <taggedValue xmi:id="_1dYyquxEEe6azOuOJFdmpQ" tag="REP_LAST_RUN_CONTEXT" value="Default"/>
+  <presentationParams xmi:id="_1dYyoOxEEe6azOuOJFdmpQ" type="TOP_MIDDLE_PRESENTATIONKEY">
+    <formula xmi:id="_1dYyoexEEe6azOuOJFdmpQ">
+      <expression xsi:type="relational:TdExpression" xmi:id="_1dYyouxEEe6azOuOJFdmpQ" body="Creation Date"/>
+    </formula>
+  </presentationParams>
+  <presentationParams xmi:id="_1dYyo-xEEe6azOuOJFdmpQ" type="TOP_LEFT_PRESENTATIONKEY">
+    <formula xmi:id="_E7VHUOxFEe6azOuOJFdmpQ">
+      <expression xsi:type="relational:TdExpression" xmi:id="_E7VHUexFEe6azOuOJFdmpQ" body=""/>
+    </formula>
+  </presentationParams>
+  <presentationParams xmi:id="_1dYypuxEEe6azOuOJFdmpQ" type="TOP_RIGHT_PRESENTATIONKEY">
+    <formula xmi:id="_1dYyp-xEEe6azOuOJFdmpQ">
+      <expression xsi:type="relational:TdExpression" xmi:id="_1dYyqOxEEe6azOuOJFdmpQ" body="Page Number"/>
+    </formula>
+  </presentationParams>
+  <analysisMap xmi:id="_1dYyq-xEEe6azOuOJFdmpQ" mustRefresh="true" reportType="Basic">
+    <analysis href="../Analyses/Demo/BusinessRule_Analysis_Employee_0.1.ana#_gU3-4evjEe6kNJrje0cWTg"/>
+  </analysisMap>
+  <analysisMap xmi:id="_1dYyrOxEEe6azOuOJFdmpQ" mustRefresh="true" reportType="Basic">
+    <analysis href="../Analyses/Demo/Column_Analysis_Employee_0.1.ana#_NfpqIeuHEe6kNJrje0cWTg"/>
+  </analysisMap>
+  <analysisMap xmi:id="_1dYyrexEEe6azOuOJFdmpQ" mustRefresh="true" reportType="Basic">
+    <analysis href="../Analyses/Demo/Connection_Overview_Employee_0.1.ana#_qNP30OtXEe6kNJrje0cWTg"/>
+  </analysisMap>
+  <ExecInformations xmi:id="_SZ6zYOxFEe6azOuOJFdmpQ" executionDate="2024-03-27T19:51:02.628+0530" executionDuration="20082" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+  <context xmi:id="_1dYyqexEEe6azOuOJFdmpQ" confirmationNeeded="false" hide="false" name="Default"/>
+</dataquality.reports:TdReport>

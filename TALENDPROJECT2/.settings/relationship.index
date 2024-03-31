@@ -69,13 +69,89 @@
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "_3EhWAOp3Ee6kpYWh3GcVaQ",
+    "id" : "_gWRrYOqWEe6kNJrje0cWTg",
     "version" : "Latest",
     "type" : "context"
+  }, {
+    "id" : "TALENDPROJECT2:_103wYOqVEe6kNJrje0cWTg",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "TALENDPROJECT2:_iJgzoOuTEe6kNJrje0cWTg",
+    "version" : "0.1",
+    "type" : "job"
+  }, {
+    "id" : "_Al5C8OqWEe6kNJrje0cWTg",
+    "version" : "Latest",
+    "type" : "property"
   }, {
     "id" : "_mSWmQLxJEe66paKj2GVf5w",
     "version" : "Latest",
     "type" : "property"
+  }, {
+    "id" : "_9dm_II6aEe69Y-EhpX6DLw",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_IIRXoI3CEe69Y-EhpX6DLw",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_UN8YwYztEe6DPNh9qc8Srg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_UO6CEYztEe6DPNh9qc8Srg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_UOOFkIztEe6DPNh9qc8Srg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_UOX2kYztEe6DPNh9qc8Srg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_UOgZcYztEe6DPNh9qc8Srg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_UPhtIIztEe6DPNh9qc8Srg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_kKHqMI6xEe6m-o0neW33tg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_nSQAII6uEe6m-o0neW33tg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_pfGf8I6zEe6lF6W9iI5hog",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_Al5C8OqWEe6kNJrje0cWTg - DEPARTMENTS",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_Al5C8OqWEe6kNJrje0cWTg - DEPT_EMP",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_Al5C8OqWEe6kNJrje0cWTg - EMPLOYEES",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_Al5C8OqWEe6kNJrje0cWTg - SALARIES",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_Al5C8OqWEe6kNJrje0cWTg - TITLES",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
@@ -347,6 +423,97 @@
     "id" : "_k_JhsM_AEe6418xKRSH7DQ",
     "version" : "Latest",
     "type" : "property"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_nQ0m8O2cEe6VCpc4SLRJQw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_crwScO2sEe6VCpc4SLRJQw",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "TALENDPROJECT2:_103wYOqVEe6kNJrje0cWTg",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "TALENDPROJECT2:_iJgzoOuTEe6kNJrje0cWTg",
+    "version" : "0.1",
+    "type" : "job"
+  }, {
+    "id" : "_mQ56sO2fEe6VCpc4SLRJQw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_mSWmQLxJEe66paKj2GVf5w",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_9dm_II6aEe69Y-EhpX6DLw",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_IIRXoI3CEe69Y-EhpX6DLw",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_UN8YwYztEe6DPNh9qc8Srg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_UO6CEYztEe6DPNh9qc8Srg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_UOOFkIztEe6DPNh9qc8Srg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_UOX2kYztEe6DPNh9qc8Srg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_UOgZcYztEe6DPNh9qc8Srg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_UPhtIIztEe6DPNh9qc8Srg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_kKHqMI6xEe6m-o0neW33tg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_nSQAII6uEe6m-o0neW33tg",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_pfGf8I6zEe6lF6W9iI5hog",
+    "version" : "Latest",
+    "type" : "report"
+  }, {
+    "id" : "_mSWmQLxJEe66paKj2GVf5w - departments",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_mSWmQLxJEe66paKj2GVf5w - dept_emp",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_mSWmQLxJEe66paKj2GVf5w - employees",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_mSWmQLxJEe66paKj2GVf5w - salaries",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_mSWmQLxJEe66paKj2GVf5w - titles",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {

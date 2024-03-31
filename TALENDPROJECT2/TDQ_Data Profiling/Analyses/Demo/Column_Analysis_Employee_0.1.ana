@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <dataquality.analysis:Analysis xmi:id="_NfpqIeuHEe6kNJrje0cWTg" name="Column_Analysis_Employee" creationDate="2024-03-26T21:10:45.378+0530" defaultContext="Default">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_NfpqIeuHEe6kNJrje0cWTg" name="Column_Analysis_Employee" supplierDependency="_1dp4YOxEEe6azOuOJFdmpQ" creationDate="2024-03-26T21:10:45.378+0530" defaultContext="Default">
     <clientDependency href="../../../metadata/connections/Employee_0.1.item#_qNGG0OtXEe6kNJrje0cWTg"/>
     <clientDependency href="../../../TDQ_Libraries/Patterns/Regex/text/Starts_with_uppercase_0.1.pattern#_oCsG4IzzEe6DPNh9qc8Srg"/>
     <taggedValue xmi:id="_NfpqIuuHEe6kNJrje0cWTg" tag="Status" value="development"/>
@@ -22,7 +22,7 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAqLxLEe66paKj2GVf5w"/>
     </context>
     <results xmi:id="_NfpqKOuHEe6kNJrje0cWTg">
-      <resultMetadata xmi:id="_NfpqKeuHEe6kNJrje0cWTg" executionDate="2024-03-26T21:19:54.802+0530" executionDuration="13526" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <resultMetadata xmi:id="_NfpqKeuHEe6kNJrje0cWTg" executionDate="2024-03-27T19:51:04.927+0530" executionDuration="12039" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
       <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_e2C4wOuIEe6kNJrje0cWTg" computed="true">
         <parameters xmi:id="_e2C4weuIEe6kNJrje0cWTg"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Employee_0.1.item#_C-tAlLxLEe66paKj2GVf5w"/>
@@ -163,6 +163,9 @@
     <parameters xmi:id="_NfpqKuuHEe6kNJrje0cWTg" dataFilter="_wTQL8euHEe6kNJrje0cWTg" analysisType="Multiple Column Analysis"/>
     <contextType xmi:id="_wSUX0OuHEe6kNJrje0cWTg" confirmationNeeded="false" hide="false" name="Default"/>
   </dataquality.analysis:Analysis>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_1dp4YOxEEe6azOuOJFdmpQ" kind="Usage" supplier="_NfpqIeuHEe6kNJrje0cWTg">
+    <client xsi:type="dataquality.reports:TdReport" href="../../Reports/Employee_Dataset_Analysis_0.1.rep#_2lCzsOxDEe6azOuOJFdmpQ"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
   <dataquality.domain:Domain xmi:id="_wTQL8euHEe6kNJrje0cWTg" name="Column_Analysis_Employee">
     <ranges xmi:id="_wTQL8uuHEe6kNJrje0cWTg">
       <expressions xmi:id="_wTQL8-uHEe6kNJrje0cWTg">

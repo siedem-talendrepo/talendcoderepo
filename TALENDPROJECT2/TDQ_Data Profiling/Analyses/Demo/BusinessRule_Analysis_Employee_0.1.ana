@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <dataquality.analysis:Analysis xmi:id="_gU3-4evjEe6kNJrje0cWTg" name="BusinessRule_Analysis_Employee" creationDate="2024-03-27T08:11:25.454+0530" defaultContext="Default">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_gU3-4evjEe6kNJrje0cWTg" name="BusinessRule_Analysis_Employee" supplierDependency="_1dijoOxEEe6azOuOJFdmpQ" creationDate="2024-03-27T08:11:25.454+0530" defaultContext="Default">
     <clientDependency href="../../../metadata/connections/Employee_0.1.item#_qNGG0OtXEe6kNJrje0cWTg"/>
     <taggedValue xmi:id="_gU3-4uvjEe6kNJrje0cWTg" tag="Status" value="development"/>
     <taggedValue xmi:id="_gU3-4-vjEe6kNJrje0cWTg" tag="Author" value="geetha.thota@siedemdata_nfr"/>
@@ -19,35 +19,74 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C_KTgbxLEe66paKj2GVf5w"/>
     </context>
     <results xmi:id="_gU3-6OvjEe6kNJrje0cWTg">
-      <resultMetadata xmi:id="_gU3-6evjEe6kNJrje0cWTg" executionDate="2024-03-27T08:13:08.464+0530" executionDuration="860" message="Query not executed for indicator: &quot;Demo DQ Rule&quot; SQL query: SELECT COUNT(*) FROM `employees`.`employees`   WHERE (example != ''). Exception: Unknown column 'example' in 'where clause'" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-cOvlEe6kNJrje0cWTg">
+      <resultMetadata xmi:id="_gU3-6evjEe6kNJrje0cWTg" executionDate="2024-03-27T19:51:02.762+0530" executionDuration="2149" message="" executionNumber="3" lastRunOk="true" lastExecutionNumberOk="3"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-cOvlEe6kNJrje0cWTg" count="9" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C-jPgbxLEe66paKj2GVf5w"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_PcJasOxFEe6azOuOJFdmpQ" body="SELECT COUNT(*) FROM `employees`.`departments` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_PamikOxFEe6azOuOJFdmpQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_PamikexFEe6azOuOJFdmpQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_PamikuxFEe6azOuOJFdmpQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_Pamik-xFEe6azOuOJFdmpQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-cevlEe6kNJrje0cWTg">
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-cevlEe6kNJrje0cWTg" count="2844047" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C-tAgbxLEe66paKj2GVf5w"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_PcJasexFEe6azOuOJFdmpQ" body="SELECT COUNT(*) FROM `employees`.`salaries` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_PaspMOxFEe6azOuOJFdmpQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_PaspMexFEe6azOuOJFdmpQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_PaspMuxFEe6azOuOJFdmpQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_PaspM-xFEe6azOuOJFdmpQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-cuvlEe6kNJrje0cWTg">
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-cuvlEe6kNJrje0cWTg" count="300024" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C-tAk7xLEe66paKj2GVf5w"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_PcJasuxFEe6azOuOJFdmpQ" body="SELECT COUNT(*) FROM `employees`.`employees` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_Pa8g0OxFEe6azOuOJFdmpQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_Pa8g0exFEe6azOuOJFdmpQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_Pa8g0uxFEe6azOuOJFdmpQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_Pa8g0-xFEe6azOuOJFdmpQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-c-vlEe6kNJrje0cWTg">
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-c-vlEe6kNJrje0cWTg" count="24" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C-3YkbxLEe66paKj2GVf5w"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_PcJas-xFEe6azOuOJFdmpQ" body="SELECT COUNT(*) FROM `employees`.`dept_manager` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_PbIHAOxFEe6azOuOJFdmpQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_PbIHAexFEe6azOuOJFdmpQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_PbIHAuxFEe6azOuOJFdmpQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_PbIHA-xFEe6azOuOJFdmpQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-dOvlEe6kNJrje0cWTg">
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-dOvlEe6kNJrje0cWTg" count="331603" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C_AigbxLEe66paKj2GVf5w"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_PcJatOxFEe6azOuOJFdmpQ" body="SELECT COUNT(*) FROM `employees`.`dept_emp` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_PbQp4OxFEe6azOuOJFdmpQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_PbQp4exFEe6azOuOJFdmpQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_PbQp4uxFEe6azOuOJFdmpQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_PbQp4-xFEe6azOuOJFdmpQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-devlEe6kNJrje0cWTg">
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_U1A-devlEe6kNJrje0cWTg" count="443308" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Employee_0.1.item#_C_KTgbxLEe66paKj2GVf5w"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_PcJatexFEe6azOuOJFdmpQ" body="SELECT COUNT(*) FROM `employees`.`titles` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_PbcQEOxFEe6azOuOJFdmpQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_PbcQEexFEe6azOuOJFdmpQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_PbcQEuxFEe6azOuOJFdmpQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_PbcQE-xFEe6azOuOJFdmpQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
       </indicators>
     </results>
     <parameters xmi:id="_gU3-6-vjEe6kNJrje0cWTg" dataFilter="_pyQfWOvjEe6kNJrje0cWTg" analysisType="Table Analysis"/>
     <contextType xmi:id="_pyQfUOvjEe6kNJrje0cWTg" confirmationNeeded="false" hide="false" name="Default"/>
   </dataquality.analysis:Analysis>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_1dijoOxEEe6azOuOJFdmpQ" kind="Usage" supplier="_gU3-4evjEe6kNJrje0cWTg">
+    <client xsi:type="dataquality.reports:TdReport" href="../../Reports/Employee_Dataset_Analysis_0.1.rep#_2lCzsOxDEe6azOuOJFdmpQ"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
   <dataquality.domain:Domain xmi:id="_pyQfWOvjEe6kNJrje0cWTg" name="BusinessRule_Analysis_Employee">
     <ranges xmi:id="_pyQfWevjEe6kNJrje0cWTg">
       <expressions xmi:id="_pyQfWuvjEe6kNJrje0cWTg">
