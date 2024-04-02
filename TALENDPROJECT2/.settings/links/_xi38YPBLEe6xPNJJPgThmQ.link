@@ -1,0 +1,59 @@
+{
+  "itemId" : "_xi38YPBLEe6xPNJJPgThmQ",
+  "contextList" : [ {
+    "contextName" : "DEV",
+    "repoId" : "_37K7MPBLEe6xPNJJPgThmQ",
+    "parameterList" : [ {
+      "id" : "_37pcY_BLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_oauthProperties_oauthPassword"
+    }, {
+      "id" : "_37pcZPBLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_userPassword_userId"
+    }, {
+      "id" : "_37pcZfBLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_schemaName"
+    }, {
+      "id" : "_37pcZvBLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_oauthProperties_clientSecret"
+    }, {
+      "id" : "_37pcZ_BLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_warehouse"
+    }, {
+      "id" : "_37pcaPBLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_account"
+    }, {
+      "id" : "_37pcafBLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_userPassword_password"
+    }, {
+      "id" : "_37pcavBLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_jdbcParameters"
+    }, {
+      "id" : "_37pca_BLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_keyAlias"
+    }, {
+      "id" : "_37pcbPBLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_oauthProperties_oauthTokenEndpoint"
+    }, {
+      "id" : "_37pcbfBLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_role"
+    }, {
+      "id" : "_37pcbvBLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_oauthProperties_scope"
+    }, {
+      "id" : "_37pcb_BLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_db"
+    }, {
+      "id" : "_37pccPBLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_oauthProperties_clientId"
+    }, {
+      "id" : "_37pccfBLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_oauthProperties_oauthUserName"
+    }, {
+      "id" : "_37pccvBLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_loginTimeout"
+    }, {
+      "id" : "_37pcc_BLEe6xPNJJPgThmQ",
+      "name" : "EMPLOYEE_AUDIT_regionID"
+    } ]
+  } ]
+}

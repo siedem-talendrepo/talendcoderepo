@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:version="2.0">
+  <talendfile:ContextType confirmationNeeded="false" hide="false" name="Default" xmi:id="_37pcUPBLEe6xPNJJPgThmQ">
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_oauthProperties_oauthPassword" prompt="EMPLOYEE_AUDIT_oauthProperties_oauthPassword?" promptNeeded="false" repositoryContextId="" type="id_Password" value="" xmi:id="_37pcUfBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_userPassword_userId" prompt="EMPLOYEE_AUDIT_userPassword_userId?" promptNeeded="false" repositoryContextId="" type="id_String" value="siedem" xmi:id="_37pcUvBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_schemaName" prompt="EMPLOYEE_AUDIT_schemaName?" promptNeeded="false" repositoryContextId="" type="id_String" value="AUDIT" xmi:id="_37pcU_BLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_oauthProperties_clientSecret" prompt="EMPLOYEE_AUDIT_oauthProperties_clientSecret?" promptNeeded="false" repositoryContextId="" type="id_Password" value="" xmi:id="_37pcVPBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_warehouse" prompt="EMPLOYEE_AUDIT_warehouse?" promptNeeded="false" repositoryContextId="" type="id_String" value="COMPUTE_WH" xmi:id="_37pcVfBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_account" prompt="EMPLOYEE_AUDIT_account?" promptNeeded="false" repositoryContextId="" type="id_String" value="ktjccko-rj52485" xmi:id="_37pcVvBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_userPassword_password" prompt="EMPLOYEE_AUDIT_userPassword_password?" promptNeeded="false" repositoryContextId="" type="id_Password" value="enc:system.encryption.key.v1:RLBx5YnwKpxDYPKJb5PELj6V/ieVZqem1KmYGqfRJdAcUd7ThYbO4EU6" xmi:id="_37pcV_BLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_jdbcParameters" prompt="EMPLOYEE_AUDIT_jdbcParameters?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pcWPBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_keyAlias" prompt="EMPLOYEE_AUDIT_keyAlias?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pcWfBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_oauthProperties_oauthTokenEndpoint" prompt="EMPLOYEE_AUDIT_oauthProperties_oauthTokenEndpoint?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pcWvBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_role" prompt="EMPLOYEE_AUDIT_role?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pcW_BLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_oauthProperties_scope" prompt="EMPLOYEE_AUDIT_oauthProperties_scope?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pcXPBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_db" prompt="EMPLOYEE_AUDIT_db?" promptNeeded="false" repositoryContextId="" type="id_String" value="EMPLOYEE" xmi:id="_37pcXfBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_oauthProperties_clientId" prompt="EMPLOYEE_AUDIT_oauthProperties_clientId?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pcXvBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_oauthProperties_oauthUserName" prompt="EMPLOYEE_AUDIT_oauthProperties_oauthUserName?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pcX_BLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_loginTimeout" prompt="EMPLOYEE_AUDIT_loginTimeout?" promptNeeded="false" repositoryContextId="" type="id_Integer" value="15" xmi:id="_37pcYPBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_regionID" prompt="EMPLOYEE_AUDIT_regionID?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pcYfBLEe6xPNJJPgThmQ"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType confirmationNeeded="false" hide="false" name="DEV" xmi:id="_37pcYvBLEe6xPNJJPgThmQ">
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_oauthProperties_oauthPassword" prompt="EMPLOYEE_AUDIT_oauthProperties_oauthPassword?" promptNeeded="false" repositoryContextId="" type="id_Password" value="" xmi:id="_37pcY_BLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_userPassword_userId" prompt="EMPLOYEE_AUDIT_userPassword_userId?" promptNeeded="false" repositoryContextId="" type="id_String" value="siedem" xmi:id="_37pcZPBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_schemaName" prompt="EMPLOYEE_AUDIT_schemaName?" promptNeeded="false" repositoryContextId="" type="id_String" value="AUDIT" xmi:id="_37pcZfBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_oauthProperties_clientSecret" prompt="EMPLOYEE_AUDIT_oauthProperties_clientSecret?" promptNeeded="false" repositoryContextId="" type="id_Password" value="" xmi:id="_37pcZvBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_warehouse" prompt="EMPLOYEE_AUDIT_warehouse?" promptNeeded="false" repositoryContextId="" type="id_String" value="COMPUTE_WH" xmi:id="_37pcZ_BLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_account" prompt="EMPLOYEE_AUDIT_account?" promptNeeded="false" repositoryContextId="" type="id_String" value="ktjccko-rj52485" xmi:id="_37pcaPBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_userPassword_password" prompt="EMPLOYEE_AUDIT_userPassword_password?" promptNeeded="false" repositoryContextId="" type="id_Password" value="enc:system.encryption.key.v1:vAJHICfIYI7tlGapq1LSQK5+XP0VScSnlwDLZi24rfbbm/XmEk+WIulF" xmi:id="_37pcafBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_jdbcParameters" prompt="EMPLOYEE_AUDIT_jdbcParameters?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pcavBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_keyAlias" prompt="EMPLOYEE_AUDIT_keyAlias?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pca_BLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_oauthProperties_oauthTokenEndpoint" prompt="EMPLOYEE_AUDIT_oauthProperties_oauthTokenEndpoint?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pcbPBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_role" prompt="EMPLOYEE_AUDIT_role?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pcbfBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_oauthProperties_scope" prompt="EMPLOYEE_AUDIT_oauthProperties_scope?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pcbvBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_db" prompt="EMPLOYEE_AUDIT_db?" promptNeeded="false" repositoryContextId="" type="id_String" value="EMPLOYEE" xmi:id="_37pcb_BLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_oauthProperties_clientId" prompt="EMPLOYEE_AUDIT_oauthProperties_clientId?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pccPBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_oauthProperties_oauthUserName" prompt="EMPLOYEE_AUDIT_oauthProperties_oauthUserName?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pccfBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_loginTimeout" prompt="EMPLOYEE_AUDIT_loginTimeout?" promptNeeded="false" repositoryContextId="" type="id_Integer" value="15" xmi:id="_37pccvBLEe6xPNJJPgThmQ"/>
+    <contextParameter comment="" name="EMPLOYEE_AUDIT_regionID" prompt="EMPLOYEE_AUDIT_regionID?" promptNeeded="false" repositoryContextId="" type="id_String" value="" xmi:id="_37pcc_BLEe6xPNJJPgThmQ"/>
+  </talendfile:ContextType>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5f1c75af-8626-40e3-b36f-e640d548ba70"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HaeVH7ydVkolulrI46PWpvnnOylEOE7rMp5Sl+2RAYwCFdWIWepKMoW8Tcra7o7Uq9dKZcikiObI&#13;
+LKy6zbL1VQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_33d4cace-7a9d-42f8-8584-cf3dc1c83754"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wrNJj27xzQWm0VgwoJftOvW1kOk+J0TVT4FTrKaA36cSVE1W+8EArspgiSG+hEcUDazYnC2Taf3R&#13;
+NZRfGCUt8A==</DigestValue></Reference></SignedInfo><SignatureValue>nC8eumwdKdYzhjLlgZBIrDSEB6aciODaRmfS1V8iPpOF7n0MFe9VfjrIIpTYRJtI144PwWNaJj6t&#13;
+zNjtbhjvBs33j9RHcCPlArwtke7AjbAxgdiOcF3R3lR56Qqb2cgcJSHYA8qKzxdAW0VnRqh5MlW1&#13;
+vww0p0/NASvMVgMDfJrOHNn0B8NZ/wmyGyJXQUhIUTEmCQGPB+88g70Qd36oakedL9exVQ6wg7aK&#13;
+quDOkphiQqk4V6lePwZKuxXtjPU80ZB38bOLrQmBBXa4ur0S1xq05wibJPz/NncmTLA5TByaTVWV&#13;
+bODDfvjBDznNvPOFRtyZ+B+vixCnGtHaozOBag==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_33d4cace-7a9d-42f8-8584-cf3dc1c83754" Target="#_5f1c75af-8626-40e3-b36f-e640d548ba70"><Timestamp>2024-04-01 17:18:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
