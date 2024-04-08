@@ -1,0 +1,65 @@
+package routines;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
+//import net.sourceforge.tess4j.*;
+
+public class PDFToCSVConverter {
+
+    public static void main(String[] args) {
+        String pdfFilePath = "C:\\SharepointFile\\invoice-plugin-sample.pdf";
+        String csvFilePath = "C:\\SharepointFile\\invoice-plugin-sample.csv";
+
+        try {
+            // Load PDF document
+            PDDocument document = PDDocument.load(new File(pdfFilePath));
+
+            // Create PDFTextStripper object
+            PDFTextStripper pdfTextStripper = new PDFTextStripper();
+
+            // Extract text from PDF
+            String pdfText = pdfTextStripper.getText(document);
+
+            // Close the PDF document
+            document.close();
+
+            // Write extracted text to CSV
+            writeTextToCSV(pdfText, csvFilePath);
+
+            System.out.println("PDF converted to CSV successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void writeTextToCSV(String text, String csvFilePath) {
+        try (FileWriter writer = new FileWriter(csvFilePath)) {
+            // Replace line breaks with commas and write to CSV
+            writer.append(text.replaceAll("[\r\n]+", ","));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
