@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.reports:TdReport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.reports="http://dataquality.reports" xmi:id="_joOEAfcdEe6OSoRjHBA3vg" name="CustomerDatasetAnalysis" creationDate="2024-04-10T15:04:41.104+0530" defaultContext="Default">
+  <clientDependency href="../Analyses/POC_Customer/ColumnAnalysis_0.1.ana#_AoW1l_ciEe6OSoRjHBA3vg"/>
+  <taggedValue xmi:id="_joOEAvcdEe6OSoRjHBA3vg" tag="Status" value="development"/>
+  <taggedValue xmi:id="_joOEA_cdEe6OSoRjHBA3vg" tag="Author" value="anilcharan1@siedemdata_nfr"/>
+  <taggedValue xmi:id="_joOEBPcdEe6OSoRjHBA3vg" tag="Purpose" value=""/>
+  <taggedValue xmi:id="_joOEBfcdEe6OSoRjHBA3vg" tag="Description" value=""/>
+  <taggedValue xmi:id="_joOEBvcdEe6OSoRjHBA3vg" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_joOEB_cdEe6OSoRjHBA3vg" tag="OutputFolder" value="C:\Users\Geetha Thota\OneDrive\Documents\POC\DQ Reports"/>
+  <taggedValue xmi:id="_joOECPcdEe6OSoRjHBA3vg" tag="REP_DBINFO_DBTYPE" value="Snowflake"/>
+  <taggedValue xmi:id="_joOECfcdEe6OSoRjHBA3vg" tag="REP_DBINFO_DBVERSION" value=""/>
+  <taggedValue xmi:id="_joOECvcdEe6OSoRjHBA3vg" tag="REP_DBINFO_HOST" value="ktjccko-rj52485.snowflakecomputing.com"/>
+  <taggedValue xmi:id="_joOEC_cdEe6OSoRjHBA3vg" tag="REP_DBINFO_PORT" value="443"/>
+  <taggedValue xmi:id="_joOEDPcdEe6OSoRjHBA3vg" tag="REP_DBINFO_WAREHOUSE" value="COMPUTE_WH"/>
+  <taggedValue xmi:id="_joOEDfcdEe6OSoRjHBA3vg" tag="REP_DBINFO_DBNAME" value="CUSTOMER"/>
+  <taggedValue xmi:id="_joOEDvcdEe6OSoRjHBA3vg" tag="REP_DBINFO_SCHEMA" value="DQ_REPORTS"/>
+  <taggedValue xmi:id="_joOED_cdEe6OSoRjHBA3vg" tag="REP_DBINFO_USER" value="SIEDEM"/>
+  <taggedValue xmi:id="_joOEEPcdEe6OSoRjHBA3vg" tag="REP_DBINFO_PASSWORD" value="enc:system.encryption.key.v1:OLmcw2YRzFenhdPh00Cgz3YFEtH4vRIZhaxftI2oMgURu2Zqw5GuKZFJ"/>
+  <taggedValue xmi:id="_joOEEfcdEe6OSoRjHBA3vg" tag="REP_DBINFO_PARAMETER" value="CLIENT_RESULT_COLUMN_CASE_INSENSITIVE=true"/>
+  <taggedValue xmi:id="_joOEEvcdEe6OSoRjHBA3vg" tag="REP_DBINFO_URL" value="jdbc:snowflake://ktjccko-rj52485.snowflakecomputing.com:443/?db=CUSTOMER&amp;schema=DQ_REPORTS&amp;warehouse=COMPUTE_WH&amp;CLIENT_RESULT_COLUMN_CASE_INSENSITIVE=true"/>
+  <taggedValue xmi:id="_joOEE_cdEe6OSoRjHBA3vg" tag="REP_DBINFO_DRIVER" value="com.snowflake.client.jdbc.SnowflakeDriver"/>
+  <taggedValue xmi:id="_joOEFPcdEe6OSoRjHBA3vg" tag="REP_DBINFO_DIALECT" value="org.hibernate.dialect.SnowflakeDialect"/>
+  <taggedValue xmi:id="_joOEFfcdEe6OSoRjHBA3vg" tag="REP_PASSWORD_CONTEXT" value="false"/>
+  <taggedValue xmi:id="_AoW1kPciEe6OSoRjHBA3vg" tag="OutputFileName" value="CustomerDataset"/>
+  <taggedValue xmi:id="_AoW1kfciEe6OSoRjHBA3vg" tag="Single output" value="false"/>
+  <taggedValue xmi:id="_AoW1kvciEe6OSoRjHBA3vg" tag="OutputType" value="pdf"/>
+  <taggedValue xmi:id="_AoW1k_ciEe6OSoRjHBA3vg" tag="REP_GENERATE_FILE" value="true"/>
+  <taggedValue xmi:id="_AoW1lfciEe6OSoRjHBA3vg" tag="REP_LAST_RUN_CONTEXT" value="Default"/>
+  <analysisMap xmi:id="_AoW1lvciEe6OSoRjHBA3vg" mustRefresh="true" reportType="Basic">
+    <analysis href="../Analyses/POC_Customer/ColumnAnalysis_0.1.ana#_m3Cl4PccEe6OSoRjHBA3vg"/>
+  </analysisMap>
+  <context xmi:id="_AoW1lPciEe6OSoRjHBA3vg" confirmationNeeded="false" hide="false" name="Default"/>
+</dataquality.reports:TdReport>
