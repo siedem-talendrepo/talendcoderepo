@@ -6813,5 +6813,6 @@
   </dataquality.domain:Domain>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_AoW1l_ciEe6OSoRjHBA3vg" kind="Usage" supplier="_m3Cl4PccEe6OSoRjHBA3vg">
     <client xsi:type="dataquality.reports:TdReport" href="../../Reports/CustomerDatasetAnalysis_0.1.rep#_joOEAfcdEe6OSoRjHBA3vg"/>
+    <client xsi:type="dataquality.reports:TdReport" href="../../Reports/CustomerDatasetAnalysisPostgres_0.1.rep#_OtE2MQuqEe-EGMRvwoEYGQ"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>

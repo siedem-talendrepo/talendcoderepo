@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.reports:TdReport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.reports="http://dataquality.reports" xmi:id="_OtE2MQuqEe-EGMRvwoEYGQ" name="CustomerDatasetAnalysisPostgres" creationDate="2024-04-10T15:04:41.104+0530" defaultContext="Default">
+  <clientDependency href="../Analyses/POC_Customer/ColumnAnalysis_0.1.ana#_AoW1l_ciEe6OSoRjHBA3vg"/>
+  <taggedValue xmi:id="_OtE2MguqEe-EGMRvwoEYGQ" tag="Status" value="development"/>
+  <taggedValue xmi:id="_OtE2MwuqEe-EGMRvwoEYGQ" tag="Author" value="anilcharan1@siedemdata_nfr"/>
+  <taggedValue xmi:id="_OtE2NAuqEe-EGMRvwoEYGQ" tag="Purpose" value=""/>
+  <taggedValue xmi:id="_OtE2NQuqEe-EGMRvwoEYGQ" tag="Description" value=""/>
+  <taggedValue xmi:id="_OtE2NguqEe-EGMRvwoEYGQ" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_OtE2NwuqEe-EGMRvwoEYGQ" tag="OutputFolder" value="C:\Users\Geetha Thota\OneDrive\Documents\POC\DQ Reports"/>
+  <taggedValue xmi:id="_OtE2OAuqEe-EGMRvwoEYGQ" tag="REP_DBINFO_DBTYPE" value="PostgreSQL"/>
+  <taggedValue xmi:id="_OtE2OQuqEe-EGMRvwoEYGQ" tag="REP_DBINFO_DBVERSION" value="V9_X"/>
+  <taggedValue xmi:id="_OtE2OguqEe-EGMRvwoEYGQ" tag="REP_DBINFO_HOST" value="localhost"/>
+  <taggedValue xmi:id="_OtE2OwuqEe-EGMRvwoEYGQ" tag="REP_DBINFO_PORT" value="5433"/>
+  <taggedValue xmi:id="_OtE2PAuqEe-EGMRvwoEYGQ" tag="REP_DBINFO_WAREHOUSE" value=""/>
+  <taggedValue xmi:id="_OtE2PQuqEe-EGMRvwoEYGQ" tag="REP_DBINFO_DBNAME" value="Customer"/>
+  <taggedValue xmi:id="_OtE2PguqEe-EGMRvwoEYGQ" tag="REP_DBINFO_SCHEMA" value="dq_reports"/>
+  <taggedValue xmi:id="_OtE2PwuqEe-EGMRvwoEYGQ" tag="REP_DBINFO_USER" value="postgres"/>
+  <taggedValue xmi:id="_OtE2QAuqEe-EGMRvwoEYGQ" tag="REP_DBINFO_PASSWORD" value="enc:system.encryption.key.v1:hvnJvCY/spDOY+86MszFDq7pbCelK1QCrI/WWKcZg3/y78OO"/>
+  <taggedValue xmi:id="_OtE2QQuqEe-EGMRvwoEYGQ" tag="REP_DBINFO_PARAMETER" value=""/>
+  <taggedValue xmi:id="_OtE2QguqEe-EGMRvwoEYGQ" tag="REP_DBINFO_URL" value="jdbc:postgresql://localhost:5433/Customer?"/>
+  <taggedValue xmi:id="_OtE2QwuqEe-EGMRvwoEYGQ" tag="REP_DBINFO_DRIVER" value="org.postgresql.Driver"/>
+  <taggedValue xmi:id="_OtE2RAuqEe-EGMRvwoEYGQ" tag="REP_DBINFO_DIALECT" value="org.hibernate.dialect.PostgreSQLDialect"/>
+  <taggedValue xmi:id="_OtE2RQuqEe-EGMRvwoEYGQ" tag="REP_PASSWORD_CONTEXT" value="true"/>
+  <taggedValue xmi:id="_OtE2RguqEe-EGMRvwoEYGQ" tag="OutputFileName" value="CustomerDataset"/>
+  <taggedValue xmi:id="_OtE2RwuqEe-EGMRvwoEYGQ" tag="Single output" value="false"/>
+  <taggedValue xmi:id="_OtE2SAuqEe-EGMRvwoEYGQ" tag="OutputType" value="pdf"/>
+  <taggedValue xmi:id="_OtE2SQuqEe-EGMRvwoEYGQ" tag="REP_GENERATE_FILE" value="true"/>
+  <taggedValue xmi:id="_OtE2SguqEe-EGMRvwoEYGQ" tag="REP_LAST_RUN_CONTEXT" value="Default"/>
+  <analysisMap xmi:id="_OtE2SwuqEe-EGMRvwoEYGQ" mustRefresh="true" reportType="Basic">
+    <analysis href="../Analyses/POC_Customer/ColumnAnalysis_0.1.ana#_m3Cl4PccEe6OSoRjHBA3vg"/>
+  </analysisMap>
+  <context xmi:id="_OtE2TAuqEe-EGMRvwoEYGQ" confirmationNeeded="false" hide="false" name="Default"/>
+</dataquality.reports:TdReport>
