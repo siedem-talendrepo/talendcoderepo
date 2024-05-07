@@ -278,11 +278,11 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_TYPE"/>
       <elementValue elementRef="VALUE" value="&quot;DATAPREP_OP_TO_STG&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBInput_2_NB_LINE&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBInput_1_NB_LINE&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_2_NB_SUCCESS&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_1_NB_LINE_INSERTED&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_STATUS"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBInput_2_NB_LINE&quot;)) - ((Integer)globalMap.get(&quot;tDBOutput_2_NB_SUCCESS&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBInput_1_NB_LINE&quot;)) - ((Integer)globalMap.get(&quot;tDBOutput_1_NB_LINE_INSERTED&quot;))== 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_DATE"/>
       <elementValue elementRef="VALUE" value="TalendDate.getCurrentDate()"/>
     </elementParameter>
@@ -412,11 +412,11 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_TYPE"/>
       <elementValue elementRef="VALUE" value="&quot;DATAPREP_OP_TO_STG&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBInput_3_NB_LINE&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBInput_2_NB_LINE&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_3_NB_SUCCESS&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_5_NB_LINE_INSERTED&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_STATUS"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBInput_3_NB_LINE&quot;)) - ((Integer)globalMap.get(&quot;tDBOutput_3_NB_SUCCESS&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBInput_2_NB_LINE&quot;)) - ((Integer)globalMap.get(&quot;tDBOutput_5_NB_LINE_INSERTED&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_DATE"/>
       <elementValue elementRef="VALUE" value="TalendDate.getCurrentDate()"/>
     </elementParameter>
@@ -756,7 +756,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT * FROM PURCHASES&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT \&quot;Customer_ID\&quot;, \&quot;Transaction_History\&quot;, \&quot;Products_Services_Purchased\&quot;, \&quot;Purchase_Frequency\&quot;, \&quot;Order_Value\&quot;, \&quot;Order_ID\&quot;&#13;&#10;&#9;FROM \&quot;raw\&quot;.\&quot;PURCHASES\&quot;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -768,27 +768,27 @@
     <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="CUSTOMER_ID"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Customer_ID"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TRANSACTION_HISTORY"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Transaction_History"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PRODUCTS_SERVICES_PURCHASED"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Products_Services_Purchased"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PURCHASE_FREQUENCY"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Purchase_Frequency"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ORDER_VALUE"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Order_Value"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ORDER_ID"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Order_ID"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="PURCHASES" name="tDBInput_1">
-      <column comment="" key="false" length="-1" name="CUSTOMER_ID" nullable="false" originalDbColumnName="0000" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="TRANSACTION_HISTORY" nullable="false" originalDbColumnName="0001" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT8" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="PRODUCTS_SERVICES_PURCHASED" nullable="false" originalDbColumnName="0002" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="PURCHASE_FREQUENCY" nullable="false" originalDbColumnName="0003" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ORDER_VALUE" nullable="false" originalDbColumnName="0004" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT8" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ORDER_ID" nullable="false" originalDbColumnName="0005" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" key="false" length="4000" name="Customer_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="Transaction_History" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="Products_Services_Purchased" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="Purchase_Frequency" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="Order_Value" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="Order_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tDataprepRun" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="416">
@@ -1024,7 +1024,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT * FROM FINANCE_INFO&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT \&quot;Customer_ID\&quot;, \&quot;Credit_Rating\&quot;, \&quot;Payment_Terms\&quot;, \&quot;Credit_Limit\&quot;, \&quot;Billing_Information\&quot;&#13;&#10;&#9;FROM \&quot;raw\&quot;.\&quot;FINANCE_INFO\&quot;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1036,24 +1036,24 @@
     <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="CUSTOMER_ID"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Customer_ID"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CREDIT_RATING"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Credit_Rating"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENT_TERMS"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Payment_Terms"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CREDIT_LIMIT"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Credit_Limit"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="BILLING_INFORMATION"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Billing_Information"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="FINANCE_INFO" name="tDBInput_2">
-      <column comment="" key="false" length="-1" name="CUSTOMER_ID" nullable="false" originalDbColumnName="0000" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CREDIT_RATING" nullable="false" originalDbColumnName="0001" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT8" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="PAYMENT_TERMS" nullable="false" originalDbColumnName="0002" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CREDIT_LIMIT" nullable="false" originalDbColumnName="0003" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT8" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="BILLING_INFORMATION" nullable="false" originalDbColumnName="0004" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" name="tDBInput_2">
+      <column comment="" key="false" length="4000" name="Customer_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="Credit_Rating" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="Payment_Terms" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="Credit_Limit" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="Billing_Information" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tDataprepRun" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="768">
@@ -1402,13 +1402,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_dc525817-57ad-45a2-be56-0ac6c43151be"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VEMjF8WdBVPsoKni3GQJSvxD9gqzB/JXACXvG/cj5lWHeOUdacQM2dDWDTUa3RJlmYnktc3BMGFo&#13;
-JMp9gQJIGg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ff2821c9-bb9e-4030-96a5-07c9e6e79e73"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>goRq62+F0CCs0aAO8m3MEPjByuHs3fjG5G1H+u/f5CSGeJ1PJ+beZxgzkBRTvw6mV4rpptqqP6Co&#13;
-/w/noySD6Q==</DigestValue></Reference></SignedInfo><SignatureValue>OEl3KrvAWLlkawhC0B3gw6e/D5jVDl0jtgLblqOKawW6znhPeWSPnoQRRLs+3kIF619CVTy2AAJp&#13;
-ZcV943rVJOKu4mA3y6MtkE+BbVv6BCMB4I2Q04OS13dG2f7BILh0Td398gGyQ4Z2UtB3EkfI3NuC&#13;
-Ls2OtNBECQJWcI3z5nx6GzNwNRAjPhi6CDAWV/rhe3LssvurmuD6ruUMOqu3UH5+3PFM9Xg9E6Zs&#13;
-5ggq6WDLT8Cw7iHg2K9IaWKQ2gLr+DMy0BJ/Wb/DHvpwDuHZaypZm6D/xY7MnaED+N1u3mDDPPj5&#13;
-iQ0VE4dBGrOe5rMhWq48rCcqaq5PF+6SbtRzgw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0469ed35-f1c5-4e63-a538-0b3ee8e9c9d9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JftaZ1e5fg95rpfFuZMOKNJzrCY7qLOhvzkI6fVweb5Z31s/ds60VxXOyFCaoiZNfSTjsC1rAGlx&#13;
+IneVHIDtIA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0d745ca0-24ca-4e7d-8afa-61fb7742c3f7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>71j04daVStw1Cy6cp3muZJ1UON8YL5svTeS+WRSwQL+L1jMohsw52FtpWB2nMGWpD37e81jgB1/b&#13;
+YFbjqrG1xg==</DigestValue></Reference></SignedInfo><SignatureValue>ZFagOM2ArglTm9ypMtGYK4rJAJCxZ85iAECtWNbbpvu/KXCfvMn/5j2jztvQlyEmzQWyDold3d9m&#13;
+Q7t1gVLowAYQIrDcmUpUwsmiNcehaBPwnTGzYx9upEYUnPyfXFJpnncrNqb629dt/XC1PUusbfrC&#13;
+3XtqwJBxWO/g3ulBfGuTDuc1WEG00ttzGSSKYSCvcqCEbB8shMAxE4tR44c/zWS9rWlTm05wS6He&#13;
+gFrjkqm2wO0652bh/3mmEg2MjmHmY1Q+2mZCH39PXIyq9Yk4XD2DRkS8m0JXg8HYarEK4V+n0SoM&#13;
+ZxbkX/IhD5o3yriujECSEGSJJZoAh/K4nm+7Vw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1430,4 +1430,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ff2821c9-bb9e-4030-96a5-07c9e6e79e73" Target="#_dc525817-57ad-45a2-be56-0ac6c43151be"><Timestamp>2024-05-06 13:22:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0d745ca0-24ca-4e7d-8afa-61fb7742c3f7" Target="#_0469ed35-f1c5-4e63-a538-0b3ee8e9c9d9"><Timestamp>2024-05-07 09:24:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -14,6 +14,13 @@
     <contextParameter comment="" internalId="_J7L8uwt3Ee-0nrku1uyDgg" name="customerPostgresAudit_Server" prompt="customerPostgresAudit_Server?" promptNeeded="false" repositoryContextId="_SpsZcAq9Ee-sAZ35nrCD1A" type="id_String" value="localhost"/>
     <contextParameter comment="" internalId="_J7L8vAt3Ee-0nrku1uyDgg" name="customerPostgresAudit_AdditionalParams" prompt="customerPostgresAudit_AdditionalParams?" promptNeeded="false" repositoryContextId="_SpsZcAq9Ee-sAZ35nrCD1A" type="id_String" value=""/>
     <contextParameter comment="" internalId="_J7L8vQt3Ee-0nrku1uyDgg" name="customerPostgresAudit_Password" prompt="customerPostgresAudit_Password?" promptNeeded="false" repositoryContextId="_SpsZcAq9Ee-sAZ35nrCD1A" type="id_Password" value="enc:system.encryption.key.v1:eMb3VTqYLDkSfwql0iKQY0Kh/eB15bEmtDzNq44miiJlg/Sg"/>
+    <contextParameter comment="" internalId="_-GbLAAu_Ee-DSa-8rXjCKA" name="customerPostgresHist_AdditionalParams" prompt="customerPostgresHist_AdditionalParams?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_-GbLAQu_Ee-DSa-8rXjCKA" name="customerPostgresHist_Schema" prompt="customerPostgresHist_Schema?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value="hist"/>
+    <contextParameter comment="" internalId="_-GbLAgu_Ee-DSa-8rXjCKA" name="customerPostgresHist_Login" prompt="customerPostgresHist_Login?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value="postgres"/>
+    <contextParameter comment="" internalId="_-GbLAwu_Ee-DSa-8rXjCKA" name="customerPostgresHist_Server" prompt="customerPostgresHist_Server?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value="localhost"/>
+    <contextParameter comment="" internalId="_-GbLBAu_Ee-DSa-8rXjCKA" name="customerPostgresHist_Database" prompt="customerPostgresHist_Database?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value="Customer"/>
+    <contextParameter comment="" internalId="_-GbLBQu_Ee-DSa-8rXjCKA" name="customerPostgresHist_Password" prompt="customerPostgresHist_Password?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_Password" value="enc:system.encryption.key.v1:29a+rmIgeQBWowqH1Z92mlktgBAWPq8dIboYSqQX8Sv+S9XT"/>
+    <contextParameter comment="" internalId="_-GbLBgu_Ee-DSa-8rXjCKA" name="customerPostgresHist_Port" prompt="customerPostgresHist_Port?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value="5433"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
@@ -137,7 +144,7 @@
     <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Geetha Thota/OneDrive/Documents/POC/customer/7lakh/Customer.csv&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Geetha Thota/OneDrive/Documents/POC/customer/7lakh/customerappended2.csv&quot;"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="true"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
@@ -433,9 +440,9 @@
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:tOTHGIYUVUqC9j4Dsrnbv+jcHAqyvJ9jctM4hwcQ"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;CUSTOMER&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" show="false" value="false"/>
     <elementParameter field="CHECK" name="SPATIAL_INDEX" show="false" value="false"/>
     <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" show="false" value="false"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -590,7 +597,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_3"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -821,11 +828,11 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_TYPE"/>
       <elementValue elementRef="VALUE" value="&quot;FILE_TO_STG&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_2_NB_LINE&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_1_NB_LINE&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_3_NB_SUCCESS&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_2_NB_LINE_INSERTED&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_STATUS"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_2_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_3_NB_SUCCESS&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_1_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_2_NB_LINE_INSERTED&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_DATE"/>
       <elementValue elementRef="VALUE" value="TalendDate.getCurrentDate()"/>
     </elementParameter>
@@ -849,7 +856,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_4"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -1248,9 +1255,9 @@
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:puSK3r6Fo6ZbwFVsthG76UfPPfweIpb6RhCXKjfb"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;FINANCE_INFO&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" show="false" value="false"/>
     <elementParameter field="CHECK" name="SPATIAL_INDEX" show="false" value="false"/>
     <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" show="false" value="false"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -1321,7 +1328,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_8"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -1420,11 +1427,11 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_TYPE"/>
       <elementValue elementRef="VALUE" value="&quot;FILE_TO_STG&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_1_NB_LINE&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_2_NB_LINE&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_1_NB_SUCCESS&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_6_NB_LINE_INSERTED&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_STATUS"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_1_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_1_NB_SUCCESS&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_2_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_6_NB_LINE_INSERTED&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_DATE"/>
       <elementValue elementRef="VALUE" value="TalendDate.getCurrentDate()"/>
     </elementParameter>
@@ -1448,7 +1455,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="832">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_9"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -1679,9 +1686,9 @@
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:sMld/E8p6IgBNFiZeGiGap7MHd11KKh3NuFUmHqm"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;PREFERENCES&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" show="false" value="false"/>
     <elementParameter field="CHECK" name="SPATIAL_INDEX" show="false" value="false"/>
     <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" show="false" value="false"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -1745,7 +1752,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="1120">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_12"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -1825,7 +1832,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1280">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="1280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_4"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_2COE0PWWEe6hCYLPl_8dMA - metadata"/>
@@ -1986,9 +1993,9 @@
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:aO2EgNvFTJeiEKajXGshbWlZI/RQKscTJzk6s25H"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;PURCHASES&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" show="false" value="false"/>
     <elementParameter field="CHECK" name="SPATIAL_INDEX" show="false" value="false"/>
     <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" show="false" value="false"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -2066,7 +2073,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="1376">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_14"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -2174,9 +2181,9 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE_COUNT"/>
       <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_4_NB_LINE&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_11_NB_SUCCESS&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_13_NB_LINE_INSERTED&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_STATUS"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_4_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_11_NB_SUCCESS&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_4_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_13_NB_LINE_INSERTED&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_DATE"/>
       <elementValue elementRef="VALUE" value="TalendDate.getCurrentDate()"/>
     </elementParameter>
@@ -2200,7 +2207,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="1344">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_15"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -2308,9 +2315,9 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE_COUNT"/>
       <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_3_NB_LINE&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_8_NB_SUCCESS&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_10_NB_LINE_INSERTED&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_STATUS"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_3_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_8_NB_SUCCESS&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_3_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_10_NB_LINE_INSERTED&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_DATE"/>
       <elementValue elementRef="VALUE" value="TalendDate.getCurrentDate()"/>
     </elementParameter>
@@ -2334,7 +2341,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="1056">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_21"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -2567,9 +2574,9 @@
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:iITlpn17A9tcvCVHOgHI3IqlLtHyUKRxzHBXlmIe"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;COMMUNICATION&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" show="false" value="false"/>
     <elementParameter field="CHECK" name="SPATIAL_INDEX" show="false" value="false"/>
     <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" show="false" value="false"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -2633,7 +2640,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="1600">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_17"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -2727,9 +2734,9 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE_COUNT"/>
       <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_5_NB_LINE&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_14_NB_SUCCESS&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_16_NB_LINE_INSERTED&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_STATUS"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_5_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_14_NB_SUCCESS&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_5_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_16_NB_LINE_INSERTED&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_DATE"/>
       <elementValue elementRef="VALUE" value="TalendDate.getCurrentDate()"/>
     </elementParameter>
@@ -2753,7 +2760,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="1568">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -2997,9 +3004,9 @@
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:U+6u0mV31QnPb2kKhapdDmD0dRkNhgKKscCe1mOp"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;SYSTEM_METADATA&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" show="false" value="false"/>
     <elementParameter field="CHECK" name="SPATIAL_INDEX" show="false" value="false"/>
     <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" show="false" value="false"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -3070,7 +3077,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="1824">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_19"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -3169,11 +3176,11 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_TYPE"/>
       <elementValue elementRef="VALUE" value="&quot;FILE_TO_STG&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_5_NB_LINE&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_6_NB_LINE&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_14_NB_SUCCESS&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_18_NB_LINE_INSERTED&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_STATUS"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_5_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_14_NB_SUCCESS&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_6_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_18_NB_LINE_INSERTED&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_DATE"/>
       <elementValue elementRef="VALUE" value="TalendDate.getCurrentDate()"/>
     </elementParameter>
@@ -3197,7 +3204,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="1760">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_20"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -3430,9 +3437,9 @@
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:cNO9ewc0fRDmmtpn+6MBflm3qF3h3Gd1AiP5DyxF"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;AGENTS&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" show="false" value="false"/>
     <elementParameter field="CHECK" name="SPATIAL_INDEX" show="false" value="false"/>
     <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" show="false" value="false"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -3496,7 +3503,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="2080">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_23"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -3590,9 +3597,9 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE_COUNT"/>
       <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_7_NB_LINE&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_20_NB_SUCCESS&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_22_NB_LINE_INSERTED&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_STATUS"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_7_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_20_NB_SUCCESS&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_7_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_22_NB_LINE_INSERTED&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_DATE"/>
       <elementValue elementRef="VALUE" value="TalendDate.getCurrentDate()"/>
     </elementParameter>
@@ -3616,7 +3623,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="2016">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_24"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -3860,9 +3867,9 @@
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:RghQL98B8kEGl7kAnqF/MkHcljEyaEfATRPKRzzq"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;SOCIAL_MEDIA&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" show="false" value="false"/>
     <elementParameter field="CHECK" name="SPATIAL_INDEX" show="false" value="false"/>
     <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" show="false" value="false"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -3933,7 +3940,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="2432">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_27"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -4034,9 +4041,9 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE_COUNT"/>
       <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_8_NB_LINE&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_23_NB_SUCCESS&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_37_NB_LINE_INSERTED&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_STATUS"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_8_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_23_NB_SUCCESS&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_8_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_37_NB_LINE_INSERTED&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_DATE"/>
       <elementValue elementRef="VALUE" value="TalendDate.getCurrentDate()"/>
     </elementParameter>
@@ -4060,7 +4067,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="2368">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_25"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -4304,9 +4311,9 @@
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:CIr34zUexRHHmJ8Nw1ocmm7Xk0pwPhiQ13rA0E3Z"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;FEEDBACK&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" show="false" value="false"/>
     <elementParameter field="CHECK" name="SPATIAL_INDEX" show="false" value="false"/>
     <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" show="false" value="false"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -4377,7 +4384,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="2720">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_30"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -4614,9 +4621,9 @@
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:TpJv6GKUXNmKFxrG4jjJVK9D3mxS/c9f2QTwOPiu"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;SALES_ORDERS&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" show="false" value="false"/>
     <elementParameter field="CHECK" name="SPATIAL_INDEX" show="false" value="false"/>
     <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" show="false" value="false"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -4687,7 +4694,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="3008">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_32"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -4924,9 +4931,9 @@
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:prpJmorPHU89bZQ/wbmVE9VRKXUa5qebBCyPLiBX"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;PRODUCT_CATALOG&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" show="false" value="false"/>
     <elementParameter field="CHECK" name="SPATIAL_INDEX" show="false" value="false"/>
     <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" show="false" value="false"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -4997,7 +5004,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="3328">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_34"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -5098,9 +5105,9 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE_COUNT"/>
       <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_9_NB_LINE&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_26_NB_SUCCESS&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_28_NB_LINE_INSERTED&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_STATUS"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_9_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_26_NB_SUCCESS&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_9_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_28_NB_LINE_INSERTED&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_DATE"/>
       <elementValue elementRef="VALUE" value="TalendDate.getCurrentDate()"/>
     </elementParameter>
@@ -5124,7 +5131,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="2656">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_26"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -5232,9 +5239,9 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE_COUNT"/>
       <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_10_NB_LINE&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_28_NB_SUCCESS&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_31_NB_LINE_INSERTED&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_STATUS"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_10_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_28_NB_SUCCESS&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_10_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_31_NB_LINE_INSERTED&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_DATE"/>
       <elementValue elementRef="VALUE" value="TalendDate.getCurrentDate()"/>
     </elementParameter>
@@ -5258,7 +5265,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="2944">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_29"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -5352,7 +5359,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="3232">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="3232">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_11"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
@@ -5366,9 +5373,9 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE_COUNT"/>
       <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_11_NB_LINE&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_COUNT"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_30_NB_SUCCESS&quot;))"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_33_NB_LINE_INSERTED&quot;))"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_STATUS"/>
-      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_11_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_30_NB_SUCCESS&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_11_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_33_NB_LINE_INSERTED&quot;)) == 0 ? &quot;SUCCESS&quot; : &quot;FAILED&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_DATE"/>
       <elementValue elementRef="VALUE" value="TalendDate.getCurrentDate()"/>
     </elementParameter>
@@ -5389,10 +5396,10 @@
       <column comment="" key="false" length="400" name="LOAD_DATE" nullable="true" originalLength="400" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="3232">
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="3232">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_36"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -5500,15 +5507,53 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBCommit_2"/>
   </node>
+  <node componentName="tPostgresqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_3"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tPostgresqlConnection"/>
+    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
+    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/PostgreSQL|ELT/Connections"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
+    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tPostgresqlConnection"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Users\Geetha Thota\OneDrive\Documents\TalendStudio\studio\configuration\lib\java"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_a726sAu_Ee-DSa-8rXjCKA"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="HOST" value="context.customerPostgresHist_Server"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="POSTGRESQL"/>
+    <elementParameter field="TEXT" name="PORT" value="context.customerPostgresHist_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.customerPostgresHist_Database"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.customerPostgresHist_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.customerPostgresHist_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:uFH/W+e5TkOt/kf4q0+niaX4p3vdoPKrRBeq3jgo22WPoslvlS6523nOucbHiu/sSq+C84t8WWH7l9I8gxCuzYo="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.customerPostgresHist_AdditionalParams"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="customerPostgresHist"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tPostgresqlCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1504" posY="800">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBCommit_3"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
+    <elementParameter field="CHECK" name="CLOSE" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBCommit_3"/>
+  </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tDBConnection_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tFixedFlowInput_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="FLOW" label="customer" lineStyle="0" metaname="customer" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tDBOutput_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -5518,8 +5563,14 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="cust_hist"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_2" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_2" target="tFixedFlowInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk3"/>
+  </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBConnection_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_2" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_2" target="tDBConnection_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tDBOutput_4">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -5540,9 +5591,6 @@
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_2" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_2" target="tFixedFlowInput_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
   </connection>
   <connection connectorName="FLOW" label="fin_info" lineStyle="0" metaname="fin_info" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tDBOutput_6">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -5577,6 +5625,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="fin_info_hist"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_6" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_6" target="tFixedFlowInput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk4"/>
+  </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tDBOutput_9">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="LOAD_DATE"/>
@@ -5589,9 +5640,6 @@
   <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tFileInputDelimited_3" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_3" target="tMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_3" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_3" target="tFixedFlowInput_4">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk6"/>
   </connection>
   <connection connectorName="FLOW" label="preferences" lineStyle="0" metaname="preferences" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_3" target="tDBOutput_10">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -5626,12 +5674,12 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="preferences_hist"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_10" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_10" target="tFixedFlowInput_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk5"/>
+  </connection>
   <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tFileInputDelimited_4" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_4" target="tMap_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_4" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_4" target="tFixedFlowInput_3">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk7"/>
   </connection>
   <connection connectorName="FLOW" label="purchases" lineStyle="0" metaname="purchases" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_4" target="tDBOutput_13">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -5640,6 +5688,9 @@
   <connection connectorName="FLOW" label="purchase_hist" lineStyle="0" metaname="purchase_hist" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_4" target="tDBOutput_14">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="purchase_hist"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_13" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_13" target="tFixedFlowInput_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk6"/>
   </connection>
   <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tFixedFlowInput_3" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_3" target="tDBOutput_15">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -5662,9 +5713,6 @@
   <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tFileInputDelimited_5" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_5" target="tMap_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row10"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_5" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_5" target="tFixedFlowInput_5">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk8"/>
   </connection>
   <connection connectorName="FLOW" label="COMM" lineStyle="0" metaname="COMM" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_5" target="tDBOutput_16">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -5702,6 +5750,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="COMM_HIST"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_16" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_16" target="tFixedFlowInput_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk7"/>
+  </connection>
   <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tFixedFlowInput_5" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_5" target="tDBOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="LOAD_DATE"/>
@@ -5714,9 +5765,6 @@
   <connection connectorName="FLOW" label="row12" lineStyle="0" metaname="tFileInputDelimited_6" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_6" target="tMap_6">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row12"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_6" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_6" target="tFixedFlowInput_6">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk9"/>
   </connection>
   <connection connectorName="FLOW" label="system_metadata" lineStyle="0" metaname="system_metadata" offsetLabelX="38" offsetLabelY="5" outputId="1" source="tMap_6" target="tDBOutput_18">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -5754,6 +5802,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="system_metadata_hist"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_18" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_18" target="tFixedFlowInput_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk8"/>
+  </connection>
   <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tFixedFlowInput_6" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_6" target="tDBOutput_20">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="LOAD_DATE"/>
@@ -5767,9 +5818,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row14"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_7" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_7" target="tFixedFlowInput_7">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk10"/>
-  </connection>
   <connection connectorName="FLOW" label="AGENTA" lineStyle="0" metaname="AGENTA" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_7" target="tDBOutput_22">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="AGENTA"/>
@@ -5777,6 +5825,9 @@
   <connection connectorName="FLOW" label="AGENTS" lineStyle="0" metaname="AGENTS" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_7" target="tDBOutput_23">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="AGENTS"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_22" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_22" target="tFixedFlowInput_7">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk9"/>
   </connection>
   <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tFixedFlowInput_7" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_7" target="tDBOutput_24">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -5791,9 +5842,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row16"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_8" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_8" target="tFixedFlowInput_8">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk14"/>
-  </connection>
   <connection connectorName="FLOW" label="SOCIAL_MEDIA" lineStyle="0" metaname="SOCIAL_MEDIA" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_8" target="tDBOutput_37">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="SOCIAL_MEDIA"/>
@@ -5801,6 +5849,9 @@
   <connection connectorName="FLOW" label="social_media_hist" lineStyle="0" metaname="social_media_hist" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_8" target="tDBOutput_27">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="social_media_hist"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_37" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_37" target="tFixedFlowInput_8">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk10"/>
   </connection>
   <connection connectorName="FLOW" label="row17" lineStyle="0" metaname="tFixedFlowInput_8" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_8" target="tDBOutput_25">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -5815,9 +5866,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row18"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_9" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_9" target="tFixedFlowInput_9">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk13"/>
-  </connection>
   <connection connectorName="FLOW" label="feedback" lineStyle="0" metaname="feedback" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_9" target="tDBOutput_28">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="feedback"/>
@@ -5826,12 +5874,12 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="feedback_hist"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_28" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_28" target="tFixedFlowInput_9">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk11"/>
+  </connection>
   <connection connectorName="FLOW" label="row19" lineStyle="0" metaname="tFileInputDelimited_10" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_10" target="tMap_10">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row19"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_10" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_10" target="tFixedFlowInput_10">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk12"/>
   </connection>
   <connection connectorName="FLOW" label="salesorders" lineStyle="0" metaname="salesorders" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_10" target="tDBOutput_31">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -5841,12 +5889,12 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="sales_order_hist"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_31" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_31" target="tFixedFlowInput_10">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk12"/>
+  </connection>
   <connection connectorName="FLOW" label="row20" lineStyle="0" metaname="tFileInputDelimited_11" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_11" target="tMap_11">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row20"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_11" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_11" target="tFixedFlowInput_11">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk11"/>
   </connection>
   <connection connectorName="FLOW" label="catalog" lineStyle="0" metaname="catalog" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_11" target="tDBOutput_33">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -5855,6 +5903,9 @@
   <connection connectorName="FLOW" label="catalog_hist" lineStyle="0" metaname="catalog_hist" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_11" target="tDBOutput_34">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="catalog_hist"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_33" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_33" target="tFixedFlowInput_11">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk13"/>
   </connection>
   <connection connectorName="FLOW" label="row21" lineStyle="0" metaname="tFixedFlowInput_9" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_9" target="tDBOutput_26">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -5885,6 +5936,9 @@
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBCommit_1" offsetLabelX="0" offsetLabelY="0" source="tDBCommit_1" target="tDBCommit_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBCommit_2" offsetLabelX="0" offsetLabelY="0" source="tDBCommit_2" target="tDBCommit_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
   </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
@@ -6033,13 +6087,23 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_17a73153-a3d8-4015-a936-bee07997e197"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gO1ddI5Pq2+7nNYNl6Rl9VzdasWiWBBXvPvHNccCiTcOy/A5uc/uf44SejBTo6SUJPhbnAUImhAA&#13;
-3ATzqBV7rw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0bcd83b4-ef59-4768-8e4f-b3c374979737"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2TMuswmJ/6vKMDGD0y5eRfc97wC2NOfofkLZFgaNxDmDrKjyVCaJf8XNDsmq7OHxa5vYajkWVweM&#13;
-3yrZEagGJg==</DigestValue></Reference></SignedInfo><SignatureValue>Dc3iJQEtwUMdXQvgB1tyAHSvOH6ScK7J8Br9HKZiAXWnqfxjelGpRDnLiV61Gyn1bykldBvfLpN+&#13;
-5zrRF0l9IJYePFiIB1hRlGSiL2inwPlq2UQaxB3KTGhfPyafwvLjneoxp/nm4D4HLCEHPs5e1lKn&#13;
-mg6m3L+5AOuVCCGVHxKNBus+Q6nCMjlwQthb/5g0kWCTpxUAMBcMyf9pEFMRkJie/p/5S/7Q0pk2&#13;
-SVtatfeQVLQJomX0kSUAQT2z0RE7LNIUAsmgly6stqpjHuR8wXUpqBhmkdzB6wCtmlEO59ReobbA&#13;
-zbwvynsBgh0xyo0kNW03bd8+3gfo8y1EDBniSw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBCommit_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0a6b8050-aed9-4a62-b409-cfc602609b7c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8tVwQFMXD/Qu0RwPd3MfI1HyAINXVB1XR1dN+8tbmOr5JuJufWa4dGK6FqR948kYE8joz4VOVkC1&#13;
+YwyJza7Hww==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d09078f5-b60f-4898-85f2-a89062416b86"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FVz7H4Rc0XhPJvQvhz4Yr9YmDfknz3A52xxSGJ/Q79OR0MtI+aiCDTzpR+JjGq6uOJKR6gQfPU0D&#13;
+QTX0e94bEw==</DigestValue></Reference></SignedInfo><SignatureValue>EsuaevasROhccLJnIogBexHKnmxymFVlgog9gpnsfuov6kvjSf/wWgmRUBuTn2/YwdbyyEg1OwGJ&#13;
+a/25+WqEGSAV1qXHgF0KodAaT3kt9ty3ce2KeFGTrQiL1P3Gc4zfcnC1uiBDSxkSSVOy3r3SMFfM&#13;
+lAHuOQ/eZf8n7X9ZMjy5FNTJe5p+lW3I3SgI+wxPrtPBLR5WS1eM+ouaoKTJJ1SV5eskvlJp1aBy&#13;
+gf2/s3ytbz6D20sA6unVcU0U9eCY8gCuBnUUSNNg7ALB6kMLh0lxEDDCD+B7faD6pDaNgILkb+MR&#13;
+WCgnjmOpOla1bmJ/7uU53RoXqQG/quhZxH/pRQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -6061,4 +6125,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0bcd83b4-ef59-4768-8e4f-b3c374979737" Target="#_17a73153-a3d8-4015-a936-bee07997e197"><Timestamp>2024-05-06 09:03:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d09078f5-b60f-4898-85f2-a89062416b86" Target="#_0a6b8050-aed9-4a62-b409-cfc602609b7c"><Timestamp>2024-05-07 09:02:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
