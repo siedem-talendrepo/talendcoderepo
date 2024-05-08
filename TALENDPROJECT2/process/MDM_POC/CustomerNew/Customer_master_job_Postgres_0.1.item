@@ -79,6 +79,13 @@
     <contextParameter comment="" internalId="_qBR8awusEe-EGMRvwoEYGQ" name="customerPostgresMaster_Login" prompt="customerPostgresMaster_Login?" promptNeeded="false" repositoryContextId="_Hlkl0AubEe-EGMRvwoEYGQ" type="id_String" value="postgres"/>
     <contextParameter comment="" internalId="_Fo2GPfcdEe6OSoRjHBA3vg" name="CUSTOMER_RAW_oauthProperties_oauthTokenEndpoint" prompt="CUSTOMER_RAW_oauthProperties_oauthTokenEndpoint?" promptNeeded="false" repositoryContextId="_GEh5YPVsEe6CeeoJaK8M4w" type="id_String" value=""/>
     <contextParameter comment="" internalId="_Fo2GYvcdEe6OSoRjHBA3vg" name="CUSTOMER_AUDIT_account" prompt="CUSTOMER_AUDIT_account?" promptNeeded="false" repositoryContextId="_2z780PVuEe6CeeoJaK8M4w" type="id_String" value="YSTHWRX-LL72988"/>
+    <contextParameter comment="" internalId="_RFf3UAx0Ee--rN4Xs45MYA" name="customerPostgresHist_AdditionalParams" prompt="customerPostgresHist_AdditionalParams?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_RFf3UQx0Ee--rN4Xs45MYA" name="customerPostgresHist_Schema" prompt="customerPostgresHist_Schema?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value="hist"/>
+    <contextParameter comment="" internalId="_RFf3Ugx0Ee--rN4Xs45MYA" name="customerPostgresHist_Login" prompt="customerPostgresHist_Login?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value="postgres"/>
+    <contextParameter comment="" internalId="_RFf3Uwx0Ee--rN4Xs45MYA" name="customerPostgresHist_Server" prompt="customerPostgresHist_Server?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value="localhost"/>
+    <contextParameter comment="" internalId="_RFf3VAx0Ee--rN4Xs45MYA" name="customerPostgresHist_Database" prompt="customerPostgresHist_Database?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value="Customer"/>
+    <contextParameter comment="" internalId="_RFf3VQx0Ee--rN4Xs45MYA" name="customerPostgresHist_Password" prompt="customerPostgresHist_Password?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_Password" value="enc:system.encryption.key.v1:+0uYaJCcv6oA3qsMgBN4TdwonoS/n3B+ZwUcFb127pCQThB8"/>
+    <contextParameter comment="" internalId="_RFf3Vgx0Ee--rN4Xs45MYA" name="customerPostgresHist_Port" prompt="customerPostgresHist_Port?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value="5433"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="DEV">
     <contextParameter comment="" internalId="_Fo2GY_cdEe6OSoRjHBA3vg" name="CUSTOMER_RAW_oauthProperties_clientSecret" prompt="CUSTOMER_RAW_oauthProperties_clientSecret?" promptNeeded="false" repositoryContextId="_GEh5YPVsEe6CeeoJaK8M4w" type="id_Password" value=""/>
@@ -160,10 +167,17 @@
     <contextParameter comment="" internalId="_qBR8hQusEe-EGMRvwoEYGQ" name="customerPostgresSTG_Port" prompt="customerPostgresSTG_Port?" promptNeeded="false" repositoryContextId="_b-YP0AuMEe-EGMRvwoEYGQ" type="id_String" value="5433"/>
     <contextParameter comment="" internalId="_qBR8hgusEe-EGMRvwoEYGQ" name="customerPostgresSTG_Password" prompt="customerPostgresSTG_Password?" promptNeeded="false" repositoryContextId="_b-YP0AuMEe-EGMRvwoEYGQ" type="id_Password" value="enc:system.encryption.key.v1:T5YZRYwXf5UMDk0uyUjiSqFh4rMFKWelEcWmgsnuGnMTtX3/"/>
     <contextParameter comment="" internalId="_qBR8hwusEe-EGMRvwoEYGQ" name="customerPostgresSTG_Database" prompt="customerPostgresSTG_Database?" promptNeeded="false" repositoryContextId="_b-YP0AuMEe-EGMRvwoEYGQ" type="id_String" value="Customer"/>
+    <contextParameter comment="" internalId="_RFf3Vwx0Ee--rN4Xs45MYA" name="customerPostgresHist_AdditionalParams" prompt="customerPostgresHist_AdditionalParams?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_RFf3WAx0Ee--rN4Xs45MYA" name="customerPostgresHist_Schema" prompt="customerPostgresHist_Schema?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value="hist"/>
+    <contextParameter comment="" internalId="_RFf3WQx0Ee--rN4Xs45MYA" name="customerPostgresHist_Login" prompt="customerPostgresHist_Login?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value="postgres"/>
+    <contextParameter comment="" internalId="_RFf3Wgx0Ee--rN4Xs45MYA" name="customerPostgresHist_Server" prompt="customerPostgresHist_Server?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value="localhost"/>
+    <contextParameter comment="" internalId="_RFf3Wwx0Ee--rN4Xs45MYA" name="customerPostgresHist_Database" prompt="customerPostgresHist_Database?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value="Customer"/>
+    <contextParameter comment="" internalId="_RFf3XAx0Ee--rN4Xs45MYA" name="customerPostgresHist_Password" prompt="customerPostgresHist_Password?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_Password" value="enc:system.encryption.key.v1:FoTcNQRcyBfGce17KNW25blRdNMcDdsPy+aBDDn/oURDZbys"/>
+    <contextParameter comment="" internalId="_RFf3XQx0Ee--rN4Xs45MYA" name="customerPostgresHist_Port" prompt="customerPostgresHist_Port?" promptNeeded="false" repositoryContextId="_gegq8Au_Ee-DSa-8rXjCKA" type="id_String" value="5433"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
-    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" show="false" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx10240M&quot;]}"/>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" show="false" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx20480M&quot;]}"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" show="false" value="true"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="32"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
@@ -406,7 +420,7 @@
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" show="false" value=""/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="Customer_Data_Steward_Task_postgres"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="DEV"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="TALENDPROJECT2:_0OWScAuaEe-EGMRvwoEYGQ"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" show="false" value="Default"/>
@@ -438,16 +452,6 @@
   </node>
   <node componentName="tPostgresqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tPostgresqlConnection"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/PostgreSQL|ELT/Connections"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tPostgresqlConnection"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Users\Geetha Thota\OneDrive\Documents\TalendStudio\studio\configuration\lib\java"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_AhdowAq9Ee-sAZ35nrCD1A"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
@@ -472,16 +476,6 @@
   </node>
   <node componentName="tPostgresqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tPostgresqlConnection"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/PostgreSQL|ELT/Connections"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tPostgresqlConnection"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Users\Geetha Thota\OneDrive\Documents\TalendStudio\studio\configuration\lib\java"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_C4GKEAubEe-EGMRvwoEYGQ"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
@@ -506,16 +500,6 @@
   </node>
   <node componentName="tPostgresqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_3"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tPostgresqlConnection"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/PostgreSQL|ELT/Connections"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tPostgresqlConnection"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Users\Geetha Thota\OneDrive\Documents\TalendStudio\studio\configuration\lib\java"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_eZQPYAniEe-y8pAaVhL1qA"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
@@ -540,16 +524,6 @@
   </node>
   <node componentName="tPostgresqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_4"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tPostgresqlConnection"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/PostgreSQL|ELT/Connections"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tPostgresqlConnection"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Users\Geetha Thota\OneDrive\Documents\TalendStudio\studio\configuration\lib\java"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="__MnRcAuHEe-EGMRvwoEYGQ"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
@@ -653,7 +627,7 @@
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="736">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
@@ -781,6 +755,47 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tPostgresqlCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="1120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBCommit_5"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_5"/>
+    <elementParameter field="CHECK" name="CLOSE" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBCommit_5"/>
+  </node>
+  <node componentName="tPostgresqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_5"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tPostgresqlConnection"/>
+    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
+    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/PostgreSQL|ELT/Connections"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
+    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tPostgresqlConnection"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Users\Geetha Thota\OneDrive\Documents\TalendStudio\studio\configuration\lib\java"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_a726sAu_Ee-DSa-8rXjCKA"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="HOST" value="context.customerPostgresHist_Server"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="POSTGRESQL"/>
+    <elementParameter field="TEXT" name="PORT" value="context.customerPostgresHist_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.customerPostgresHist_Database"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.customerPostgresHist_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.customerPostgresHist_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:YwduRc/mKY62A6MAPYjIfXXbDJ8X5RySI79Fi7t1E47ksjKjEhpdkNSvEWSpmxvIDiTqsZg3Lq+VmJdOuERvPqg="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.customerPostgresHist_AdditionalParams"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="customerPostgresHist"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tDBConnection_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
   </connection>
@@ -812,11 +827,17 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_3" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_3" target="tDBConnection_4">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk9"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_4" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_4" target="tDBConnection_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk14"/>
+  </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tParallelize_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBCommit_1" offsetLabelX="0" offsetLabelY="0" source="tDBCommit_1" target="tDBCommit_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBCommit_2" offsetLabelX="0" offsetLabelY="0" source="tDBCommit_2" target="tDBCommit_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk13"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBCommit_3" offsetLabelX="0" offsetLabelY="0" source="tDBCommit_3" target="tDBCommit_4">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
@@ -928,13 +949,23 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d5ff1146-9be2-4cce-93ea-82e000fbcf89"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Kqgaw/JwIw769xmV3hOgRA59h733iRW6+qhWJ5WuQP2E69Sa6PRXO2BT/0Ik8oODjfDJcv60ol6K&#13;
-yhqhCsQPZg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ddb7b788-2f73-47c2-8ff6-19a412e1dc4b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xSot/zwf0/SR0bIN+VtK1+176HDmwNvmMswUzUbsCvpcovb6BH6z+iRQ7qE4LGUrMzrrq1qxbAgf&#13;
-k9gF/MuqoA==</DigestValue></Reference></SignedInfo><SignatureValue>g4T8lPTD1QzX+tz5K4LJNpqVk9s1jtyo2I/h/BqbVNwOSE6nvOmRTlD/6u9UDZyOLdLQftzNOG0d&#13;
-ldVDWw5jQxPVBuucUX79qqtIj4tIzp/wTsqN7JyC6mrCpJ8YU06st5onW5CcjSojR/du+2XGH0s8&#13;
-aGNtaq7TvXmCR8Z0CtQVFSPhqh7yy47VwbEZ4exifxXw1c8L4l49EVadzmb2ynmb+bwFMe7mb+cI&#13;
-K8lYrjxDASNqCQ6LCOYMcojeLVESDxwJ7Qpmp3uTsOD4Arh0HoS6lemZhWSuNJlqttWT/9swU6Vq&#13;
-08zUaxglhzsDs6f9fXz6l5XwQJ7hYCibybdh1Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBCommit_5"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_5"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5cdb6701-aab4-4b8d-9655-2a067ce6064c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2G3/Y5swdz8T2Wz/eNuBEtVcsqPArQyQFsBHi00e3GRe1tpfXfzX9/AeKhnEnX2pueVE//McRFFp&#13;
+3a5B9KONaw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3e1cbbc8-9353-411a-a1fa-7d8a6a372392"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>55Nc1xazyO1lS1Rx2yfklxowgNBK8ZpDBBJWo9vX7gTjy92fBSdUPD6H5C+levY0WZhKSSDSQqM4&#13;
+Kk+8JWhAAg==</DigestValue></Reference></SignedInfo><SignatureValue>diYHCYHvXa6KaAgssm1qfefzpK4FZ+DsUHwRuGMCRSRetYGgH/fdoOHyEdPLfwc/4e70YKdojmjQ&#13;
+dy9Xow6A57ocx29cZqNgp8PhTRhoZFZ/MwUhsx/O/5FGuONLY2CsWNBvdmMh1qcaQjlMCE5F+PPq&#13;
+1DztXgENEBODN5deeAX7D0+Z0dVC4DaBdsSNrnK/DAnQ8zEE9kF2IrF+jzuVbzVFmQLJLoqw2A4T&#13;
+bFqs/n0Ed/eMPWx3CoAEVLmeAGltbrMfQzL+u8yFrAFurCVIIVoJ/OuJuZBeTBX8HIFBPT9VsakK&#13;
+InI/4KpgidPhgVupgjQK+yXjQYs9ipy1+oa4Vg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -956,4 +987,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ddb7b788-2f73-47c2-8ff6-19a412e1dc4b" Target="#_d5ff1146-9be2-4cce-93ea-82e000fbcf89"><Timestamp>2024-05-06 13:29:25</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3e1cbbc8-9353-411a-a1fa-7d8a6a372392" Target="#_5cdb6701-aab4-4b8d-9655-2a067ce6064c"><Timestamp>2024-05-07 15:17:25</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
