@@ -183,7 +183,7 @@
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
-    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" show="false" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx10240M&quot;]}"/>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" show="false" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx30720M&quot;]}"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" show="false" value="true"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
@@ -302,6 +302,7 @@
   </node>
   <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="832">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="672">
@@ -458,7 +459,7 @@
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="context.customerPostgresAudit_AdditionalParams"/>
-    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="customerPostgresAudit"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
@@ -482,7 +483,7 @@
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="context.customerPostgresRaw_AdditionalParams"/>
-    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="customerPostgresRaw"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
@@ -506,12 +507,13 @@
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="context.customerPostgresSTG_AdditionalParams"/>
-    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="customerPostgresSTG"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tPostgresqlCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="832">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBCommit_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
     <elementParameter field="CHECK" name="CLOSE" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -519,6 +521,7 @@
   </node>
   <node componentName="tPostgresqlCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="832">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBCommit_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
     <elementParameter field="CHECK" name="CLOSE" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -526,12 +529,13 @@
   </node>
   <node componentName="tPostgresqlCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="832">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBCommit_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CHECK" name="CLOSE" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBCommit_3"/>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="384">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_8"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
@@ -653,7 +657,181 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="384">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFilterRow_11"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="||"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.EMAIL_ADDRESS.contains(&quot;@&quot;)||input_row.EMAIL_ADDRESS.contains(&quot;.&quot;)&#10;&#9;&#9;&#9;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFilterRow_11">
+      <column comment="" key="true" length="4000" name="CUSTOMER_ID" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="INT8" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_ID"/>
+      </column>
+      <column comment="" key="true" length="4000" name="CUSTOMER_NAME" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_NAME"/>
+      </column>
+      <column comment="" key="true" length="4000" name="CUSTOMER_TYPE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_TYPE"/>
+      </column>
+      <column comment="" key="true" length="4000" name="EMAIL_ADDRESS" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="EMAIL_ADDRESS"/>
+      </column>
+      <column comment="" key="false" length="38" name="PHONE_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PHONE_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="4000" name="ADRESS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADRESS"/>
+      </column>
+      <column comment="" key="false" length="4000" name="CITY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CITY"/>
+      </column>
+      <column comment="" key="false" length="4000" name="STATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="STATE"/>
+      </column>
+      <column comment="" key="true" length="4000" name="POSTAL_CODE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="POSTAL_CODE"/>
+      </column>
+      <column comment="" key="false" length="4000" name="GENDER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="GENDER"/>
+      </column>
+      <column comment="" key="true" length="-1" name="DATE_OF_BIRTH" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_OF_BIRTH"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="4000" name="MARITAL_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MARITAL_STATUS"/>
+      </column>
+      <column comment="" key="false" length="4000" name="OCCUPATION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="OCCUPATION"/>
+      </column>
+      <column comment="" key="false" length="4000" name="COMPANY_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY_NAME"/>
+      </column>
+      <column comment="" key="false" length="4000" name="INDUSTRY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="INDUSTRY"/>
+      </column>
+      <column comment="" key="false" length="38" name="NUMBER_OF_EMPLOYEES" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="NUMBER_OF_EMPLOYEES"/>
+      </column>
+      <column comment="" key="false" length="38" name="ANNUAL_REVENUE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ANNUAL_REVENUE"/>
+      </column>
+    </metadata>
+    <metadata connector="FILTER" name="FILTER">
+      <column comment="" key="true" length="4000" name="CUSTOMER_ID" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="INT8" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_ID"/>
+      </column>
+      <column comment="" key="true" length="4000" name="CUSTOMER_NAME" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_NAME"/>
+      </column>
+      <column comment="" key="true" length="4000" name="CUSTOMER_TYPE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_TYPE"/>
+      </column>
+      <column comment="" key="true" length="4000" name="EMAIL_ADDRESS" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="EMAIL_ADDRESS"/>
+      </column>
+      <column comment="" key="false" length="38" name="PHONE_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PHONE_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="4000" name="ADRESS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADRESS"/>
+      </column>
+      <column comment="" key="false" length="4000" name="CITY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CITY"/>
+      </column>
+      <column comment="" key="false" length="4000" name="STATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="STATE"/>
+      </column>
+      <column comment="" key="true" length="4000" name="POSTAL_CODE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="POSTAL_CODE"/>
+      </column>
+      <column comment="" key="false" length="4000" name="GENDER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="GENDER"/>
+      </column>
+      <column comment="" key="true" length="-1" name="DATE_OF_BIRTH" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_OF_BIRTH"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="4000" name="MARITAL_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MARITAL_STATUS"/>
+      </column>
+      <column comment="" key="false" length="4000" name="OCCUPATION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="OCCUPATION"/>
+      </column>
+      <column comment="" key="false" length="4000" name="COMPANY_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY_NAME"/>
+      </column>
+      <column comment="" key="false" length="4000" name="INDUSTRY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="INDUSTRY"/>
+      </column>
+      <column comment="" key="false" length="38" name="NUMBER_OF_EMPLOYEES" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="NUMBER_OF_EMPLOYEES"/>
+      </column>
+      <column comment="" key="false" length="38" name="ANNUAL_REVENUE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ANNUAL_REVENUE"/>
+      </column>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="true" length="4000" name="CUSTOMER_ID" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="INT8" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_ID"/>
+      </column>
+      <column comment="" key="true" length="4000" name="CUSTOMER_NAME" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_NAME"/>
+      </column>
+      <column comment="" key="true" length="4000" name="CUSTOMER_TYPE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_TYPE"/>
+      </column>
+      <column comment="" key="true" length="4000" name="EMAIL_ADDRESS" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="EMAIL_ADDRESS"/>
+      </column>
+      <column comment="" key="false" length="38" name="PHONE_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PHONE_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="4000" name="ADRESS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADRESS"/>
+      </column>
+      <column comment="" key="false" length="4000" name="CITY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CITY"/>
+      </column>
+      <column comment="" key="false" length="4000" name="STATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="STATE"/>
+      </column>
+      <column comment="" key="true" length="4000" name="POSTAL_CODE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="POSTAL_CODE"/>
+      </column>
+      <column comment="" key="false" length="4000" name="GENDER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="GENDER"/>
+      </column>
+      <column comment="" key="true" length="-1" name="DATE_OF_BIRTH" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_OF_BIRTH"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="4000" name="MARITAL_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MARITAL_STATUS"/>
+      </column>
+      <column comment="" key="false" length="4000" name="OCCUPATION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="OCCUPATION"/>
+      </column>
+      <column comment="" key="false" length="4000" name="COMPANY_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY_NAME"/>
+      </column>
+      <column comment="" key="false" length="4000" name="INDUSTRY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="INDUSTRY"/>
+      </column>
+      <column comment="" key="false" length="38" name="NUMBER_OF_EMPLOYEES" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="NUMBER_OF_EMPLOYEES"/>
+      </column>
+      <column comment="" key="false" length="38" name="ANNUAL_REVENUE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ANNUAL_REVENUE"/>
+      </column>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="576" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -875,243 +1053,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="384">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAggregateRow_1"/>
-    <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="CUSTOMER_ID"/>
-      <elementValue elementRef="INPUT_COLUMN" value="CUSTOMER_ID"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="CUSTOMER_NAME"/>
-      <elementValue elementRef="INPUT_COLUMN" value="CUSTOMER_NAME"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="CUSTOMER_TYPE"/>
-      <elementValue elementRef="INPUT_COLUMN" value="CUSTOMER_TYPE"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="EMAIL_ADDRESS"/>
-      <elementValue elementRef="INPUT_COLUMN" value="EMAIL_ADDRESS"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="POSTAL_CODE"/>
-      <elementValue elementRef="INPUT_COLUMN" value="POSTAL_CODE"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="DATE_OF_BIRTH"/>
-      <elementValue elementRef="INPUT_COLUMN" value="DATE_OF_BIRTH"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="OPERATIONS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="PHONE_NUMBER"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="PHONE_NUMBER"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="ADRESS"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="ADRESS"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="CITY"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="CITY"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="STATE"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="STATE"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="GENDER"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="GENDER"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="HOBBIES_INTERESTS"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="HOBBIES_INTERESTS"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="MARITAL_STATUS"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="MARITAL_STATUS"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="OCCUPATION"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="OCCUPATION"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="COMPANY_NAME"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="COMPANY_NAME"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="CREDIT_RATING"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="CREDIT_RATING"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="BILLING_INFORMATION"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="BILLING_INFORMATION"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="TRANSACTION_HISTORY"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="TRANSACTION_HISTORY"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="PRODUCTS_SERVICES_PURCHASED"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="PRODUCTS_SERVICES_PURCHASED"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="PURCHASE_FREQUENCY"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="PURCHASE_FREQUENCY"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="PRODUCT_PREFERENCES"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="PRODUCT_PREFERENCES"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="ORDER_ID"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="ORDER_ID"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="ORDER_DATE"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="ORDER_DATE"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="ORDER_TOTAL"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="ORDER_TOTAL"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="ORDER_STATUS"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="ORDER_STATUS"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="SURVEY_ID"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="SURVEY_ID"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="FEEDBACK_DATE"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="FEEDBACK_DATE"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="COMMENTS"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="COMMENTS"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="CREATION_DATE"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="CREATION_DATE"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="CREATED_BY"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="CREATED_BY"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="LAST_MODIFIED_DATE"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="LAST_MODIFIED_DATE"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="LAST_MODIFIED_BY"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="LAST_MODIFIED_BY"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
-    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
-    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
-    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="CustomerMaster" name="tAggregateRow_1">
-      <column comment="" key="true" length="4000" name="CUSTOMER_ID" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_Integer" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_ID"/>
-      </column>
-      <column comment="" key="true" length="4000" name="CUSTOMER_NAME" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_NAME"/>
-      </column>
-      <column comment="" key="true" length="4000" name="CUSTOMER_TYPE" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_TYPE"/>
-      </column>
-      <column comment="" key="true" length="4000" name="EMAIL_ADDRESS" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="EMAIL_ADDRESS"/>
-      </column>
-      <column comment="" key="false" length="38" name="PHONE_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PHONE_NUMBER"/>
-      </column>
-      <column comment="" key="false" length="4000" name="ADRESS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ADRESS"/>
-      </column>
-      <column comment="" key="false" length="4000" name="CITY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CITY"/>
-      </column>
-      <column comment="" key="false" length="4000" name="STATE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="STATE"/>
-      </column>
-      <column comment="" key="true" length="4000" name="POSTAL_CODE" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="POSTAL_CODE"/>
-      </column>
-      <column comment="" key="false" length="4000" name="GENDER" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="GENDER"/>
-      </column>
-      <column comment="" key="false" length="4000" name="HOBBIES_INTERESTS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="HOBBIES_INTERESTS"/>
-      </column>
-      <column comment="" key="true" length="-1" name="DATE_OF_BIRTH" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="di.date.date" value="true"/>
-        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_OF_BIRTH"/>
-        <additionalField key="di.column.logicalType" value="date"/>
-      </column>
-      <column comment="" key="false" length="4000" name="MARITAL_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="MARITAL_STATUS"/>
-      </column>
-      <column comment="" key="false" length="4000" name="OCCUPATION" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="OCCUPATION"/>
-      </column>
-      <column comment="" key="false" length="4000" name="COMPANY_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY_NAME"/>
-      </column>
-      <column comment="" key="false" length="-1" name="CREDIT_RATING" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CREDIT_RATING"/>
-      </column>
-      <column comment="" key="false" length="4000" name="BILLING_INFORMATION" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="BILLING_INFORMATION"/>
-      </column>
-      <column comment="" key="false" length="-1" name="TRANSACTION_HISTORY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TRANSACTION_HISTORY"/>
-      </column>
-      <column comment="" key="false" length="4000" name="PRODUCTS_SERVICES_PURCHASED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PRODUCTS_SERVICES_PURCHASED"/>
-      </column>
-      <column comment="" key="false" length="4000" name="PURCHASE_FREQUENCY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PURCHASE_FREQUENCY"/>
-      </column>
-      <column comment="" key="false" length="4000" name="PRODUCT_PREFERENCES" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PRODUCT_PREFERENCES"/>
-      </column>
-      <column comment="" key="false" length="4000" name="ORDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_ID"/>
-      </column>
-      <column comment="" key="false" length="-1" name="ORDER_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="di.date.date" value="true"/>
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_DATE"/>
-        <additionalField key="di.column.logicalType" value="date"/>
-      </column>
-      <column comment="" key="false" length="38" name="ORDER_TOTAL" nullable="true" originalLength="-1" pattern="" precision="0" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_TOTAL"/>
-      </column>
-      <column comment="" key="false" length="4000" name="ORDER_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="STATUS"/>
-      </column>
-      <column comment="" key="false" length="4000" name="SURVEY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SURVEY_ID"/>
-      </column>
-      <column comment="" key="false" length="-1" name="FEEDBACK_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="di.date.date" value="true"/>
-        <additionalField key="AVRO_TECHNICAL_KEY" value="FEEDBACK_DATE"/>
-        <additionalField key="di.column.logicalType" value="date"/>
-      </column>
-      <column comment="" key="false" length="4000" name="COMMENTS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="COMMENTS"/>
-      </column>
-      <column comment="" key="false" length="-1" name="CREATION_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="di.date.date" value="true"/>
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATION_DATE"/>
-        <additionalField key="di.column.logicalType" value="date"/>
-      </column>
-      <column comment="" key="false" length="4000" name="CREATED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATED_BY"/>
-      </column>
-      <column comment="" key="false" length="-1" name="LAST_MODIFIED_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
-        <additionalField key="di.date.date" value="true"/>
-        <additionalField key="AVRO_TECHNICAL_KEY" value="LAST_MODIFIED_DATE"/>
-        <additionalField key="di.column.logicalType" value="date"/>
-      </column>
-      <column comment="" key="false" length="4000" name="LAST_MODIFIED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="LAST_MODIFIED_BY"/>
-      </column>
-    </metadata>
-  </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="288">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
@@ -1164,7 +1106,7 @@
       <column comment="" defaultValue="" key="false" length="4000" name="ORDER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="256">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_4"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
@@ -1211,7 +1153,7 @@
       <column comment="" key="false" length="4000" name="Hobbies_Interests" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="288">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
@@ -1261,7 +1203,7 @@
       <column comment="" key="false" length="4000" name="BILLING_INFORMATION" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="480">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
@@ -1311,7 +1253,7 @@
       <column comment="" key="false" length="4000" name="Status" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="512">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
@@ -1361,7 +1303,7 @@
       <column comment="" key="false" length="4000" name="Comments" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="512">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_6"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
@@ -1411,7 +1353,272 @@
       <column comment="" key="false" length="4000" name="Last_Modified_By" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="384">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="896" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_NBYLYAuUEe-EGMRvwoEYGQ-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="CustomerMaster" name="master_stg">
+      <column comment="" key="true" length="4000" name="CUSTOMER_ID" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_ID"/>
+      </column>
+      <column comment="" key="true" length="4000" name="CUSTOMER_NAME" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_NAME"/>
+      </column>
+      <column comment="" key="true" length="4000" name="CUSTOMER_TYPE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_TYPE"/>
+      </column>
+      <column comment="" key="true" length="4000" name="EMAIL_ADDRESS" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="EMAIL_ADDRESS"/>
+      </column>
+      <column comment="" key="false" length="38" name="PHONE_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PHONE_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="4000" name="ADRESS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADRESS"/>
+      </column>
+      <column comment="" key="false" length="4000" name="CITY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CITY"/>
+      </column>
+      <column comment="" key="false" length="4000" name="STATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="STATE"/>
+      </column>
+      <column comment="" defaultValue="&quot;00000&quot;" key="false" length="4000" name="POSTAL_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="POSTAL_CODE"/>
+      </column>
+      <column comment="" key="false" length="4000" name="GENDER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="GENDER"/>
+      </column>
+      <column comment="" key="false" length="4000" name="HOBBIES_INTERESTS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="HOBBIES_INTERESTS"/>
+      </column>
+      <column comment="" key="true" length="-1" name="DATE_OF_BIRTH" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_OF_BIRTH"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="4000" name="MARITAL_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MARITAL_STATUS"/>
+      </column>
+      <column comment="" key="false" length="4000" name="OCCUPATION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="OCCUPATION"/>
+      </column>
+      <column comment="" key="false" length="4000" name="COMPANY_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY_NAME"/>
+      </column>
+      <column comment="" key="false" length="-1" name="CREDIT_RATING" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT4" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CREDIT_RATING"/>
+      </column>
+      <column comment="" key="false" length="4000" name="BILLING_INFORMATION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BILLING_INFORMATION"/>
+      </column>
+      <column comment="" key="false" length="-1" name="TRANSACTION_HISTORY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT8" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TRANSACTION_HISTORY"/>
+      </column>
+      <column comment="" key="false" length="4000" name="PRODUCTS_SERVICES_PURCHASED" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PRODUCTS_SERVICES_PURCHASED"/>
+      </column>
+      <column comment="" key="false" length="4000" name="PURCHASE_FREQUENCY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PURCHASE_FREQUENCY"/>
+      </column>
+      <column comment="" key="false" length="4000" name="PRODUCT_PREFERENCES" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PRODUCT_PREFERENCES"/>
+      </column>
+      <column comment="" key="false" length="4000" name="ORDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="ORDER_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="38" name="ORDER_TOTAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT8" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_TOTAL"/>
+      </column>
+      <column comment="" key="false" length="4000" name="ORDER_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="STATUS"/>
+      </column>
+      <column comment="" key="false" length="4000" name="SURVEY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SURVEY_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="FEEDBACK_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="FEEDBACK_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="4000" name="COMMENTS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMMENTS"/>
+      </column>
+      <column comment="" key="false" length="-1" name="CREATION_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATION_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="4000" name="CREATED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATED_BY"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LAST_MODIFIED_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LAST_MODIFIED_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="4000" name="LAST_MODIFIED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LAST_MODIFIED_BY"/>
+      </column>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="master_stg" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="CustomerMaster.CUSTOMER_ID" name="CUSTOMER_ID" type="id_Integer"/>
+        <mapperTableEntries expression="CustomerMaster.CUSTOMER_NAME" name="CUSTOMER_NAME" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.CUSTOMER_TYPE" name="CUSTOMER_TYPE" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.EMAIL_ADDRESS" name="EMAIL_ADDRESS" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.PHONE_NUMBER" name="PHONE_NUMBER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.ADRESS" name="ADRESS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(CustomerMaster.CITY==null||CustomerMaster.CITY==&quot;&quot;||CustomerMaster.CITY.trim().length()==0)? row8.CITY : CustomerMaster.CITY " name="CITY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(CustomerMaster.STATE==null||CustomerMaster.STATE==&quot;&quot;||CustomerMaster.STATE.trim().length()==0)?  row8.STATE:CustomerMaster.STATE " name="STATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(CustomerMaster.POSTAL_CODE==null||CustomerMaster.POSTAL_CODE==&quot;&quot;||CustomerMaster.POSTAL_CODE.trim().length()==0)?row8.POSTAL_CODE:CustomerMaster.POSTAL_CODE " name="POSTAL_CODE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.GENDER" name="GENDER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.HOBBIES_INTERESTS" name="HOBBIES_INTERESTS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.DATE_OF_BIRTH" name="DATE_OF_BIRTH" type="id_Date"/>
+        <mapperTableEntries expression="CustomerMaster.MARITAL_STATUS" name="MARITAL_STATUS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.OCCUPATION" name="OCCUPATION" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.COMPANY_NAME" name="COMPANY_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.CREDIT_RATING" name="CREDIT_RATING" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="CustomerMaster.BILLING_INFORMATION" name="BILLING_INFORMATION" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.TRANSACTION_HISTORY" name="TRANSACTION_HISTORY" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="CustomerMaster.PRODUCTS_SERVICES_PURCHASED" name="PRODUCTS_SERVICES_PURCHASED" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.PURCHASE_FREQUENCY" name="PURCHASE_FREQUENCY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.PRODUCT_PREFERENCES" name="PRODUCT_PREFERENCES" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.ORDER_ID" name="ORDER_ID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.ORDER_DATE" name="ORDER_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="CustomerMaster.ORDER_TOTAL" name="ORDER_TOTAL" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="CustomerMaster.ORDER_STATUS" name="ORDER_STATUS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.SURVEY_ID" name="SURVEY_ID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.FEEDBACK_DATE" name="FEEDBACK_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="CustomerMaster.COMMENTS" name="COMMENTS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.CREATION_DATE" name="CREATION_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="CustomerMaster.CREATED_BY" name="CREATED_BY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="CustomerMaster.LAST_MODIFIED_DATE" name="LAST_MODIFIED_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="CustomerMaster.LAST_MODIFIED_BY" name="LAST_MODIFIED_BY" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="CustomerMaster" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="CUSTOMER_ID" type="id_Integer"/>
+        <mapperTableEntries name="CUSTOMER_NAME" type="id_String"/>
+        <mapperTableEntries name="CUSTOMER_TYPE" type="id_String"/>
+        <mapperTableEntries name="EMAIL_ADDRESS" type="id_String"/>
+        <mapperTableEntries name="PHONE_NUMBER" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ADRESS" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CITY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="STATE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="POSTAL_CODE" type="id_String"/>
+        <mapperTableEntries name="GENDER" nullable="true" type="id_String"/>
+        <mapperTableEntries name="HOBBIES_INTERESTS" nullable="true" type="id_String"/>
+        <mapperTableEntries name="DATE_OF_BIRTH" type="id_Date"/>
+        <mapperTableEntries name="MARITAL_STATUS" nullable="true" type="id_String"/>
+        <mapperTableEntries name="OCCUPATION" nullable="true" type="id_String"/>
+        <mapperTableEntries name="COMPANY_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CREDIT_RATING" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="BILLING_INFORMATION" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TRANSACTION_HISTORY" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="PRODUCTS_SERVICES_PURCHASED" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PURCHASE_FREQUENCY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PRODUCT_PREFERENCES" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ORDER_ID" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ORDER_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="ORDER_TOTAL" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="ORDER_STATUS" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SURVEY_ID" nullable="true" type="id_String"/>
+        <mapperTableEntries name="FEEDBACK_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="COMMENTS" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CREATION_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="CREATED_BY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="LAST_MODIFIED_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="LAST_MODIFIED_BY" nullable="true" type="id_String"/>
+      </inputTables>
+      <inputTables activateCondensedTool="true" lookupMode="LOAD_ONCE" matchingMode="FIRST_MATCH" name="row8" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="CustomerMaster.CITY " name="CITY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="STATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="POSTAL_CODE" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
+    <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Geetha Thota/OneDrive/Documents/POC/customer/city_state_postal_code.csv&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HEADER" value="1"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0"/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="true"/>
+    <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="DIRECTORY" name="TEMP_DIR" show="false" value="&quot;C:/Users/Geetha Thota/OneDrive/Documents/TalendWorkspace&quot;"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="RANDOM" value="false"/>
+    <elementParameter field="TEXT" name="NB_RANDOM" show="false" value="10"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="CITY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="POSTAL_CODE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="SPLITRECORD" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DECODE" value="false"/>
+    <elementParameter field="TABLE" name="DECODE_COLS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="CITY"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STATE"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="POSTAL_CODE"/>
+      <elementValue elementRef="DECODE" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DESTINATION" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_HEADER_AS_IS" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="LABEL" value="LocationReference"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileInputDelimited_1">
+      <column comment="" key="false" length="-1" name="CITY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="POSTAL_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="CITY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="POSTAL_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_3"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
@@ -1424,9 +1631,9 @@
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:PoLtwyREp5Pf37U53i9N821XDCDxha7z4QzcoQuF"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;CUSTOMER_MASTER_STG&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
     <elementParameter field="CHECK" name="SPATIAL_INDEX" show="false" value="false"/>
     <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" show="false" value="false"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -1609,114 +1816,114 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="CONVERT_COLUMN_TABLE_TO_LOWERCASE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
-    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="1"/>
     <elementParameter field="TEXT" name="LABEL" value="CUSTOMER_MASTER_STG"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="CustomerMaster" name="tDBOutput_3">
       <column comment="" key="true" length="4000" name="CUSTOMER_ID" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_ID"/>
       </column>
-      <column comment="" key="true" length="4000" name="CUSTOMER_NAME" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="4000" name="CUSTOMER_NAME" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_NAME"/>
       </column>
-      <column comment="" key="true" length="4000" name="CUSTOMER_TYPE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="4000" name="CUSTOMER_TYPE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_TYPE"/>
       </column>
-      <column comment="" key="true" length="4000" name="EMAIL_ADDRESS" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="4000" name="EMAIL_ADDRESS" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="EMAIL_ADDRESS"/>
       </column>
-      <column comment="" key="false" length="38" name="PHONE_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="38" name="PHONE_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="PHONE_NUMBER"/>
       </column>
-      <column comment="" key="false" length="4000" name="ADRESS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="ADRESS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="ADRESS"/>
       </column>
-      <column comment="" key="false" length="4000" name="CITY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="CITY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="CITY"/>
       </column>
-      <column comment="" key="false" length="4000" name="STATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="STATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="STATE"/>
       </column>
-      <column comment="" key="true" length="4000" name="POSTAL_CODE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" defaultValue="&quot;00000&quot;" key="false" length="4000" name="POSTAL_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="POSTAL_CODE"/>
       </column>
-      <column comment="" key="false" length="4000" name="GENDER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="GENDER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="GENDER"/>
       </column>
-      <column comment="" key="false" length="4000" name="HOBBIES_INTERESTS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="HOBBIES_INTERESTS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="HOBBIES_INTERESTS"/>
       </column>
-      <column comment="" key="true" length="-1" name="DATE_OF_BIRTH" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="DATE_OF_BIRTH" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
         <additionalField key="di.date.date" value="true"/>
         <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_OF_BIRTH"/>
         <additionalField key="di.column.logicalType" value="date"/>
       </column>
-      <column comment="" key="false" length="4000" name="MARITAL_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="MARITAL_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="MARITAL_STATUS"/>
       </column>
-      <column comment="" key="false" length="4000" name="OCCUPATION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="OCCUPATION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="OCCUPATION"/>
       </column>
-      <column comment="" key="false" length="4000" name="COMPANY_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="COMPANY_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY_NAME"/>
       </column>
-      <column comment="" key="false" length="-1" name="CREDIT_RATING" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="CREDIT_RATING" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT4" type="id_Double" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="CREDIT_RATING"/>
       </column>
-      <column comment="" key="false" length="4000" name="BILLING_INFORMATION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="BILLING_INFORMATION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="BILLING_INFORMATION"/>
       </column>
-      <column comment="" key="false" length="-1" name="TRANSACTION_HISTORY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="TRANSACTION_HISTORY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT8" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="TRANSACTION_HISTORY"/>
       </column>
-      <column comment="" key="false" length="4000" name="PRODUCTS_SERVICES_PURCHASED" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="PRODUCTS_SERVICES_PURCHASED" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="PRODUCTS_SERVICES_PURCHASED"/>
       </column>
-      <column comment="" key="false" length="4000" name="PURCHASE_FREQUENCY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="PURCHASE_FREQUENCY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="PURCHASE_FREQUENCY"/>
       </column>
-      <column comment="" key="false" length="4000" name="PRODUCT_PREFERENCES" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="PRODUCT_PREFERENCES" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="PRODUCT_PREFERENCES"/>
       </column>
-      <column comment="" key="false" length="4000" name="ORDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="ORDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_ID"/>
       </column>
-      <column comment="" key="false" length="-1" name="ORDER_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="ORDER_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
         <additionalField key="di.date.date" value="true"/>
         <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_DATE"/>
         <additionalField key="di.column.logicalType" value="date"/>
       </column>
-      <column comment="" key="false" length="38" name="ORDER_TOTAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="38" name="ORDER_TOTAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT8" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_TOTAL"/>
       </column>
-      <column comment="" key="false" length="4000" name="ORDER_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="ORDER_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="STATUS"/>
       </column>
-      <column comment="" key="false" length="4000" name="SURVEY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="SURVEY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="SURVEY_ID"/>
       </column>
-      <column comment="" key="false" length="-1" name="FEEDBACK_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="FEEDBACK_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
         <additionalField key="di.date.date" value="true"/>
         <additionalField key="AVRO_TECHNICAL_KEY" value="FEEDBACK_DATE"/>
         <additionalField key="di.column.logicalType" value="date"/>
       </column>
-      <column comment="" key="false" length="4000" name="COMMENTS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="COMMENTS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="COMMENTS"/>
       </column>
-      <column comment="" key="false" length="-1" name="CREATION_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="CREATION_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
         <additionalField key="di.date.date" value="true"/>
         <additionalField key="AVRO_TECHNICAL_KEY" value="CREATION_DATE"/>
         <additionalField key="di.column.logicalType" value="date"/>
       </column>
-      <column comment="" key="false" length="4000" name="CREATED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="CREATED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="CREATED_BY"/>
       </column>
-      <column comment="" key="false" length="-1" name="LAST_MODIFIED_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="LAST_MODIFIED_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
         <additionalField key="di.date.date" value="true"/>
         <additionalField key="AVRO_TECHNICAL_KEY" value="LAST_MODIFIED_DATE"/>
         <additionalField key="di.column.logicalType" value="date"/>
       </column>
-      <column comment="" key="false" length="4000" name="LAST_MODIFIED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="4000" name="LAST_MODIFIED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="LAST_MODIFIED_BY"/>
       </column>
     </metadata>
@@ -1724,6 +1931,148 @@
       <column comment="" key="true" length="4000" name="CUSTOMER_ID" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_ID"/>
       </column>
+      <column comment="" key="true" length="4000" name="CUSTOMER_NAME" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_NAME"/>
+      </column>
+      <column comment="" key="true" length="4000" name="CUSTOMER_TYPE" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_TYPE"/>
+      </column>
+      <column comment="" key="true" length="4000" name="EMAIL_ADDRESS" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="EMAIL_ADDRESS"/>
+      </column>
+      <column comment="" key="false" length="38" name="PHONE_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PHONE_NUMBER"/>
+      </column>
+      <column comment="" key="false" length="4000" name="ADRESS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADRESS"/>
+      </column>
+      <column comment="" key="false" length="4000" name="CITY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CITY"/>
+      </column>
+      <column comment="" key="false" length="4000" name="STATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="STATE"/>
+      </column>
+      <column comment="" defaultValue="&quot;00000&quot;" key="false" length="4000" name="POSTAL_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="POSTAL_CODE"/>
+      </column>
+      <column comment="" key="false" length="4000" name="GENDER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="GENDER"/>
+      </column>
+      <column comment="" key="false" length="4000" name="HOBBIES_INTERESTS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="HOBBIES_INTERESTS"/>
+      </column>
+      <column comment="" key="true" length="-1" name="DATE_OF_BIRTH" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_OF_BIRTH"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="4000" name="MARITAL_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MARITAL_STATUS"/>
+      </column>
+      <column comment="" key="false" length="4000" name="OCCUPATION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="OCCUPATION"/>
+      </column>
+      <column comment="" key="false" length="4000" name="COMPANY_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY_NAME"/>
+      </column>
+      <column comment="" key="false" length="-1" name="CREDIT_RATING" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT4" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CREDIT_RATING"/>
+      </column>
+      <column comment="" key="false" length="4000" name="BILLING_INFORMATION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BILLING_INFORMATION"/>
+      </column>
+      <column comment="" key="false" length="-1" name="TRANSACTION_HISTORY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT8" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TRANSACTION_HISTORY"/>
+      </column>
+      <column comment="" key="false" length="4000" name="PRODUCTS_SERVICES_PURCHASED" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PRODUCTS_SERVICES_PURCHASED"/>
+      </column>
+      <column comment="" key="false" length="4000" name="PURCHASE_FREQUENCY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PURCHASE_FREQUENCY"/>
+      </column>
+      <column comment="" key="false" length="4000" name="PRODUCT_PREFERENCES" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PRODUCT_PREFERENCES"/>
+      </column>
+      <column comment="" key="false" length="4000" name="ORDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="ORDER_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="38" name="ORDER_TOTAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT8" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_TOTAL"/>
+      </column>
+      <column comment="" key="false" length="4000" name="ORDER_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="STATUS"/>
+      </column>
+      <column comment="" key="false" length="4000" name="SURVEY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SURVEY_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="FEEDBACK_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="FEEDBACK_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="4000" name="COMMENTS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="COMMENTS"/>
+      </column>
+      <column comment="" key="false" length="-1" name="CREATION_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATION_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="4000" name="CREATED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATED_BY"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LAST_MODIFIED_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LAST_MODIFIED_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" key="false" length="4000" name="LAST_MODIFIED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LAST_MODIFIED_BY"/>
+      </column>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Geetha Thota/OneDrive/Documents/POC/customer/invalid/INVALID&quot;+TalendDate.getDate(&quot;CCYYMMDD&quot;)+&quot;.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
+    <elementParameter field="TEXT" name="LABEL" value="InvalidData"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_1">
+      <column comment="" key="true" length="4000" name="CUSTOMER_ID" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="INT8" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_ID"/>
+      </column>
       <column comment="" key="true" length="4000" name="CUSTOMER_NAME" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="CUSTOMER_NAME"/>
       </column>
@@ -1751,10 +2100,7 @@
       <column comment="" key="false" length="4000" name="GENDER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="GENDER"/>
       </column>
-      <column comment="" key="false" length="4000" name="HOBBIES_INTERESTS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="HOBBIES_INTERESTS"/>
-      </column>
-      <column comment="" key="true" length="-1" name="DATE_OF_BIRTH" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="DATE_OF_BIRTH" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true">
         <additionalField key="di.date.date" value="true"/>
         <additionalField key="AVRO_TECHNICAL_KEY" value="DATE_OF_BIRTH"/>
         <additionalField key="di.column.logicalType" value="date"/>
@@ -1768,70 +2114,18 @@
       <column comment="" key="false" length="4000" name="COMPANY_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="COMPANY_NAME"/>
       </column>
-      <column comment="" key="false" length="-1" name="CREDIT_RATING" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CREDIT_RATING"/>
+      <column comment="" key="false" length="4000" name="INDUSTRY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="INDUSTRY"/>
       </column>
-      <column comment="" key="false" length="4000" name="BILLING_INFORMATION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="BILLING_INFORMATION"/>
+      <column comment="" key="false" length="38" name="NUMBER_OF_EMPLOYEES" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="NUMBER_OF_EMPLOYEES"/>
       </column>
-      <column comment="" key="false" length="-1" name="TRANSACTION_HISTORY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="TRANSACTION_HISTORY"/>
+      <column comment="" key="false" length="38" name="ANNUAL_REVENUE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ANNUAL_REVENUE"/>
       </column>
-      <column comment="" key="false" length="4000" name="PRODUCTS_SERVICES_PURCHASED" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PRODUCTS_SERVICES_PURCHASED"/>
-      </column>
-      <column comment="" key="false" length="4000" name="PURCHASE_FREQUENCY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PURCHASE_FREQUENCY"/>
-      </column>
-      <column comment="" key="false" length="4000" name="PRODUCT_PREFERENCES" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="PRODUCT_PREFERENCES"/>
-      </column>
-      <column comment="" key="false" length="4000" name="ORDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_ID"/>
-      </column>
-      <column comment="" key="false" length="-1" name="ORDER_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
-        <additionalField key="di.date.date" value="true"/>
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_DATE"/>
-        <additionalField key="di.column.logicalType" value="date"/>
-      </column>
-      <column comment="" key="false" length="38" name="ORDER_TOTAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ORDER_TOTAL"/>
-      </column>
-      <column comment="" key="false" length="4000" name="ORDER_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="STATUS"/>
-      </column>
-      <column comment="" key="false" length="4000" name="SURVEY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SURVEY_ID"/>
-      </column>
-      <column comment="" key="false" length="-1" name="FEEDBACK_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
-        <additionalField key="di.date.date" value="true"/>
-        <additionalField key="AVRO_TECHNICAL_KEY" value="FEEDBACK_DATE"/>
-        <additionalField key="di.column.logicalType" value="date"/>
-      </column>
-      <column comment="" key="false" length="4000" name="COMMENTS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="COMMENTS"/>
-      </column>
-      <column comment="" key="false" length="-1" name="CREATION_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
-        <additionalField key="di.date.date" value="true"/>
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATION_DATE"/>
-        <additionalField key="di.column.logicalType" value="date"/>
-      </column>
-      <column comment="" key="false" length="4000" name="CREATED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="CREATED_BY"/>
-      </column>
-      <column comment="" key="false" length="-1" name="LAST_MODIFIED_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
-        <additionalField key="di.date.date" value="true"/>
-        <additionalField key="AVRO_TECHNICAL_KEY" value="LAST_MODIFIED_DATE"/>
-        <additionalField key="di.column.logicalType" value="date"/>
-      </column>
-      <column comment="" key="false" length="4000" name="LAST_MODIFIED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="LAST_MODIFIED_BY"/>
-      </column>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogCatcher" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="512">
+  <node componentName="tLogCatcher" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="768">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogCatcher_1"/>
     <elementParameter field="CHECK" name="CATCH_JAVA_EXCEPTION" value="true"/>
     <elementParameter field="CHECK" name="CATCH_TDIE" value="true"/>
@@ -1853,7 +2147,7 @@
       <column defaultValue="" key="false" length="3" name="code" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1472" posY="512">
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1568" posY="768">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
@@ -1988,6 +2282,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tDBCommit_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
   </connection>
   <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tDBOutput_4">
@@ -2006,123 +2301,31 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBCommit_1" offsetLabelX="0" offsetLabelY="0" source="tDBCommit_1" target="tDBCommit_2">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBCommit_2" offsetLabelX="0" offsetLabelY="0" source="tDBCommit_2" target="tDBCommit_3">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
   </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_8" offsetLabelX="0" offsetLabelY="0" source="tDBInput_8" target="tMap_1">
+  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tDBInput_8" offsetLabelX="0" offsetLabelY="0" source="tDBInput_8" target="tFilterRow_11">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row10"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_8" offsetLabelX="0" offsetLabelY="0" source="tDBInput_8" target="tFixedFlowInput_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
   </connection>
-  <connection connectorName="FLOW" label="CustomerMaster" lineStyle="0" metaname="CustomerMaster" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tAggregateRow_1">
+  <connection connectorName="FILTER" label="row1" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFilterRow_11" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="REJECT" label="row11" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFilterRow_11" target="tFileOutputDelimited_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row11"/>
+  </connection>
+  <connection connectorName="FLOW" label="CustomerMaster" lineStyle="0" metaname="CustomerMaster" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="CustomerMaster"/>
-  </connection>
-  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tDBOutput_3">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="HOBBIES_INTERESTS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="LAST_MODIFIED_BY"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="MARITAL_STATUS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="CUSTOMER_TYPE"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="STATE"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="SURVEY_ID"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="COMMENTS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="PRODUCT_PREFERENCES"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ORDER_TOTAL"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="PURCHASE_FREQUENCY"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="EMAIL_ADDRESS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="POSTAL_CODE"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="GENDER"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ORDER_STATUS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="DATE_OF_BIRTH"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="TRANSACTION_HISTORY"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="CREATED_BY"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ORDER_DATE"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="CUSTOMER_ID"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="CREATION_DATE"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="LAST_MODIFIED_DATE"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="FEEDBACK_DATE"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="COMPANY_NAME"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="CUSTOMER_NAME"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="CITY"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ORDER_ID"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="CREDIT_RATING"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ADRESS"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="OCCUPATION"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="PHONE_NUMBER"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="BILLING_INFORMATION"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="PRODUCTS_SERVICES_PURCHASED"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="8" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2147,6 +2350,14 @@
   <connection connectorName="FLOW" label="row7" lineStyle="8" metaname="tDBInput_6" offsetLabelX="0" offsetLabelY="0" source="tDBInput_6" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
+  </connection>
+  <connection connectorName="FLOW" label="master_stg" lineStyle="0" metaname="master_stg" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tDBOutput_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="master_stg"/>
+  </connection>
+  <connection connectorName="FLOW" label="row8" lineStyle="8" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
   </connection>
   <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tLogCatcher_1" offsetLabelX="0" offsetLabelY="0" source="tLogCatcher_1" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2211,13 +2422,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fff2b76d-7d2e-487d-a8b1-1b5040d5361e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>IFTACsB9ZeDKhDs5TpMIHiskbRq9Pa7o5udX0lXJYvBWfhiVD88jiLTVNy6o8+rzgVGAwG7gU2Rx&#13;
-oZeCw0xPiQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7f959941-a2fc-41ab-8c3e-0df00a5e1a02"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ET4YSMdD1dkEWWqWmLz0FEcqq0ZZYmndMRM/+MyGiy+QauBu5bMm4Z0RIrfppajl0PPV20a2zUN2&#13;
-FS559IaAsw==</DigestValue></Reference></SignedInfo><SignatureValue>IiAYCIxNGXRhdRUVuXLInT5C6TdvhKHNejOtJpa6vO3oslAtxgNnJZ0pNpmgwmMEboa0eBCKeWXv&#13;
-Q4zKVkYeeBmI+fzEQfOIa5kNcvRpXldPsJgWd0VCNL0JbAcfEucE4z3qfUbeAl1zcVFmQCOw/C2h&#13;
-Qgz0UA+CwBTqxJWMwmHC6VZBJcq3lxbQMpPbWsBoBV8wl039mz9Y/oZQ1hDASppPpFeB94x1L7pI&#13;
-KmHRqOFaSU+igPpE8To0B04biGEwqd7m4HXgjJffBW5/DU0ssmWQHoZX4YXnA9W3PtwUc/14F11C&#13;
-wCDzzucQteGMcf2naf29b0Oe69Wna4e8j5Bvow==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_78849337-4860-4aae-8348-7ee381c6b6a7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>g871dBf7tiRLWvrbmQ2RTQy3WoHrjajVPUoGn+9gqkCww6HiFXqUKNXdQ0FhGlTxDJ6lk+UIkoUA&#13;
+kZmW10+aFw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_58ac7291-db62-4050-9e50-5dc71d567cd3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Ido58RCK12lc7sEh3nz8pwNVXlHhOL9Xd7ypixrtXlbCyLv0xEIktvWwo20OVVJVLyMQXftWtIuA&#13;
+sfhpfSupFw==</DigestValue></Reference></SignedInfo><SignatureValue>D/poFuS9VtcCY8T1lU3rYR7g+FBkZiNvWRzf0SrBtSn5EKm27/dODeeAKfVoFdU8L6SLTs4XFKKU&#13;
+s2vUyWfToaMH3FwQPjwo4ktLRrn2zKJlFd1tsOe0bZAH3qkjBoNrEcQaJi6NbRntkRPmRfFrleIa&#13;
+oSqDa+Z9GuP/msBHqG4jJIlMau27D5vYkRrNxHrNqX/rGeKy54a17wH7RYEqoyXlNFoUU1pdam2i&#13;
+22wcA2aOH8rg9s5olAxLZd2Y+pw1/9alM0fN7FnJu4e+DO5t7yFqU/F2fYhjmLHqWFV40HjMi9kJ&#13;
+7U+6TZIFgcgcwL7kNpQRBOU4ukUStqRDmxbIdA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2239,4 +2450,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7f959941-a2fc-41ab-8c3e-0df00a5e1a02" Target="#_fff2b76d-7d2e-487d-a8b1-1b5040d5361e"><Timestamp>2024-05-07 11:45:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_58ac7291-db62-4050-9e50-5dc71d567cd3" Target="#_78849337-4860-4aae-8348-7ee381c6b6a7"><Timestamp>2024-05-16 11:43:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
