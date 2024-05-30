@@ -1,0 +1,29 @@
+{
+  "itemId" : "_xTPGMAb6Ee-nvMGwfFKP1g",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_SpsZcAq9Ee-sAZ35nrCD1A",
+    "parameterList" : [ {
+      "id" : "_SqH3QQq9Ee-sAZ35nrCD1A",
+      "name" : "customerPostgresAudit_Port"
+    }, {
+      "id" : "_SqH3Qgq9Ee-sAZ35nrCD1A",
+      "name" : "customerPostgresAudit_Database"
+    }, {
+      "id" : "_SqH3Qwq9Ee-sAZ35nrCD1A",
+      "name" : "customerPostgresAudit_Login"
+    }, {
+      "id" : "_SqH3RAq9Ee-sAZ35nrCD1A",
+      "name" : "customerPostgresAudit_Server"
+    }, {
+      "id" : "_SqH3RQq9Ee-sAZ35nrCD1A",
+      "name" : "customerPostgresAudit_AdditionalParams"
+    }, {
+      "id" : "_SqH3Rgq9Ee-sAZ35nrCD1A",
+      "name" : "customerPostgresAudit_Password"
+    }, {
+      "id" : "_SqH3Rwq9Ee-sAZ35nrCD1A",
+      "name" : "customerPostgresAudit_Schema"
+    } ]
+  } ]
+}
