@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
-  <context confirmationNeeded="false" hide="false" name="Default"/>
+  <context confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter comment="" internalId="_DovnQB9MEe-7k5aoOfLkXQ" name="customer_id" prompt="customer_id?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
+  </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="128"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="96"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
@@ -1245,18 +1247,8 @@
       <column comment="" key="false" length="-1" name="Unite_price" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="640">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="832">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_4"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tFileInputDelimited"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="File/Input"/>
-    <elementParameter field="CHECK" name="START" show="false" value="true"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tFileInputDelimited"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Users\Geetha Thota\OneDrive\Documents\TalendStudio\studio\configuration\lib\java"/>
     <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
@@ -1269,7 +1261,7 @@
     <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;"/>
     <elementParameter field="TEXT" name="HEADER" value="1"/>
     <elementParameter field="TEXT" name="FOOTER" value="0"/>
-    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="TEXT" name="LIMIT" value="1"/>
     <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="false"/>
     <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
@@ -1295,33 +1287,7 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Customer_Type"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Email_Address"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Phone_Number"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Adress"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="City"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="State"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Postal_Code"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Gender"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Date_of_Birth"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Marital_Status"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Occupation"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Company_Name"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Industry"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Number_of_Employees"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Annual_Revenue"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
@@ -1343,33 +1309,7 @@
       <elementValue elementRef="DECODE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Customer_Type"/>
       <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Email_Address"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Phone_Number"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Adress"/>
-      <elementValue elementRef="DECODE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="City"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="State"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Postal_Code"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Gender"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Date_of_Birth"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Marital_Status"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Occupation"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Company_Name"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Industry"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Number_of_Employees"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Annual_Revenue"/>
       <elementValue elementRef="DECODE" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="DESTINATION" show="false" value=""/>
@@ -1396,48 +1336,7 @@
       <column comment="" key="false" length="4000" name="Customer_Type" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
         <additionalField key="Content Type" value="Nominal"/>
       </column>
-      <column comment="" key="false" length="4000" name="Email_Address" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="-1" name="Phone_Number" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true">
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Adress" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="City" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="State" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Postal_Code" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Gender" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="-1" name="Date_of_Birth" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true">
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Marital_Status" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Occupation" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Company_Name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Industry" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="-1" name="Number_of_Employees" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true">
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="-1" name="Annual_Revenue" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true">
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
+      <column comment="" key="false" length="-1" name="City" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="metadata" name="REJECT">
       <column comment="" key="false" length="4000" name="Customer_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
@@ -1458,53 +1357,12 @@
       <column comment="" key="false" length="4000" name="Customer_Type" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
         <additionalField key="Content Type" value="Nominal"/>
       </column>
-      <column comment="" key="false" length="4000" name="Email_Address" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="-1" name="Phone_Number" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true">
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Adress" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="City" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="State" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Postal_Code" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Gender" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="-1" name="Date_of_Birth" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true">
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Marital_Status" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Occupation" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Company_Name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Industry" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="-1" name="Number_of_Employees" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true">
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="-1" name="Annual_Revenue" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true">
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
+      <column comment="" key="false" length="-1" name="City" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="640">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="832">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -1518,98 +1376,32 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata name="output1">
-      <column comment="" key="false" length="4000" name="Customer_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
+    <metadata connector="FLOW" name="output1">
+      <column comment="" key="false" length="4000" name="Customer_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true">
         <additionalField key="Content Type" value="Nominal"/>
       </column>
       <column comment="" key="false" length="4000" name="First_Name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
         <additionalField key="Content Type" value="Nominal"/>
       </column>
-      <column comment="" key="false" length="4000" name="Middle_Name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
       <column comment="" key="false" length="4000" name="Last_Name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Customer_Name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
         <additionalField key="Content Type" value="Nominal"/>
       </column>
       <column comment="" key="false" length="4000" name="Customer_Type" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
         <additionalField key="Content Type" value="Nominal"/>
       </column>
-      <column comment="" key="false" length="4000" name="Email_Address" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="-1" name="Phone_Number" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true">
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Adress" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
       <column comment="" key="false" length="4000" name="City" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
         <additionalField key="Content Type" value="Nominal"/>
       </column>
-      <column comment="" key="false" length="4000" name="State" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Postal_Code" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Gender" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="-1" name="Date_of_Birth" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true">
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Marital_Status" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Occupation" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Company_Name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Industry" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="-1" name="Number_of_Employees" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true">
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="-1" name="Annual_Revenue" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true">
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="4000" name="Survey_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="Feedback_Date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="4000" name="Comments" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="output1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="StringHandling.TRIM(row8.First_Name) " name="Customer_ID" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.First_Name" name="First_Name" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.Middle_Name" name="Middle_Name" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.Last_Name" name="Last_Name" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.Customer_Name" name="Customer_Name" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.Customer_Type" name="Customer_Type" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.Email_Address" name="Email_Address" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.Phone_Number" name="Phone_Number" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row8.Adress" name="Adress" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.City" name="City" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.State" name="State" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.Postal_Code" name="Postal_Code" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.Gender" name="Gender" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.Date_of_Birth" name="Date_of_Birth" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row8.Marital_Status" name="Marital_Status" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.Occupation" name="Occupation" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.Company_Name" name="Company_Name" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.Industry" name="Industry" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.Number_of_Employees" name="Number_of_Employees" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row8.Annual_Revenue" name="Annual_Revenue" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row9.Survey_ID " name="Survey_ID" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row9.Feedback_Date  " name="Feedback_Date" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row9.Comments " name="Comments" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="context.customer_id" name="Customer_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row8.First_Name " name="First_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row8.Last_Name " name="Last_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row8.Customer_Type " name="Customer_Type" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row8.City " name="City" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row8" sizeState="INTERMEDIATE">
         <mapperTableEntries name="Customer_ID" nullable="true" type="id_String"/>
@@ -1618,31 +1410,18 @@
         <mapperTableEntries name="Last_Name" nullable="true" type="id_String"/>
         <mapperTableEntries name="Customer_Name" nullable="true" type="id_String"/>
         <mapperTableEntries name="Customer_Type" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Email_Address" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Phone_Number" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="Adress" nullable="true" type="id_String"/>
         <mapperTableEntries name="City" nullable="true" type="id_String"/>
-        <mapperTableEntries name="State" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Postal_Code" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Gender" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Date_of_Birth" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="Marital_Status" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Occupation" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Company_Name" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Industry" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Number_of_Employees" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="Annual_Revenue" nullable="true" type="id_Integer"/>
       </inputTables>
       <inputTables activateCondensedTool="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row9" sizeState="INTERMEDIATE">
         <mapperTableEntries name="Survey_ID" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row8.Customer_ID " name="Customer_ID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="String.valueOf(context.customer_id) " name="Customer_ID" nullable="true" type="id_String"/>
         <mapperTableEntries name="Feedback_Date" nullable="true" type="id_Date"/>
         <mapperTableEntries name="Feedback_Score" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="Comments" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="480">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="672">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_5"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_8uBjkPWYEe6hCYLPl_8dMA"/>
@@ -1780,6 +1559,74 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="832">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;output_row.Customer_ID = input_row.Customer_ID;&#13;&#10;output_row.Name = input_row.First_Name + &quot; &quot; +input_row.Last_Name;&#13;&#10;output_row.Customer_Type = StringHandling.RTRIM(input_row.Customer_Type);&#13;&#10;output_row.City = StringHandling.UPCASE( input_row.City);&#13;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_1">
+      <column comment="" key="false" length="4000" name="Customer_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true">
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="4000" name="Name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="4000" name="Customer_Type" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="4000" name="City" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="832">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_4"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Customer_ID"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Name"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Customer_Type"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="City"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_4">
+      <column comment="" key="false" length="4000" name="Customer_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true">
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="4000" name="Name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="4000" name="Customer_Type" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="4000" name="City" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true">
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.customer_id=123;&#10;System.out.println(context.customer_id);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_2" target="tSortRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
@@ -1878,12 +1725,59 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
   </connection>
   <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tFileInputDelimited_4" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_4" target="tMap_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="City"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
+  </connection>
+  <connection connectorName="FLOW" label="output1" lineStyle="0" metaname="output1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tJavaRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="First_Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Customer_Type"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Last_Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Customer_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="City"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="output1"/>
   </connection>
   <connection connectorName="FLOW" label="row9" lineStyle="8" metaname="tFileInputDelimited_5" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_5" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row9"/>
+  </connection>
+  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tLogRow_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Customer_Type"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Customer_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="City"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row10"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tFileInputDelimited_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_2"/>
@@ -1905,13 +1799,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_36d2a825-4860-40c6-8921-a37a431e206c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ypbffcdcrjfGYXTeh/pmDEiJeEBEA9pHCeUWAynCtxxIab5FhAvk3hRdc5re0G90855z7y9SyLMw&#13;
-aQHUph1UxA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a4ff8ca3-a14f-44dd-882a-1f68500ed1c9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SJEZe/LJNqBnA4heIZTKXBRRL0yLzZiMP0a9xyRuKNjfUwiEDHLyp3WRg7u7k9hKw8W+wJIgzsxB&#13;
-ZcMkUyBDuw==</DigestValue></Reference></SignedInfo><SignatureValue>PjvBYyEUg+MwTSq3IUWhnmPJIv8kH6RGdWlHrbDvheUcwOV6ajRbTABWCj1q3JW6Hz5OYg6vdRcj&#13;
-xHzKh+Q7/b9qZbnk4ij4LAhy6Ot/i727dILpuyuV/5IZaCfZvdQxKz9KciUpKfstNuVtOfyR+EEX&#13;
-WuMzLLURHSlhKxVUbWyCiWerk6nVG1l1Jrolb3pO6c0jIok/WjMiM8KDBYOV3//HtY48LlRQAsk5&#13;
-imwHntPjDKDVQXHHQi6V220Avtukvs+Z5nUXnTJczFI/xtsADGX0rhEhX7yIop/KLjjAfvuovDqp&#13;
-AMN7ZZDrYqKHeilEcjaLVobJU/tWrtFbNiSLBw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_afa00d01-94b9-49a7-bc92-a77cdf6d6685"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>L/AQzADtV1QeeYVQg6VMSczZSmnkWshzFDN36gW6A/9SWEb8wncGv7+ElyQ7UTAyhjs6JgNONuxr&#13;
+PxfGXsGQ9A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1c69d18c-6be9-4028-ba35-613a5b77faf9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ILZJ3puZRh7bvFS3nS54HvDF6CQewM5U+tfD3IKqLWxcOw9LkS9jtqKYU+/3q780L0cttlOHmNAD&#13;
+6/K44qAKeg==</DigestValue></Reference></SignedInfo><SignatureValue>ZqoLivdByUWWt9VTPEijPLNuGy37v7ehvFKUYlr3TN384S5vs+oD594Gq72y+QQ7RZFZiG5qMC1T&#13;
+YAXFFQDJ+Zai3ag8/r6lu3jJDa6HiAVMp3yfJkZRPSuFHK5uFVbpqbjYuMxB+kqbJYwcQfEXjuzr&#13;
+VSFNTWIsc2yZWiaKknaUgwMqr5Us2RfdrsOqlZ/okD/vOXxboTskXfQon3MLZzPbezZBCYu1wOks&#13;
+FjkIJMLsyEM7D3YOrrK6h5uUvups0W3uly449wGc+kMXF7SkWoet3VGkDcNQCGLRKJ61H0ArTX8v&#13;
+a7DodDDf3yCK2k+7zNyHlHP9LXkJzxswfzk9Mg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1933,4 +1832,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a4ff8ca3-a14f-44dd-882a-1f68500ed1c9" Target="#_36d2a825-4860-40c6-8921-a37a431e206c"><Timestamp>2024-05-26 13:11:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1c69d18c-6be9-4028-ba35-613a5b77faf9" Target="#_afa00d01-94b9-49a7-bc92-a77cdf6d6685"><Timestamp>2024-05-31 12:59:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
