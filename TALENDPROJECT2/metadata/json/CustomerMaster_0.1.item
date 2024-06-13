@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <TalendJSON:JSONFileConnection Encoding="UTF-8" JSONFilePath="C:/Users/Geetha Thota/OneDrive/Desktop/customerMaster.json" dataPackage="_vX-xkiSpEe-wnuwJtz9BBA" name="CustomerMaster" readbyMode="JSONPATH" xmi:id="_vX-xcCSpEe-wnuwJtz9BBA">
+    <schema AbsoluteXPathQuery="$" LimitBoucle="50" xmi:id="_vX-xcSSpEe-wnuwJtz9BBA">
+      <schemaTargets RelativeXPathQuery="CUSTOMER_ID" TagName="CUSTOMER_ID" xmi:id="_vX-xciSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="CUSTOMER_NAME" TagName="CUSTOMER_NAME" xmi:id="_vX-xcySpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="CUSTOMER_TYPE" TagName="CUSTOMER_TYPE" xmi:id="_vX-xdCSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="EMAIL_ADDRESS" TagName="EMAIL_ADDRESS" xmi:id="_vX-xdSSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="PHONE_NUMBER" TagName="PHONE_NUMBER" xmi:id="_vX-xdiSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="ADDRESS" TagName="ADDRESS" xmi:id="_vX-xdySpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="CITY" TagName="CITY" xmi:id="_vX-xeCSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="STATE" TagName="STATE" xmi:id="_vX-xeSSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="POSTAL_CODE" TagName="POSTAL_CODE" xmi:id="_vX-xeiSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="GENDER" TagName="GENDER" xmi:id="_vX-xeySpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="HOBBIES_INTERESTS" TagName="HOBBIES_INTERESTS" xmi:id="_vX-xfCSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="DATE_OF_BIRTH" TagName="DATE_OF_BIRTH" xmi:id="_vX-xfSSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="MARITAL_STATUS" TagName="MARITAL_STATUS" xmi:id="_vX-xfiSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="OCCUPATION" TagName="OCCUPATION" xmi:id="_vX-xfySpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="COMPANY_NAME" TagName="COMPANY_NAME" xmi:id="_vX-xgCSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="CREDIT_RATING" TagName="CREDIT_RATING" xmi:id="_vX-xgSSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="BILLING_INFORMATION" TagName="BILLING_INFORMATION" xmi:id="_vX-xgiSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="TRANSACTION_HISTORY" TagName="TRANSACTION_HISTORY" xmi:id="_vX-xgySpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="PRODUCTS_SERVICES_PURCHASED" TagName="PRODUCTS_SERVICES_PURCHASED" xmi:id="_vX-xhCSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="PURCHASE_FREQUENCY" TagName="PURCHASE_FREQUENCY" xmi:id="_vX-xhSSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="PRODUCT_PREFERENCES" TagName="PRODUCT_PREFERENCES" xmi:id="_vX-xhiSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="ORDER_ID" TagName="ORDER_ID" xmi:id="_vX-xhySpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="ORDER_DATE" TagName="ORDER_DATE" xmi:id="_vX-xiCSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="ORDER_TOTAL" TagName="ORDER_TOTAL" xmi:id="_vX-xiSSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="ORDER_STATUS" TagName="ORDER_STATUS" xmi:id="_vX-xiiSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="SURVEY_ID" TagName="SURVEY_ID" xmi:id="_vX-xiySpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="FEEDBACK_DATE" TagName="FEEDBACK_DATE" xmi:id="_vX-xjCSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="COMMENTS" TagName="COMMENTS" xmi:id="_vX-xjSSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="CREATION_DATE" TagName="CREATION_DATE" xmi:id="_vX-xjiSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="CREATED_BY" TagName="CREATED_BY" xmi:id="_vX-xjySpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="LAST_MODIFIED_DATE" TagName="LAST_MODIFIED_DATE" xmi:id="_vX-xkCSpEe-wnuwJtz9BBA"/>
+      <schemaTargets RelativeXPathQuery="LAST_MODIFIED_BY" TagName="LAST_MODIFIED_BY" xmi:id="_vX-xkSSpEe-wnuwJtz9BBA"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile dataManager="_vX-xcCSpEe-wnuwJtz9BBA" name="default" xmi:id="_vX-xkiSpEe-wnuwJtz9BBA">
+    <ownedElement id="_BgwmoCSoEe-wnuwJtz9BBA" label="metadata" xmi:id="_vX-xkySpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataTable">
+      <feature label="CUSTOMER_ID" length="-1" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_Integer" xmi:id="_vX-xlCSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="CUSTOMER_NAME" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xlSSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="CUSTOMER_TYPE" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xliSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="EMAIL_ADDRESS" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xlySpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="PHONE_NUMBER" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xmCSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="ADDRESS" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xmSSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="CITY" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xmiSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="STATE" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xmySpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="POSTAL_CODE" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xnCSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="GENDER" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xnSSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="HOBBIES_INTERESTS" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xniSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="DATE_OF_BIRTH" length="19" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_Date" xmi:id="_vX-xnySpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="MARITAL_STATUS" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xoCSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="OCCUPATION" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xoSSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="COMPANY_NAME" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xoiSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="CREDIT_RATING" length="-1" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_Double" xmi:id="_vX-xoySpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="BILLING_INFORMATION" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xpCSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TRANSACTION_HISTORY" length="-1" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_Integer" xmi:id="_vX-xpSSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="PRODUCTS_SERVICES_PURCHASED" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xpiSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="PURCHASE_FREQUENCY" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xpySpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="PRODUCT_PREFERENCES" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xqCSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="ORDER_ID" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xqSSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="ORDER_DATE" length="19" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_Date" xmi:id="_vX-xqiSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="ORDER_TOTAL" length="-1" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_Integer" xmi:id="_vX-xqySpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="ORDER_STATUS" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xrCSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="SURVEY_ID" length="-1" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xrSSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="FEEDBACK_DATE" length="19" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_Date" xmi:id="_vX-xriSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="COMMENTS" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xrySpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="CREATION_DATE" length="19" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_Date" xmi:id="_vX-xsCSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="CREATED_BY" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xsSSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="LAST_MODIFIED_DATE" length="19" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_Date" xmi:id="_vX-xsiSpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="LAST_MODIFIED_BY" length="4000" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_vX-xsySpEe-wnuwJtz9BBA" xsi:type="TalendMetadata:MetadataColumn"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_bee67c0c-d7ac-478a-903f-2501cce83afd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gYMEb+19S9JGKS03SYcgZ78dwgkHErAfw4/enw+Dw/s0gv8G2xIqM3o4aBbI45ps0esan7p7S9oF&#13;
+O2gmEn6ikQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b67977e6-6747-486c-95fe-368cfb4c7e6a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FBar+WwxTP2AVpqkqVSluz5FYeGX1odNkVxF/T0V6VNjVjiHrO0L+W1bpeyW1Gv2SbPCJiZmwB86&#13;
+JUkw+aKV6Q==</DigestValue></Reference></SignedInfo><SignatureValue>XVPDKF38hn/dUMlK98VY2jcgJgYuD5mPe18tRtrNVehkgHvA5xIRbpD+zfFS6TrTrk6JXT+R4JEG&#13;
+Edk+BWCwXJVRScoMoyYBF7vWzwaP6pipqH9vQ7iFoAXUZ/Dx0XqUpWY+pYHHiq/Jr3FHzJED93uI&#13;
+dCbD066lyL21rQ5CqVhFUVxS3pvyAAKRnN3mWS+hYq+e/FxkmcXDAOfmZrfFSQ96gYHvfPIunYTm&#13;
+O/hZaof3ZR4hlZwUntWcJrfzxfzjJEb2uecwho4WK0U6OoaCVOQC2aLDdFUtO7SPs+NI1SRrnT2R&#13;
+qZb2Ov993AxK07XTH8UFzpCLTlK9bpYJ47qoEw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b67977e6-6747-486c-95fe-368cfb4c7e6a" Target="#_bee67c0c-d7ac-478a-903f-2501cce83afd"><Timestamp>2024-06-07 08:41:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

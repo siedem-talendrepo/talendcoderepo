@@ -1,0 +1,207 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "customer master",
+    "description" : "API to manage customer Master data",
+    "contact" : { },
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "https://qoipvvc64kt3ffl.ap.api-mocks.com",
+    "description" : "This is your API mock endpoint. When called, it will simulate the behavior of your API."
+  } ],
+  "paths" : {
+    "/customers" : {
+      "get" : {
+        "summary" : "Get the list of customers",
+        "responses" : {
+          "200" : {
+            "description" : "status 200",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Customers"
+                },
+                "example" : "[\n  {\n    \"CUSTOMER_ID\": 4,\n    \"CUSTOMER_NAME\": \"Adeline Metrick\",\n    \"CUSTOMER_TYPE\": \"Commercial\",\n    \"EMAIL_ADDRESS\": \"ametrick3@vistaprint.com\",\n    \"PHONE_NUMBER\": \"257 862 3304\",\n    \"ADDRESS\": \"5th Floor\",\n    \"CITY\": \"Felgueiras\",\n    \"STATE\": \"Porto\",\n    \"POSTAL_CODE\": \"4610-104\",\n    \"GENDER\": \"Female\",\n    \"HOBBIES_INTERESTS\": \"Movies\",\n    \"DATE_OF_BIRTH\": \"2020-10-31T00:00:00\",\n    \"MARITAL_STATUS\": \"Not applicable\",\n    \"OCCUPATION\": \"Social Worker\",\n    \"COMPANY_NAME\": \"Glide Tours\",\n    \"CREDIT_RATING\": 74,\n    \"BILLING_INFORMATION\": \"UNPAID, DUE IN NOVEMBER\",\n    \"TRANSACTION_HISTORY\": 7,\n    \"PRODUCTS_SERVICES_PURCHASED\": \"INDIVIDUAL HEALTH INSURANCE\",\n    \"PURCHASE_FREQUENCY\": \"ANNUALLY\",\n    \"PRODUCT_PREFERENCES\": \"Individual Health Insurance\",\n    \"ORDER_ID\": 4,\n    \"ORDER_DATE\": \"2023-11-04T00:00:00\",\n    \"ORDER_TOTAL\": 104244,\n    \"ORDER_STATUS\": \"Renewed\",\n    \"SURVEY_ID\": 4,\n    \"FEEDBACK_DATE\": \"2022-01-27T00:00:00\",\n    \"COMMENTS\": \"Happy\",\n    \"CREATION_DATE\": \"2020-07-09T00:00:00\",\n    \"CREATED_BY\": \"Agent 4\",\n    \"LAST_MODIFIED_DATE\": \"2020-07-10T00:00:00\",\n    \"LAST_MODIFIED_BY\": \"Agent 7\"\n  },\n  {\n    \"CUSTOMER_ID\": 12,\n    \"CUSTOMER_NAME\": \"Ariel Norvill\",\n    \"CUSTOMER_TYPE\": \"Individual\",\n    \"EMAIL_ADDRESS\": \"anorvillb@wikia.com\",\n    \"PHONE_NUMBER\": \"492 800 3832\",\n    \"ADDRESS\": \"Suite 54\",\n    \"CITY\": \"Emmen\",\n    \"STATE\": \"Provincie Drenthe\",\n    \"POSTAL_CODE\": \"7804\",\n    \"GENDER\": \"Female\",\n    \"HOBBIES_INTERESTS\": \"Camping\",\n    \"DATE_OF_BIRTH\": \"2000-01-01T00:00:00\",\n    \"MARITAL_STATUS\": \"Unmarried\",\n    \"OCCUPATION\": \"Designer\",\n    \"COMPANY_NAME\": \"Vertex Vision\",\n    \"CREDIT_RATING\": 786,\n    \"BILLING_INFORMATION\": \"PAID, DUE IN SEPTEMBER\",\n    \"TRANSACTION_HISTORY\": 1,\n    \"PRODUCTS_SERVICES_PURCHASED\": \"COMMERCIAL PROPERTY INSURANCE\",\n    \"PURCHASE_FREQUENCY\": \"QUARTERLY\",\n    \"PRODUCT_PREFERENCES\": \"Commercial Property Insurance\",\n    \"ORDER_ID\": 12,\n    \"ORDER_DATE\": \"2023-11-14T00:00:00\",\n    \"ORDER_TOTAL\": 845560,\n    \"ORDER_STATUS\": \"Updated\",\n    \"SURVEY_ID\": 12,\n    \"FEEDBACK_DATE\": \"2024-01-01T00:00:00\",\n    \"COMMENTS\": \"Happy but wanted prior information\",\n    \"CREATION_DATE\": \"2020-09-28T00:00:00\",\n    \"CREATED_BY\": \"Agent 1\",\n    \"LAST_MODIFIED_DATE\": \"2020-09-29T00:00:00\",\n    \"LAST_MODIFIED_BY\": \"Agent 1\"\n  },\n  {\n    \"CUSTOMER_ID\": 18,\n    \"CUSTOMER_NAME\": \"Duncan Bohea\",\n    \"CUSTOMER_TYPE\": \"Commercial\",\n    \"EMAIL_ADDRESS\": \"dboheah@xrea.com\",\n    \"PHONE_NUMBER\": \"125 969 0180\",\n    \"ADDRESS\": \"PO Box 12069\",\n    \"CITY\": \"Plaisir\",\n    \"STATE\": \"Île-de-France\",\n    \"POSTAL_CODE\": \"78379 CEDEX\",\n    \"GENDER\": \"Male\",\n    \"HOBBIES_INTERESTS\": \"Movies\",\n    \"DATE_OF_BIRTH\": \"2020-10-03T00:00:00\",\n    \"MARITAL_STATUS\": \"Unmarried\",\n    \"OCCUPATION\": \"Artist\",\n    \"COMPANY_NAME\": \"Kite Aeronautics\",\n    \"CREDIT_RATING\": 736,\n    \"BILLING_INFORMATION\": \"UNPAID, DUE IN NOVEMBER\",\n    \"TRANSACTION_HISTORY\": 2,\n    \"PRODUCTS_SERVICES_PURCHASED\": \"INDIVIDUAL HEALTH INSURANCE\",\n    \"PURCHASE_FREQUENCY\": \"ANNUALLY\",\n    \"PRODUCT_PREFERENCES\": \"Individual Health Insurance\",\n    \"ORDER_ID\": 18,\n    \"ORDER_DATE\": \"2023-11-04T00:00:00\",\n    \"ORDER_TOTAL\": 178623,\n    \"ORDER_STATUS\": \"Renewed\",\n    \"SURVEY_ID\": 18,\n    \"FEEDBACK_DATE\": \"2023-02-28T00:00:00\",\n    \"COMMENTS\": \"Happy\",\n    \"CREATION_DATE\": \"2020-07-09T00:00:00\",\n    \"CREATED_BY\": \"Agent 4\",\n    \"LAST_MODIFIED_DATE\": \"2020-07-10T00:00:00\",\n    \"LAST_MODIFIED_BY\": \"Agent 7\"\n  }\n]"
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "summary" : "create a customer",
+        "description" : "adds a new customer",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Customer"
+              },
+              "example" : "{\n  \"CUSTOMER_ID\": 4,\n  \"CUSTOMER_NAME\": \"Adeline Metrick\",\n  \"CUSTOMER_TYPE\": \"Commercial\",\n  \"EMAIL_ADDRESS\": \"ametrick3@vistaprint.com\",\n  \"PHONE_NUMBER\": \"257 862 3304\",\n  \"ADDRESS\": \"5th Floor\",\n  \"CITY\": \"Felgueiras\",\n  \"STATE\": \"Porto\",\n  \"POSTAL_CODE\": \"4610-104\",\n  \"GENDER\": \"Female\",\n  \"HOBBIES_INTERESTS\": \"Movies\",\n  \"DATE_OF_BIRTH\": \"2020-10-31T00:00:00\",\n  \"MARITAL_STATUS\": \"Not applicable\",\n  \"OCCUPATION\": \"Social Worker\",\n  \"COMPANY_NAME\": \"Glide Tours\",\n  \"CREDIT_RATING\": 74,\n  \"BILLING_INFORMATION\": \"UNPAID, DUE IN NOVEMBER\",\n  \"TRANSACTION_HISTORY\": 7,\n  \"PRODUCTS_SERVICES_PURCHASED\": \"INDIVIDUAL HEALTH INSURANCE\",\n  \"PURCHASE_FREQUENCY\": \"ANNUALLY\",\n  \"PRODUCT_PREFERENCES\": \"Individual Health Insurance\",\n  \"ORDER_ID\": 4,\n  \"ORDER_DATE\": \"2023-11-04T00:00:00\",\n  \"ORDER_TOTAL\": 104244,\n  \"ORDER_STATUS\": \"Renewed\",\n  \"SURVEY_ID\": 4,\n  \"FEEDBACK_DATE\": \"2022-01-27T00:00:00\",\n  \"COMMENTS\": \"Happy\",\n  \"CREATION_DATE\": \"2020-07-09T00:00:00\",\n  \"CREATED_BY\": \"Agent 4\",\n  \"LAST_MODIFIED_DATE\": \"2020-07-10T00:00:00\",\n  \"LAST_MODIFIED_BY\": \"Agent 7\"\n}"
+            }
+          }
+        },
+        "responses" : {
+          "201" : {
+            "description" : "201 - created",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Customer"
+                },
+                "example" : "{\n  \"CUSTOMER_ID\": 4,\n  \"CUSTOMER_NAME\": \"Adeline Metrick\",\n  \"CUSTOMER_TYPE\": \"Commercial\",\n  \"EMAIL_ADDRESS\": \"ametrick3@vistaprint.com\",\n  \"PHONE_NUMBER\": \"257 862 3304\",\n  \"ADDRESS\": \"5th Floor\",\n  \"CITY\": \"Felgueiras\",\n  \"STATE\": \"Porto\",\n  \"POSTAL_CODE\": \"4610-104\",\n  \"GENDER\": \"Female\",\n  \"HOBBIES_INTERESTS\": \"Movies\",\n  \"DATE_OF_BIRTH\": \"2020-10-31T00:00:00\",\n  \"MARITAL_STATUS\": \"Not applicable\",\n  \"OCCUPATION\": \"Social Worker\",\n  \"COMPANY_NAME\": \"Glide Tours\",\n  \"CREDIT_RATING\": 74,\n  \"BILLING_INFORMATION\": \"UNPAID, DUE IN NOVEMBER\",\n  \"TRANSACTION_HISTORY\": 7,\n  \"PRODUCTS_SERVICES_PURCHASED\": \"INDIVIDUAL HEALTH INSURANCE\",\n  \"PURCHASE_FREQUENCY\": \"ANNUALLY\",\n  \"PRODUCT_PREFERENCES\": \"Individual Health Insurance\",\n  \"ORDER_ID\": 4,\n  \"ORDER_DATE\": \"2023-11-04T00:00:00\",\n  \"ORDER_TOTAL\": 104244,\n  \"ORDER_STATUS\": \"Renewed\",\n  \"SURVEY_ID\": 4,\n  \"FEEDBACK_DATE\": \"2022-01-27T00:00:00\",\n  \"COMMENTS\": \"Happy\",\n  \"CREATION_DATE\": \"2020-07-09T00:00:00\",\n  \"CREATED_BY\": \"Agent 4\",\n  \"LAST_MODIFIED_DATE\": \"2020-07-10T00:00:00\",\n  \"LAST_MODIFIED_BY\": \"Agent 7\"\n}"
+              }
+            }
+          },
+          "409" : {
+            "description" : "Status 409. Record could not be added",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Customer"
+                },
+                "example" : "{\n\"ID\":\"1\"\n\"errorCode\":\"12345\"\n\"errorMessage\":\"Duplicate entry\"\n}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Customer" : {
+        "type" : "object",
+        "required" : [ "CUSTOMER_ID" ],
+        "properties" : {
+          "CUSTOMER_ID" : {
+            "type" : "number"
+          },
+          "CUSTOMER_NAME" : {
+            "type" : "string"
+          },
+          "CUSTOMER_TYPE" : {
+            "type" : "string"
+          },
+          "EMAIL_ADDRESS" : {
+            "type" : "string"
+          },
+          "PHONE_NUMBER" : {
+            "type" : "string"
+          },
+          "ADDRESS" : {
+            "type" : "string"
+          },
+          "CITY" : {
+            "type" : "string"
+          },
+          "STATE" : {
+            "type" : "string"
+          },
+          "POSTAL_CODE" : {
+            "type" : "string"
+          },
+          "GENDER" : {
+            "type" : "string"
+          },
+          "HOBBIES_INTERESTS" : {
+            "type" : "string"
+          },
+          "DATE_OF_BIRTH" : {
+            "type" : "string",
+            "format" : "date"
+          },
+          "MARITAL_STATUS" : {
+            "type" : "string"
+          },
+          "OCCUPATION" : {
+            "type" : "string"
+          },
+          "COMPANY_NAME" : {
+            "type" : "string"
+          },
+          "CREDIT_RATING" : {
+            "type" : "number"
+          },
+          "BILLING_INFORMATION" : {
+            "type" : "string"
+          },
+          "TRANSACTION_HISTORY" : {
+            "type" : "number"
+          },
+          "PRODUCTS_SERVICES_PURCHASED" : {
+            "type" : "string"
+          },
+          "PURCHASE_FREQUENCY" : {
+            "type" : "string"
+          },
+          "PRODUCT_PREFERENCES" : {
+            "type" : "string"
+          },
+          "ORDER_ID" : {
+            "type" : "string"
+          },
+          "ORDER_DATE" : {
+            "type" : "string",
+            "format" : "date"
+          },
+          "ORDER_TOTAL" : {
+            "type" : "number"
+          },
+          "ORDER_STATUS" : {
+            "type" : "string"
+          },
+          "SURVEY_ID" : {
+            "type" : "string"
+          },
+          "FEEDBACK_DATE" : {
+            "type" : "string",
+            "format" : "date"
+          },
+          "COMMENTS" : {
+            "type" : "string"
+          },
+          "CREATION_DATE" : {
+            "type" : "string",
+            "format" : "date"
+          },
+          "CREATED_BY" : {
+            "type" : "string"
+          },
+          "LAST_MODIFIED_DATE" : {
+            "type" : "string",
+            "format" : "date"
+          },
+          "LAST_MODIFIED_BY" : {
+            "type" : "string"
+          }
+        },
+        "example" : "{\n  \"CUSTOMER_ID\": 4,\n  \"CUSTOMER_NAME\": \"Adeline Metrick\",\n  \"CUSTOMER_TYPE\": \"Commercial\",\n  \"EMAIL_ADDRESS\": \"ametrick3@vistaprint.com\",\n  \"PHONE_NUMBER\": \"257 862 3304\",\n  \"ADDRESS\": \"5th Floor\",\n  \"CITY\": \"Felgueiras\",\n  \"STATE\": \"Porto\",\n  \"POSTAL_CODE\": \"4610-104\",\n  \"GENDER\": \"Female\",\n  \"HOBBIES_INTERESTS\": \"Movies\",\n  \"DATE_OF_BIRTH\": \"2020-10-31T00:00:00\",\n  \"MARITAL_STATUS\": \"Not applicable\",\n  \"OCCUPATION\": \"Social Worker\",\n  \"COMPANY_NAME\": \"Glide Tours\",\n  \"CREDIT_RATING\": 74,\n  \"BILLING_INFORMATION\": \"UNPAID, DUE IN NOVEMBER\",\n  \"TRANSACTION_HISTORY\": 7,\n  \"PRODUCTS_SERVICES_PURCHASED\": \"INDIVIDUAL HEALTH INSURANCE\",\n  \"PURCHASE_FREQUENCY\": \"ANNUALLY\",\n  \"PRODUCT_PREFERENCES\": \"Individual Health Insurance\",\n  \"ORDER_ID\": 4,\n  \"ORDER_DATE\": \"2023-11-04T00:00:00\",\n  \"ORDER_TOTAL\": 104244,\n  \"ORDER_STATUS\": \"Renewed\",\n  \"SURVEY_ID\": 4,\n  \"FEEDBACK_DATE\": \"2022-01-27T00:00:00\",\n  \"COMMENTS\": \"Happy\",\n  \"CREATION_DATE\": \"2020-07-09T00:00:00\",\n  \"CREATED_BY\": \"Agent 4\",\n  \"LAST_MODIFIED_DATE\": \"2020-07-10T00:00:00\",\n  \"LAST_MODIFIED_BY\": \"Agent 7\"\n}"
+      },
+      "Customers" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Customer"
+        }
+      },
+      "Error" : {
+        "type" : "object",
+        "required" : [ "ID" ],
+        "properties" : {
+          "ID" : {
+            "type" : "string"
+          },
+          "errorCode" : {
+            "type" : "integer",
+            "format" : "int32",
+            "minimum" : 400,
+            "maximum" : 599
+          },
+          "errorMessage" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}

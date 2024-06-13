@@ -875,6 +875,49 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_FgD6UCSTEe-NT6Geo62Xbw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_Hlkl0AubEe-EGMRvwoEYGQ",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_b-YP0AuMEe-EGMRvwoEYGQ",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "TALENDPROJECT2:_0OWScAuaEe-EGMRvwoEYGQ",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_bxjr0CSmEe-wnuwJtz9BBA",
+    "version" : "Latest",
+    "type" : "mapper"
+  }, {
+    "id" : "_C4GKEAubEe-EGMRvwoEYGQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "__MnRcAuHEe-EGMRvwoEYGQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_lnA6kCSREe-NT6Geo62Xbw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_vX88QCSpEe-wnuwJtz9BBA",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "__MnRcAuHEe-EGMRvwoEYGQ - CUSTOMER_MASTER_STG",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_JO5_0OW3Ee6JzNOjhLUtiA",
     "version" : "0.1",
     "type" : "job"
