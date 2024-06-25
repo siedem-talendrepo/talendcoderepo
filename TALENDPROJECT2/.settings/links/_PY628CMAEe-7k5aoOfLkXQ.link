@@ -25,5 +25,30 @@
       "id" : "_b-lEJwuMEe-EGMRvwoEYGQ",
       "name" : "customerPostgresSTG_Database"
     } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_1J-pkAqwEe-sAZ35nrCD1A",
+    "parameterList" : [ {
+      "id" : "_1KY5RwqwEe-sAZ35nrCD1A",
+      "name" : "customerPostgresRaw_Schema"
+    }, {
+      "id" : "_1KY5RAqwEe-sAZ35nrCD1A",
+      "name" : "customerPostgresRaw_Server"
+    }, {
+      "id" : "_1KY5RQqwEe-sAZ35nrCD1A",
+      "name" : "customerPostgresRaw_AdditionalParams"
+    }, {
+      "id" : "_1KY5QwqwEe-sAZ35nrCD1A",
+      "name" : "customerPostgresRaw_Login"
+    }, {
+      "id" : "_1KY5RgqwEe-sAZ35nrCD1A",
+      "name" : "customerPostgresRaw_Password"
+    }, {
+      "id" : "_1KY5QgqwEe-sAZ35nrCD1A",
+      "name" : "customerPostgresRaw_Database"
+    }, {
+      "id" : "_1KY5QQqwEe-sAZ35nrCD1A",
+      "name" : "customerPostgresRaw_Port"
+    } ]
   } ]
 }
