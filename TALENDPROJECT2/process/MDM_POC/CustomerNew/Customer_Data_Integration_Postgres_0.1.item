@@ -1311,9 +1311,9 @@
         <mapperTableEntries expression="CustomerMaster.EMAIL_ADDRESS" name="EMAIL_ADDRESS" type="id_String"/>
         <mapperTableEntries expression="CustomerMaster.PHONE_NUMBER" name="PHONE_NUMBER" nullable="true" type="id_String"/>
         <mapperTableEntries expression="CustomerMaster.ADRESS" name="ADRESS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="(CustomerMaster.CITY==null||CustomerMaster.CITY==&quot;&quot;||CustomerMaster.CITY.trim().length()==0)? row8.CITY : CustomerMaster.CITY " name="CITY" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="(CustomerMaster.STATE==null||CustomerMaster.STATE==&quot;&quot;||CustomerMaster.STATE.trim().length()==0)?  row8.STATE:CustomerMaster.STATE " name="STATE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="(CustomerMaster.POSTAL_CODE==null||CustomerMaster.POSTAL_CODE==&quot;&quot;||CustomerMaster.POSTAL_CODE.trim().length()==0)?row8.POSTAL_CODE:CustomerMaster.POSTAL_CODE " name="POSTAL_CODE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(CustomerMaster.CITY==null||CustomerMaster.CITY==&quot;&quot;||CustomerMaster.CITY.trim().length()==0)? Lookup1.CITY : CustomerMaster.CITY " name="CITY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(CustomerMaster.STATE==null||CustomerMaster.STATE==&quot;&quot;||CustomerMaster.STATE.trim().length()==0)?  Lookup1.STATE:CustomerMaster.STATE " name="STATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(CustomerMaster.POSTAL_CODE==null||CustomerMaster.POSTAL_CODE==&quot;&quot;||CustomerMaster.POSTAL_CODE.trim().length()==0)?Lookup1.POSTAL_CODE:CustomerMaster.POSTAL_CODE " name="POSTAL_CODE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="CustomerMaster.GENDER" name="GENDER" nullable="true" type="id_String"/>
         <mapperTableEntries expression="CustomerMaster.HOBBIES_INTERESTS" name="HOBBIES_INTERESTS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="CustomerMaster.DATE_OF_BIRTH" name="DATE_OF_BIRTH" type="id_Date"/>
@@ -1372,7 +1372,7 @@
         <mapperTableEntries name="LAST_MODIFIED_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries name="LAST_MODIFIED_BY" nullable="true" type="id_String"/>
       </inputTables>
-      <inputTables activateCondensedTool="true" lookupMode="LOAD_ONCE" matchingMode="FIRST_MATCH" name="row8" sizeState="INTERMEDIATE">
+      <inputTables activateCondensedTool="true" lookupMode="LOAD_ONCE" matchingMode="FIRST_MATCH" name="Lookup1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="CustomerMaster.CITY " name="CITY" nullable="true" type="id_String"/>
         <mapperTableEntries expression="" name="STATE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="" name="POSTAL_CODE" nullable="true" type="id_String"/>
@@ -1457,9 +1457,9 @@
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:PoLtwyREp5Pf37U53i9N821XDCDxha7z4QzcoQuF"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;CUSTOMER_MASTER_STG&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" show="false" value="false"/>
     <elementParameter field="CHECK" name="SPATIAL_INDEX" show="false" value="false"/>
     <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" show="false" value="false"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -2349,9 +2349,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="master_stg"/>
   </connection>
-  <connection connectorName="FLOW" label="row8" lineStyle="8" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_2">
+  <connection connectorName="FLOW" label="Lookup1" lineStyle="8" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Lookup1"/>
   </connection>
   <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tLogCatcher_1" offsetLabelX="0" offsetLabelY="0" source="tLogCatcher_1" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2426,13 +2426,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4c1f5a4c-fd37-46d5-8e6e-d472c24f24ed"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jpIBL6YrPp4f4lTUwcCGnItHpfQRbmx1Nd7Z4t7giItnIdtIHROBNq9nTswih1gD6/gxPeYj6jT6&#13;
-AMAept8xWw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c29be155-5b43-4ad1-9764-dda5bb7f60a8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8Kbfs/dpgmE5WDn1s0m8fSfk5JK1rRw5bm64eR2WBGRgZFrEpsG+KZDTErmKbVjF2HIxekQxk+Pv&#13;
-j/WN6A5uvA==</DigestValue></Reference></SignedInfo><SignatureValue>pq9Kuqn5pLclllU2sGIBhkQa7dVN1eaRtgNAzNoaH7GEovN/jm/C8vbWwV0qe2wXWU3J358+t4K3&#13;
-0c0fH7ZDuqpXmmsqgpJNoyVYNIkEWKkb6c9w5vmjXmM0RlL0FlJ0TPEKd1h51KmKj6XdauF5O37X&#13;
-j3N4vCSWl727u68RZdFrylZoMEuVveiSycabRLMzGGOM2eZubSN350vTMGjjkfmiQ0cxvaNDsKeN&#13;
-aaWHOJlE5sBRUmptGJaPBje/TpdbmqHqvKFinz6DUXmRw7hs1v/00WfyH8UW8nQX4EeGBqZUGXTy&#13;
-3kCXGxfCU0lxS3VEw8Fk0PojNAXKk/s1B91KIw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c786822b-bfb0-4e40-8440-e7a74e4b627d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wskgiRWqNGmlKd5VgMqHL6RrJAE6fMI7KWo/t48SU5XEmNBEc8t0+j7qpyI6RY1Hi3jaE0OID6wH&#13;
+Tig9Vz2sHA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_39cc6f32-0586-4e47-9977-c4f0e0504503"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1jkJRhWfbqelV1xc5YR0oLNIl3geDP9OknqwM5sH9NLH+w5oN4fowjATyVD9QbLE3qpvONmpoZfA&#13;
+LghTWYvDpw==</DigestValue></Reference></SignedInfo><SignatureValue>bQotu6Yh0y7dXJiGRylZ8r80xj7+ddzxNRRJa+wYbALut0ojhWkOTFmXOwraqH48OV2B18i2l7ZY&#13;
+I1sUckRSGQBTfzdst//5ofKlWYzMc+t/rIfqewXfvDcS3anZYa6swlz6nngr7J3LqmrJK30X3Mqx&#13;
+XTxxJylzg/9m4qXERQH1bgoN93/kKW9G5nnAJeP71zyoP0jav6UweSNijd5Y85XCnfEVEu0AtKnL&#13;
+vdlq4EdU4CLCgnMpbfMGPA9ec1LvnJOWYkg8E6uakOZrPVOimlpX1t2pzRc69HIIYi1QQ6AY5x1G&#13;
+kbaAHb8rBdqmIiI5Zlu31G9ODMQ8KxI8JdtwzA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2454,4 +2454,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c29be155-5b43-4ad1-9764-dda5bb7f60a8" Target="#_4c1f5a4c-fd37-46d5-8e6e-d472c24f24ed"><Timestamp>2024-05-28 06:38:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_39cc6f32-0586-4e47-9977-c4f0e0504503" Target="#_c786822b-bfb0-4e40-8440-e7a74e4b627d"><Timestamp>2024-06-26 18:01:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

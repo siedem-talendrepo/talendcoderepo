@@ -1,0 +1,29 @@
+{
+  "itemId" : "_qph3IDPEEe-8RPjMYW4bzA",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_vZu2wDPEEe-8RPjMYW4bzA",
+    "parameterList" : [ {
+      "id" : "_vbgYYTPEEe-8RPjMYW4bzA",
+      "name" : "customerPostgresCDC_Database"
+    }, {
+      "id" : "_vbgYYjPEEe-8RPjMYW4bzA",
+      "name" : "customerPostgresCDC_Password"
+    }, {
+      "id" : "_vbgYYzPEEe-8RPjMYW4bzA",
+      "name" : "customerPostgresCDC_Server"
+    }, {
+      "id" : "_vbgYZDPEEe-8RPjMYW4bzA",
+      "name" : "customerPostgresCDC_Port"
+    }, {
+      "id" : "_vbgYZTPEEe-8RPjMYW4bzA",
+      "name" : "customerPostgresCDC_AdditionalParams"
+    }, {
+      "id" : "_vbgYZjPEEe-8RPjMYW4bzA",
+      "name" : "customerPostgresCDC_Schema"
+    }, {
+      "id" : "_vbgYZzPEEe-8RPjMYW4bzA",
+      "name" : "customerPostgresCDC_Login"
+    } ]
+  } ]
+}

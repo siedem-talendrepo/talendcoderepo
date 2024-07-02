@@ -1,0 +1,54 @@
+{
+  "itemId" : "_xBwPUDSGEe-C46YfamjbKA",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_Hlkl0AubEe-EGMRvwoEYGQ",
+    "parameterList" : [ {
+      "id" : "_Hl1rkQubEe-EGMRvwoEYGQ",
+      "name" : "customerPostgresMaster_Password"
+    }, {
+      "id" : "_Hl1rkgubEe-EGMRvwoEYGQ",
+      "name" : "customerPostgresMaster_AdditionalParams"
+    }, {
+      "id" : "_Hl1rkwubEe-EGMRvwoEYGQ",
+      "name" : "customerPostgresMaster_Schema"
+    }, {
+      "id" : "_Hl1rlAubEe-EGMRvwoEYGQ",
+      "name" : "customerPostgresMaster_Server"
+    }, {
+      "id" : "_Hl1rlQubEe-EGMRvwoEYGQ",
+      "name" : "customerPostgresMaster_Login"
+    }, {
+      "id" : "_Hl1rlgubEe-EGMRvwoEYGQ",
+      "name" : "customerPostgresMaster_Port"
+    }, {
+      "id" : "_Hl1rlwubEe-EGMRvwoEYGQ",
+      "name" : "customerPostgresMaster_Database"
+    } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_4qcsQDg6Ee-aqsRQPKN3cQ",
+    "parameterList" : [ {
+      "id" : "_4r1zYjg6Ee-aqsRQPKN3cQ",
+      "name" : "customerPostgresReference_AdditionalParams"
+    }, {
+      "id" : "_4r1zZDg6Ee-aqsRQPKN3cQ",
+      "name" : "customerPostgresReference_Port"
+    }, {
+      "id" : "_4r1zZzg6Ee-aqsRQPKN3cQ",
+      "name" : "customerPostgresReference_Database"
+    }, {
+      "id" : "_4r1zYTg6Ee-aqsRQPKN3cQ",
+      "name" : "customerPostgresReference_Password"
+    }, {
+      "id" : "_4r1zZjg6Ee-aqsRQPKN3cQ",
+      "name" : "customerPostgresReference_Server"
+    }, {
+      "id" : "_4r1zYzg6Ee-aqsRQPKN3cQ",
+      "name" : "customerPostgresReference_Login"
+    }, {
+      "id" : "_4r1zZTg6Ee-aqsRQPKN3cQ",
+      "name" : "customerPostgresReference_Schema"
+    } ]
+  } ]
+}
