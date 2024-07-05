@@ -138,15 +138,15 @@
       <elementValue elementRef="SCHEMA" value="Get_the_list_of_customers"/>
       <elementValue elementRef="HTTP_VERB" value="GET"/>
       <elementValue elementRef="URI_PATTERN" value="&quot;/customers&quot;"/>
-      <elementValue elementRef="CONSUMES" value=""/>
+      <elementValue elementRef="CONSUMES" value="NONE"/>
       <elementValue elementRef="PRODUCES" value="JSON"/>
-      <elementValue elementRef="STREAMING" value=""/>
+      <elementValue elementRef="STREAMING" value="true"/>
       <elementValue elementRef="SCHEMA" value="create_a_customer"/>
       <elementValue elementRef="HTTP_VERB" value="POST"/>
       <elementValue elementRef="URI_PATTERN" value="&quot;/customers&quot;"/>
       <elementValue elementRef="CONSUMES" value="JSON"/>
       <elementValue elementRef="PRODUCES" value="JSON"/>
-      <elementValue elementRef="STREAMING" value=""/>
+      <elementValue elementRef="STREAMING" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
     <elementParameter field="TEXT" name="SERVICE_NAMESPACE" show="false" value="&quot;http://www.talend.org/rest/&quot;"/>
@@ -185,31 +185,29 @@
   </node>
   <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_C4GKEAubEe-EGMRvwoEYGQ"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
-    <elementParameter field="TEXT" name="HOST" value="context.customerPostgresMaster_Server"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="V9_X"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="context.customerPostgresMaster_Server"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="POSTGRESQL"/>
-    <elementParameter field="TEXT" name="PORT" value="context.customerPostgresMaster_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.customerPostgresMaster_Database"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.customerPostgresMaster_Schema"/>
-    <elementParameter field="TEXT" name="USER" value="context.customerPostgresMaster_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:q1gFMrNK/IKwSafn8bGn8t5VqmDm7iammVdY8bDelYksTDwEUyoJFw+kVfRahTEa2Raee7+XepiRJgHHrIPblDRYFg=="/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="__MnRcAuHEe-EGMRvwoEYGQ - CUSTOMER_MASTER_STG"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="context.customerPostgresMaster_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="context.customerPostgresMaster_Database"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="context.customerPostgresMaster_Schema"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="context.customerPostgresMaster_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:q1gFMrNK/IKwSafn8bGn8t5VqmDm7iammVdY8bDelYksTDwEUyoJFw+kVfRahTEa2Raee7+XepiRJgHHrIPblDRYFg=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;CUSTOMER_MASTER&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;CUSTOMER_ID\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;CUSTOMER_NAME\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;CUSTOMER_TYPE\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;EMAIL_ADDRESS\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;PHONE_NUMBER\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;ADRESS\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;CITY\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;STATE\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;POSTAL_CODE\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;GENDER\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;HOBBIES_INTERESTS\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;DATE_OF_BIRTH\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;MARITAL_STATUS\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;OCCUPATION\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;COMPANY_NAME\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;CREDIT_RATING\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;BILLING_INFORMATION\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;TRANSACTION_HISTORY\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;PRODUCTS_SERVICES_PURCHASED\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;PURCHASE_FREQUENCY\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;PRODUCT_PREFERENCES\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;ORDER_ID\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;ORDER_DATE\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;ORDER_TOTAL\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;ORDER_STATUS\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;SURVEY_ID\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;FEEDBACK_DATE\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;COMMENTS\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;CREATION_DATE\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;CREATED_BY\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;LAST_MODIFIED_DATE\&quot;, &#10;  \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;LAST_MODIFIED_BY\&quot;&#10;FROM \&quot;&quot;+context.customerPostgresSTG_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;CUSTOMER_ID\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;CUSTOMER_NAME\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;CUSTOMER_TYPE\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;EMAIL_ADDRESS\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;PHONE_NUMBER\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;ADRESS\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;CITY\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;STATE\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;POSTAL_CODE\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;GENDER\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;HOBBIES_INTERESTS\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;DATE_OF_BIRTH\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;MARITAL_STATUS\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;OCCUPATION\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;COMPANY_NAME\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;CREDIT_RATING\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;BILLING_INFORMATION\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;TRANSACTION_HISTORY\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;PRODUCTS_SERVICES_PURCHASED\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;PURCHASE_FREQUENCY\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;PRODUCT_PREFERENCES\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;ORDER_ID\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;ORDER_DATE\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;ORDER_TOTAL\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;ORDER_STATUS\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;SURVEY_ID\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;FEEDBACK_DATE\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;COMMENTS\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;CREATION_DATE\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;CREATED_BY\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;LAST_MODIFIED_DATE\&quot;, &#10;  \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;LAST_MODIFIED_BY\&quot;&#10;FROM \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot; where   \&quot;&quot;+context.customerPostgresMaster_Schema+&quot;\&quot;.\&quot;CUSTOMER_MASTER\&quot;.\&quot;CUSTOMER_ID\&quot; &lt; 100 &quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="postgres_id"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="context.customerPostgresMaster_AdditionalParams"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="context.customerPostgresMaster_AdditionalParams"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
@@ -870,9 +868,9 @@
     <elementParameter field="TEXT" name="USER" show="false" value="context.customerPostgresSTG_Login"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:b2zq3KoyWsCERhytkFKA/rr/AfKRPCHueiUEqUTD5kRSahnuXlrsen3qWmVfT1Q7LT3Y+hACu7zsV3tVMpTRaA=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;CUSTOMER_MASTER_STG&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_CREATE"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" show="false" value="false"/>
     <elementParameter field="CHECK" name="SPATIAL_INDEX" show="false" value="false"/>
     <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" show="false" value="false"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -1543,7 +1541,7 @@
   <node componentName="tPostgresqlCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-96" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBCommit_1"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
-    <elementParameter field="CHECK" name="CLOSE" value="true"/>
+    <elementParameter field="CHECK" name="CLOSE" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBCommit_1"/>
   </node>
@@ -1581,6 +1579,40 @@
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tPostgresqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tPostgresqlConnection"/>
+    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
+    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/PostgreSQL|ELT/Connections"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
+    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tPostgresqlConnection"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Users\Geetha Thota\OneDrive\Documents\TalendStudio\studio\configuration\lib\java"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_C4GKEAubEe-EGMRvwoEYGQ"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="HOST" value="context.customerPostgresMaster_Server"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="POSTGRESQL"/>
+    <elementParameter field="TEXT" name="PORT" value="context.customerPostgresMaster_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.customerPostgresMaster_Database"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.customerPostgresMaster_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.customerPostgresMaster_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:k9sgB7/tddFs8IT+yUAGMaEcpHL5SUND0rN4KDHf7jcVVG7pSR/8gML3W/nvXlHQJfQGWBxQSZlMc103toWpx3MaGw=="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.customerPostgresMaster_AdditionalParams"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="customerPostgresMaster"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <connection connectorName="FLOW" label="Get_the_list_of_customers" lineStyle="0" metaname="Get_the_list_of_customers" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRESTRequest_1" target="tFlowToIterate_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1721,6 +1753,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBConnection_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
+  </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tDBConnection_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
   </connection>
@@ -1771,13 +1806,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e85ffd0d-8f75-46ed-a057-2d3c7b641149"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6GXNqzb2leVne8/iLnIzyHGoMXcKBPTHMwt1xYlBMLGM3aiBUqDAWjB8jRMsexiqFATzWfaECFM1&#13;
-w/7qsgq71A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_495397bf-cc60-4331-b59d-23e60ab61c2a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cNiZ8vr8d0My1m7LcB2FqggWt/UJGlI2H9ou+Q3nehMMMlSYbvdNHBshiKte1ChndWw1wAPhtpZs&#13;
-rXJPVUlrew==</DigestValue></Reference></SignedInfo><SignatureValue>k3sHiBf5fyra47BQSzmySKTY1i5b0ZXlXyHKQQUlHB7ygHor1blCOucpFz+ZNhPxt0tf3Po+VhU+&#13;
-lfHlxY3e5KSR8Ojo/DPCGoQNEkuEbq9XQCLSVgGHaQEfF272KAjb1GAHng18p4DGqM5UJSt84I+N&#13;
-HPeKGJ3hJ9PIoNe3ivbY5Ya1w3F8JQ7OFkX28L7r59kQ7YH0+kDNFzAUvB84jf6/07LMoSMdLHNs&#13;
-Tn/ubnngK/ZAuzWNozCP86h31/7RpNLFVpKrWzyTAYWiHDqeYN8t4h5+FbBcF94mrAB7yJgucbu7&#13;
-59MOcoQYEwUvHy/YL+v3cO76rpZ7EihvqFBJPw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a60a92d4-5624-4134-b2c9-ffc2ad159efc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BHs+fWWxxdRNdvys4ypVvoCjGtPFkidndKPhK8wOIfn/tkFawf0i548uU6TVzlmrnDdiverJQOe/&#13;
+EJOkYmCzqw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1c47a9e2-8c5f-4af7-8064-8ee58b97699b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YBhiDCkFjn4W/i8406arp9yTJCb5tZUXePgM++yihVCEeV4x9kY9cYFiK+ecPX7vKeZuTxKa5zma&#13;
+pa9v1UmpJA==</DigestValue></Reference></SignedInfo><SignatureValue>PQptJa0xQCjfmvd26h5NRSGns+2zMmDXFyuHXqOgTBqf/Q0DA7qWDEOSL99X0lo3VWcpr3/VmI7t&#13;
+VB2GPI/SrahQ1XuV0dRrTFHY/KAgWtPrKe3a1ia5/ydo18J1szAKaTQf5R/sYCDuwGJlXbJohFvR&#13;
+7gKkInitopP9yjcZ3qXeCjub7kltDgstaUpchZqp05Uwp11pFPN830Zs3AoNeWqafT2lkkL9bH38&#13;
+Bc4gUEqqC7ypDs2nd6u8RxOKT/G30aXfEXXz+FYlU4MeROqXClWvTF7a7mUUTutRzCa+r7DRdqW7&#13;
+frAdXNqNAS15qD5whe6z6HQxxBDhVwzgrGBXxg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1799,4 +1839,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_495397bf-cc60-4331-b59d-23e60ab61c2a" Target="#_e85ffd0d-8f75-46ed-a057-2d3c7b641149"><Timestamp>2024-06-10 06:48:53</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1c47a9e2-8c5f-4af7-8064-8ee58b97699b" Target="#_a60a92d4-5624-4134-b2c9-ffc2ad159efc"><Timestamp>2024-07-03 04:31:25</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

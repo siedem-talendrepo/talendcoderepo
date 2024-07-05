@@ -911,10 +911,6 @@
     "id" : "_vX88QCSpEe-wnuwJtz9BBA",
     "version" : "Latest",
     "type" : "property"
-  }, {
-    "id" : "__MnRcAuHEe-EGMRvwoEYGQ - CUSTOMER_MASTER_STG",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
