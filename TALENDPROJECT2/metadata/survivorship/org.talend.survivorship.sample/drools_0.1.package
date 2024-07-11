@@ -1,0 +1,56 @@
+package org.talend.survivorship.sample 
+
+import java.util.Date
+import java.math.BigDecimal
+
+global org.talend.survivorship.model.DataSet dataset
+
+declare  RecordIn 
+
+    TALEND_INTERNAL_ID : int  
+    campaignid : Integer  
+    campaign_name : String  
+    campaign_type : String  
+    campaign_start_date : Date  
+    campaign_end_date : Date  
+    campaign_budget : String  
+    campaign_status : String  
+    objective : String  
+    target_audience : String  
+    channels_used : String  
+    creative_assets : String  
+    messages_and_content : String  
+    call_to_action : String  
+    reach : String  
+    impressions : String  
+    engagement_rate : String  
+    conversion_rate : String  
+    leads_generated : String  
+    sales_generated : String  
+    roi : String  
+    segment_id : String  
+    segment_name : String  
+    demographics : String  
+    geographics : String  
+    psychographics : String  
+    behavioral_data : String  
+    engagement_history : String  
+    cost_per_lead : String  
+    cost_per_acquisition : String  
+    lifetime_value__ltv : String  
+    competitor_analysis : String  
+    feedback_and_insights : String  
+    learnings_and_recommendations : String  
+    stakeholders : String  
+    entry_made_by : String  
+    entry_time : Date  
+    action : String  
+    source : String  
+    gid : String  
+    grp_size : Integer  
+    master : Boolean  
+    score : Double  
+    grp_quality : Double  
+end
+
+
